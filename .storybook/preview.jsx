@@ -1,14 +1,22 @@
-import { ThemeProvider, createTheme } from '@mui/material/styles'
+import React from 'react'
+import { ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
+import { withThemeFromJSXProvider } from '@storybook/addon-themes'
+import { createTheme } from '../src/theme'
 
-const theme = createTheme()
+const darkTheme = createTheme({
+  colorPreset: 'orange',
+  direction: 'ltr',
+  paletteMode: 'dark',
+  contrast: 'high',
+})
 
-const withMuiTheme = (Story) => (
-  <ThemeProvider theme={theme}>
-    <CssBaseline/>
-    <Story/>
-  </ThemeProvider>
-)
+const lightTheme = createTheme({
+  colorPreset: 'orange',
+  direction: 'ltr',
+  paletteMode: 'light',
+  contrast: 'high',
+})
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
@@ -20,7 +28,17 @@ const preview = {
       },
     },
   },
-  decorators: [withMuiTheme],
+  decorators: [
+    withThemeFromJSXProvider({
+      themes: {
+        light: lightTheme,
+        dark: darkTheme,
+      },
+      defaultTheme: 'light',
+      Provider: ThemeProvider,
+      GlobalStyles: CssBaseline,
+    }),
+  ],
 }
 
 export default preview

@@ -8,8 +8,8 @@ import {
   Stack,
   CardActions,
 } from "@mui/material";
-import { ActionList } from "../../components/action-list";
-import { ActionListItem } from "../../components/action-list-item";
+import { ActionList } from "../action-list";
+import { ActionListItem } from "../action-list-item";
 import { PropertyList } from "../../components/property-list";
 import { PropertyListItem } from "../../components/property-list-item";
 import { useDialog } from "../../hooks/use-dialog";
