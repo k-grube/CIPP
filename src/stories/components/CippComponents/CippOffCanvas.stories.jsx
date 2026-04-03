@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { fn, within, userEvent, expect } from 'storybook/test'
+import { Button } from '@mui/material'
 import { CippOffCanvas } from '../../../components/CippComponents/CippOffCanvas'
 
 export default {
@@ -31,7 +32,7 @@ const mockDeviceData = {
 export const InteractiveOffCanvas = {
   args: {
     title: 'Device Details',
-    visible: true,
+    visible: false,
     size: 'md',
     extendedData: mockDeviceData,
     // Maps to the nested/flat keys in our mock object
@@ -53,40 +54,58 @@ export const InteractiveOffCanvas = {
     footer: <button type="button">Force Sync</button>,
   },
 
-  play: async ({ args, step }) => {
-    // ⚠️ CRITICAL GOTCHA: MUI's <Drawer> uses React Portals.
-    // It renders outside the standard Storybook `canvasElement`.
-    // Therefore, we MUST query `document.body` to find the drawer's content.
+  render: (args) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [open, setOpen] = useState(false)
+
+    return (
+      <>
+        <Button variant="contained" onClick={() => setOpen(true)}>
+          Open offcanvas
+        </Button>
+        <CippOffCanvas
+          {...args}
+          visible={open}
+          onClose={(...closeArgs) => {
+            setOpen(false)
+            args.onClose?.(...closeArgs)
+          }}
+        />
+      </>
+    )
+  },
+
+  play: async ({ canvasElement, step, args }) => {
+    const canvas = within(canvasElement)
+
+    await step('Open the offcanvas', async () => {
+      await userEvent.click(canvas.getByRole('button', { name: /open offcanvas/i }))
+    })
+
+    // MUI's Drawer uses a portal, so query document.body
     const root = within(document.body)
 
     await step('Verify Header and Content Render', async () => {
-      // Assert the title passed in args is visible
       await expect(root.getByText('Device Details')).toBeVisible()
 
-      // Assert the children render prop correctly received and displayed the data
       const customChild = root.getByTestId('custom-children')
       await expect(customChild).toHaveTextContent('jdoe@domain.com')
 
-      // Assert the footer is rendered
       await expect(root.getByRole('button', { name: /force sync/i })).toBeVisible()
     })
 
     await step('Test Up/Down Navigation Interactions', async () => {
-      // Find the arrow icon buttons by their title attributes
       const upButton = root.getByTitle('Previous row')
       const downButton = root.getByTitle('Next row')
 
-      // Simulate user clicks
       await userEvent.click(upButton)
       await userEvent.click(downButton)
 
-      // Assert that the component successfully called our mocked fn() props
       await expect(args.onNavigateUp).toHaveBeenCalledTimes(1)
       await expect(args.onNavigateDown).toHaveBeenCalledTimes(1)
     })
 
     await step('Test Close Interaction', async () => {
-      // MUI icons automatically get a data-testid matching their icon name
       const closeIcon = root.getByTestId('CloseIcon')
 
       await userEvent.click(closeIcon)

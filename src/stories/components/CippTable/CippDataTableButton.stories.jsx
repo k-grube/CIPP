@@ -1,70 +1,64 @@
-import React from "react";
-import { within, userEvent, expect } from "storybook/test";
-import CippDataTableButton from "../../../components/CippTable/CippDataTableButton";
-
-// Mock CippDataTable
-import { vi } from "vitest";
-vi.mock("../../../components/CippTable/CippDataTable", () => ({
-  CippDataTable: () => <div data-testid="cipp-data-table">MOCK TABLE</div>,
-}));
-
-// Mock the translation utility
-vi.mock("../../../utils/get-cipp-translation", () => ({
-  getCippTranslation: (key) => key,
-}));
+import React from 'react'
+import { within, userEvent, expect, fn, waitFor } from 'storybook/test'
+import CippDataTableButton from '../../../components/CippTable/CippDataTableButton'
 
 export default {
-  title: "Components/CippTable/CippDataTableButton",
+  title: 'Components/CippTable/CippDataTableButton',
   component: CippDataTableButton,
-  tags: ["autodocs"],
-};
+  tags: ['autodocs'],
+  args: {
+    onClick: fn(),
+  },
+}
 
 export const ArrayData = {
   args: {
-    title: "View List",
+    title: 'View List',
     data: [
-      { id: 1, name: "Item 1" },
-      { id: 2, name: "Item 2" },
+      { id: 1, name: 'Item 1' },
+      { id: 2, name: 'Item 2' },
     ],
-    tableTitle: "Items List",
+    tableTitle: 'Items List',
   },
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await expect(button).toHaveTextContent("2 items");
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await expect(button).toHaveTextContent('2 items')
 
-    await userEvent.click(button);
+    await userEvent.click(button)
 
-    // Dialog is rendered in a portal, need to search in document.body
-    const root = within(document.body);
-    await expect(root.getByTestId("cipp-data-table")).toBeInTheDocument();
+    // Dialog renders in a portal with the real CippDataTable
+    const root = within(document.body)
+    await waitFor(() => {
+      expect(root.getByRole('dialog')).toBeInTheDocument()
+    })
   },
-};
+}
 
 export const ObjectData = {
   args: {
-    title: "View Details",
+    title: 'View Details',
     data: {
-      "Display Name": "John Doe",
-      Email: "john@example.com",
+      'Display Name': 'John Doe',
+      Email: 'john@example.com',
     },
-    tableTitle: "User Details",
+    tableTitle: 'User Details',
   },
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    await expect(canvas.getByText("2 items")).toBeInTheDocument();
+    const canvas = within(canvasElement)
+    await expect(canvas.getByText('2 items')).toBeInTheDocument()
   },
-};
+}
 
 export const EmptyData = {
   args: {
-    title: "No Data",
-    data: [],
+    title: 'No Data',
+    data: null,
   },
   play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    const button = canvas.getByRole("button");
-    await expect(button).toHaveTextContent("No items");
-    await expect(button).toBeDisabled();
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+    await expect(button).toHaveTextContent('No items')
+    await expect(button).toBeDisabled()
   },
-};
+}

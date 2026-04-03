@@ -1,6 +1,5 @@
-import { fn, within, userEvent, expect } from 'storybook/test'
+import { fn, within, userEvent, expect, spyOn } from 'storybook/test'
 import { CippCopyToClipBoard } from '../../../components/CippComponents/CippCopyToClipboard'
-import { vi } from 'vitest'
 
 export default {
   title: 'Components/CippComponents/CippCopyToClipboard',
@@ -30,9 +29,10 @@ export const Default = {
     await expect(button).toBeInTheDocument()
 
     // Mock navigator.clipboard.writeText
-    const writeText = typeof navigator.clipboard !== 'undefined'
-      ? vi.spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
-      : (navigator.clipboard = { writeText: vi.fn().mockResolvedValue(undefined) }).writeText
+    const writeText =
+      typeof navigator.clipboard !== 'undefined'
+        ? spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
+        : (navigator.clipboard = { writeText: fn().mockResolvedValue(undefined) }).writeText
 
     await userEvent.click(button)
     await expect(writeText).toHaveBeenCalledWith('Copy me!')
