@@ -26,6 +26,7 @@
     "storybook": "storybook dev -p 6006 --no-open",
     "storybook-build": "npx storybook build -o build-storybook",
     "storybook-serve": "npx http-server build-storybook -p 6006",
+    "storybook-deploy": "npx storybook build -o build-storybook && node .storybook/rebase-storybook.js && npx gh-pages -d build-storybook",
     "test": "vitest run",
     "test:watch": "vitest"
   },
