@@ -29,6 +29,8 @@
     "storybook-deploy": "npx storybook build -o build-storybook && node .storybook/rebase-storybook.js && npx gh-pages -d build-storybook",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:browser": "vitest run --project browser",
     "test:api": "vitest run --config vitest.api.config.mjs",
     "test:api:update": "node Tools/generate-schemas.js --live"
   },
@@ -127,6 +129,7 @@
     "@storybook/addon-a11y": "^10.3.1",
     "@storybook/addon-docs": "^10.3.1",
     "@storybook/addon-themes": "^10.3.3",
+    "@storybook/react-vite": "^10.3.4",
     "@svgr/webpack": "8.1.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -134,6 +137,8 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "@vitest/browser": "3.2.4",
+    "@vitest/coverage-v8": "3.2.4",
     "ajv": "^8.18.0",
     "ajv-formats": "^3.0.1",
     "dotenv": "^17.4.0",
@@ -144,11 +149,13 @@
     "jsdom": "^29.0.1",
     "msw": "2.12.14",
     "msw-storybook-addon": "^2.0.6",
+    "playwright": "^1.59.1",
     "prettier": "^3.8.1",
     "prettier-eslint": "^16.4.2",
     "storybook": "^10.3.1",
     "vite": "^7.3.1",
-    "vitest": "^3.2.1"
+    "vitest": "^3.2.1",
+    "vitest-browser-react": "0.1.0"
   },
   "msw": {
     "workerDirectory": [

@@ -1,0 +1,464 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListAppProtectionPolicies",
+  "description": "Shape schema for /api/ListAppProtectionPolicies",
+  "type": "object",
+  "properties": {
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lastModifiedDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "roleScopeTagIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "id": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "periodOfflineBeforeAccessCheck": {
+      "type": "string"
+    },
+    "periodOnlineBeforeAccessCheck": {
+      "type": "string"
+    },
+    "allowedInboundDataTransferSources": {
+      "type": "string"
+    },
+    "allowedOutboundDataTransferDestinations": {
+      "type": "string"
+    },
+    "organizationalCredentialsRequired": {
+      "type": "boolean"
+    },
+    "allowedOutboundClipboardSharingLevel": {
+      "type": "string"
+    },
+    "dataBackupBlocked": {
+      "type": "boolean"
+    },
+    "deviceComplianceRequired": {
+      "type": "boolean"
+    },
+    "managedBrowserToOpenLinksRequired": {
+      "type": "boolean"
+    },
+    "saveAsBlocked": {
+      "type": "boolean"
+    },
+    "periodOfflineBeforeWipeIsEnforced": {
+      "type": "string"
+    },
+    "pinRequired": {
+      "type": "boolean"
+    },
+    "maximumPinRetries": {
+      "type": "number"
+    },
+    "simplePinBlocked": {
+      "type": "boolean"
+    },
+    "minimumPinLength": {
+      "type": "number"
+    },
+    "pinCharacterSet": {
+      "type": "string"
+    },
+    "periodBeforePinReset": {
+      "type": "string"
+    },
+    "allowedDataStorageLocations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contactSyncBlocked": {
+      "type": "boolean"
+    },
+    "printBlocked": {
+      "type": "boolean"
+    },
+    "fingerprintBlocked": {
+      "type": "boolean"
+    },
+    "disableAppPinIfDevicePinIsSet": {
+      "type": "boolean"
+    },
+    "maximumRequiredOsVersion": {
+      "type": "null"
+    },
+    "maximumWarningOsVersion": {
+      "type": "null"
+    },
+    "maximumWipeOsVersion": {
+      "type": "null"
+    },
+    "minimumRequiredOsVersion": {
+      "type": "null"
+    },
+    "minimumWarningOsVersion": {
+      "type": "null"
+    },
+    "minimumRequiredAppVersion": {
+      "type": "null"
+    },
+    "minimumWarningAppVersion": {
+      "type": "null"
+    },
+    "minimumWipeOsVersion": {
+      "type": "null"
+    },
+    "minimumWipeAppVersion": {
+      "type": "null"
+    },
+    "appActionIfDeviceComplianceRequired": {
+      "type": "string"
+    },
+    "appActionIfMaximumPinRetriesExceeded": {
+      "type": "string"
+    },
+    "pinRequiredInsteadOfBiometricTimeout": {
+      "type": "string"
+    },
+    "allowedOutboundClipboardSharingExceptionLength": {
+      "type": "number"
+    },
+    "notificationRestriction": {
+      "type": "string"
+    },
+    "previousPinBlockCount": {
+      "type": "number"
+    },
+    "managedBrowser": {
+      "type": "string"
+    },
+    "maximumAllowedDeviceThreatLevel": {
+      "type": "string"
+    },
+    "mobileThreatDefenseRemediationAction": {
+      "type": "string"
+    },
+    "mobileThreatDefensePartnerPriority": {
+      "type": "null"
+    },
+    "blockDataIngestionIntoOrganizationDocuments": {
+      "type": "boolean"
+    },
+    "allowedDataIngestionLocations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "appActionIfUnableToAuthenticateUser": {
+      "type": "string"
+    },
+    "dialerRestrictionLevel": {
+      "type": "string"
+    },
+    "gracePeriodToBlockAppsDuringOffClockHours": {
+      "type": "null"
+    },
+    "protectedMessagingRedirectAppType": {
+      "type": "string"
+    },
+    "isAssigned": {
+      "type": "boolean"
+    },
+    "targetedAppManagementLevels": {
+      "type": "string"
+    },
+    "appGroupType": {
+      "type": "string"
+    },
+    "screenCaptureBlocked": {
+      "type": "boolean"
+    },
+    "disableAppEncryptionIfDeviceEncryptionIsEnabled": {
+      "type": "boolean"
+    },
+    "encryptAppData": {
+      "type": "boolean"
+    },
+    "deployedAppCount": {
+      "type": "number"
+    },
+    "minimumRequiredPatchVersion": {
+      "type": "string"
+    },
+    "minimumWarningPatchVersion": {
+      "type": "string"
+    },
+    "minimumWipePatchVersion": {
+      "type": "string"
+    },
+    "allowedAndroidDeviceManufacturers": {
+      "type": "null"
+    },
+    "appActionIfAndroidDeviceManufacturerNotAllowed": {
+      "type": "string"
+    },
+    "appActionIfAccountIsClockedOut": {
+      "type": "null"
+    },
+    "appActionIfSamsungKnoxAttestationRequired": {
+      "type": "null"
+    },
+    "requiredAndroidSafetyNetDeviceAttestationType": {
+      "type": "string"
+    },
+    "appActionIfAndroidSafetyNetDeviceAttestationFailed": {
+      "type": "string"
+    },
+    "requiredAndroidSafetyNetAppsVerificationType": {
+      "type": "string"
+    },
+    "appActionIfAndroidSafetyNetAppsVerificationFailed": {
+      "type": "string"
+    },
+    "customBrowserPackageId": {
+      "type": "string"
+    },
+    "customBrowserDisplayName": {
+      "type": "string"
+    },
+    "minimumRequiredCompanyPortalVersion": {
+      "type": "null"
+    },
+    "minimumWarningCompanyPortalVersion": {
+      "type": "null"
+    },
+    "minimumWipeCompanyPortalVersion": {
+      "type": "null"
+    },
+    "keyboardsRestricted": {
+      "type": "boolean"
+    },
+    "allowedAndroidDeviceModels": {
+      "type": "array",
+      "items": {}
+    },
+    "appActionIfAndroidDeviceModelNotAllowed": {
+      "type": "string"
+    },
+    "customDialerAppPackageId": {
+      "type": "string"
+    },
+    "customDialerAppDisplayName": {
+      "type": "string"
+    },
+    "biometricAuthenticationBlocked": {
+      "type": "boolean"
+    },
+    "requiredAndroidSafetyNetEvaluationType": {
+      "type": "string"
+    },
+    "blockAfterCompanyPortalUpdateDeferralInDays": {
+      "type": "number"
+    },
+    "warnAfterCompanyPortalUpdateDeferralInDays": {
+      "type": "number"
+    },
+    "wipeAfterCompanyPortalUpdateDeferralInDays": {
+      "type": "number"
+    },
+    "deviceLockRequired": {
+      "type": "boolean"
+    },
+    "appActionIfDeviceLockNotSet": {
+      "type": "string"
+    },
+    "connectToVpnOnLaunch": {
+      "type": "boolean"
+    },
+    "appActionIfDevicePasscodeComplexityLessThanLow": {
+      "type": "null"
+    },
+    "appActionIfDevicePasscodeComplexityLessThanMedium": {
+      "type": "string"
+    },
+    "appActionIfDevicePasscodeComplexityLessThanHigh": {
+      "type": "null"
+    },
+    "requireClass3Biometrics": {
+      "type": "boolean"
+    },
+    "requirePinAfterBiometricChange": {
+      "type": "boolean"
+    },
+    "fingerprintAndBiometricEnabled": {
+      "type": "null"
+    },
+    "messagingRedirectAppPackageId": {
+      "type": "null"
+    },
+    "messagingRedirectAppDisplayName": {
+      "type": "null"
+    },
+    "exemptedAppPackages": {
+      "type": "array",
+      "items": {}
+    },
+    "approvedKeyboards": {
+      "type": "array",
+      "items": {}
+    },
+    "assignments@odata.context": {
+      "type": "string"
+    },
+    "assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "string"
+          },
+          "target": {
+            "type": "object",
+            "properties": {
+              "@odata.type": {
+                "type": "string"
+              },
+              "deviceAndAppManagementAssignmentFilterId": {
+                "type": "null"
+              },
+              "deviceAndAppManagementAssignmentFilterType": {
+                "type": "string"
+              },
+              "groupId": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "URLName": {
+      "type": "string"
+    },
+    "PolicyTypeName": {
+      "type": "string"
+    },
+    "PolicySource": {
+      "type": "string"
+    },
+    "PolicyAssignment": {
+      "type": "string"
+    },
+    "PolicyExclude": {
+      "type": "string"
+    },
+    "genmojiConfigurationState": {
+      "type": "null"
+    },
+    "screenCaptureConfigurationState": {
+      "type": "null"
+    },
+    "writingToolsConfigurationState": {
+      "type": "null"
+    },
+    "appDataEncryptionType": {
+      "type": "string"
+    },
+    "minimumRequiredSdkVersion": {
+      "type": "null"
+    },
+    "faceIdBlocked": {
+      "type": "boolean"
+    },
+    "allowWidgetContentSync": {
+      "type": "boolean"
+    },
+    "minimumWipeSdkVersion": {
+      "type": "null"
+    },
+    "allowedIosDeviceModels": {
+      "type": "null"
+    },
+    "appActionIfIosDeviceModelNotAllowed": {
+      "type": "string"
+    },
+    "thirdPartyKeyboardsBlocked": {
+      "type": "boolean"
+    },
+    "filterOpenInToOnlyManagedApps": {
+      "type": "boolean"
+    },
+    "disableProtectionOfManagedOutboundOpenInData": {
+      "type": "boolean"
+    },
+    "protectInboundDataFromUnknownSources": {
+      "type": "boolean"
+    },
+    "customBrowserProtocol": {
+      "type": "string"
+    },
+    "customDialerAppProtocol": {
+      "type": "string"
+    },
+    "managedUniversalLinks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exemptedUniversalLinks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "minimumWarningSdkVersion": {
+      "type": "null"
+    },
+    "messagingRedirectAppUrlScheme": {
+      "type": "null"
+    },
+    "exemptedAppProtocols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:36.790Z",
+  "_endpoint": "ListAppProtectionPolicies",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 2
+}

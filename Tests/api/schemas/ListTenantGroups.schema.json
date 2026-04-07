@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListTenantGroups",
+  "description": "Shape schema for /api/ListTenantGroups",
+  "_metadata": {
+    "endpoint": "ListTenantGroups",
+    "generatedAt": "2026-04-05T12:15:06.115Z",
+    "tenantFilter": "7ngn50.onmicrosoft.com",
+    "requiresTenant": true,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListTenantGroups.json"
+  },
+  "type": "object",
+  "properties": {
+    "Description": {
+      "type": "string"
+    },
+    "DynamicRules": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "GroupType": {
+      "type": "string"
+    },
+    "Id": {
+      "type": "string"
+    },
+    "Members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "customerId": {},
+          "defaultDomainName": {},
+          "displayName": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "Name": {
+      "type": "string"
+    },
+    "RuleLogic": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

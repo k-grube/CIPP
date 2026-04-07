@@ -1,19 +1,8 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { ThemeProvider } from '@mui/material/styles'
-import { createTheme } from '../../../theme'
+import { renderWithTheme } from '../../test-utils'
 import { CippCopyToClipBoard } from '../../../components/CippComponents/CippCopyToClipboard'
-
-const theme = createTheme({
-  colorPreset: 'orange',
-  direction: 'ltr',
-  paletteMode: 'light',
-  contrast: 'high',
-})
-
-const renderWithTheme = (ui) =>
-  render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>)
 
 describe('CippCopyToClipboard', () => {
   it('renders button and copies text on click', async () => {

@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListIntuneReusableSettings",
+  "description": "Shape schema for /api/ListIntuneReusableSettings",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "settingDefinitionId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "number"
+    },
+    "referencingConfigurationPolicyCount": {
+      "type": "number"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lastModifiedDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "settingInstance": {
+      "type": "object",
+      "properties": {
+        "@odata.type": {
+          "type": "string"
+        },
+        "settingDefinitionId": {
+          "type": "string"
+        },
+        "settingInstanceTemplateReference": {
+          "type": "null"
+        },
+        "auditRuleInformation": {
+          "type": "null"
+        },
+        "groupSettingCollectionValue": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "settingValueTemplateReference": {
+                "type": "null"
+              },
+              "children": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "@odata.type": {
+                      "type": "string"
+                    },
+                    "settingDefinitionId": {
+                      "type": "string"
+                    },
+                    "settingInstanceTemplateReference": {
+                      "type": "null"
+                    },
+                    "auditRuleInformation": {
+                      "type": "null"
+                    },
+                    "simpleSettingValue": {
+                      "type": "object",
+                      "properties": {
+                        "@odata.type": {
+                          "type": "string"
+                        },
+                        "settingValueTemplateReference": {
+                          "type": "null"
+                        },
+                        "value": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": true
+                    },
+                    "choiceSettingValue": {
+                      "type": "object",
+                      "properties": {
+                        "settingValueTemplateReference": {
+                          "type": "null"
+                        },
+                        "value": {
+                          "type": "string"
+                        },
+                        "children": {
+                          "type": "array",
+                          "items": {}
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "RawJSON": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:10:08.402Z",
+  "_endpoint": "ListIntuneReusableSettings",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 1
+}

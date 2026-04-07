@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListTenants",
+  "description": "Shape schema for /api/ListTenants",
+  "type": "object",
+  "properties": {
+    "ETag": {
+      "type": "string"
+    },
+    "PartitionKey": {
+      "type": "string"
+    },
+    "RowKey": {
+      "type": "string"
+    },
+    "customerId": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "relationshipEnd": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "relationshipCount": {
+      "type": "number"
+    },
+    "defaultDomainName": {
+      "type": "string"
+    },
+    "initialDomainName": {
+      "type": "string"
+    },
+    "hasAutoExtend": {
+      "type": "boolean"
+    },
+    "delegatedPrivilegeStatus": {
+      "type": "string"
+    },
+    "domains": {
+      "type": "string"
+    },
+    "Excluded": {
+      "type": "boolean"
+    },
+    "ExcludeUser": {
+      "type": "string"
+    },
+    "ExcludeDate": {
+      "type": "string"
+    },
+    "GraphErrorCount": {
+      "type": "number"
+    },
+    "LastGraphError": {
+      "type": "string"
+    },
+    "RequiresRefresh": {
+      "type": "boolean"
+    },
+    "LastRefresh": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "SharepointAdminUrl": {
+      "type": "string"
+    },
+    "Timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:14:33.047Z",
+  "_endpoint": "ListTenants",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 1
+}

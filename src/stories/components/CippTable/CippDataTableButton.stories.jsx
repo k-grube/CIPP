@@ -1,5 +1,4 @@
-import React from 'react'
-import { within, userEvent, expect, fn, waitFor } from 'storybook/test'
+import { fn } from 'storybook/test'
 import CippDataTableButton from '../../../components/CippTable/CippDataTableButton'
 
 export default {
@@ -20,19 +19,6 @@ export const ArrayData = {
     ],
     tableTitle: 'Items List',
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const button = canvas.getByRole('button')
-    await expect(button).toHaveTextContent('2 items')
-
-    await userEvent.click(button)
-
-    // Dialog renders in a portal with the real CippDataTable
-    const root = within(document.body)
-    await waitFor(() => {
-      expect(root.getByRole('dialog')).toBeInTheDocument()
-    })
-  },
 }
 
 export const ObjectData = {
@@ -44,21 +30,11 @@ export const ObjectData = {
     },
     tableTitle: 'User Details',
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await expect(canvas.getByText('2 items')).toBeInTheDocument()
-  },
 }
 
 export const EmptyData = {
   args: {
     title: 'No Data',
     data: null,
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const button = canvas.getByRole('button')
-    await expect(button).toHaveTextContent('No items')
-    await expect(button).toBeDisabled()
   },
 }

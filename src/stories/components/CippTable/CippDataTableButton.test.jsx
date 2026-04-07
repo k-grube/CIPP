@@ -1,38 +1,8 @@
 import React from 'react'
-import { render, screen, within, waitFor } from '@testing-library/react'
+import { screen, within, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { ThemeProvider } from '@mui/material/styles'
-import { Provider } from 'react-redux'
-import { configureStore } from '@reduxjs/toolkit'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { createTheme } from '../../../theme'
+import { renderWithProviders } from '../../test-utils'
 import CippDataTableButton from '../../../components/CippTable/CippDataTableButton'
-
-const theme = createTheme({
-  colorPreset: 'orange',
-  direction: 'ltr',
-  paletteMode: 'light',
-  contrast: 'high',
-})
-
-const mockStore = configureStore({
-  reducer: {
-    toasts: (state = { toasts: [] }) => state,
-  },
-})
-
-const renderWithProviders = (ui) => {
-  const queryClient = new QueryClient({
-    defaultOptions: { queries: { retry: false } },
-  })
-  return render(
-    <Provider store={mockStore}>
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={theme}>{ui}</ThemeProvider>
-      </QueryClientProvider>
-    </Provider>
-  )
-}
 
 describe('CippDataTableButton', () => {
   it('shows item count and opens dialog on click', async () => {

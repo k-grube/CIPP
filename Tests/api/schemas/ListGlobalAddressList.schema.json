@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListGlobalAddressList",
+  "description": "Shape schema for /api/ListGlobalAddressList",
+  "type": "object",
+  "properties": {
+    "Identity": {
+      "type": "string"
+    },
+    "Alias": {
+      "type": "string"
+    },
+    "ExternalDirectoryObjectId": {
+      "type": "string"
+    },
+    "EmailAddresses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "DisplayName": {
+      "type": "string"
+    },
+    "HiddenFromAddressListsEnabled": {
+      "type": "boolean"
+    },
+    "IsDirSynced": {
+      "type": "boolean"
+    },
+    "PrimarySmtpAddress": {
+      "type": "string"
+    },
+    "RecipientType": {
+      "type": "string"
+    },
+    "RecipientTypeDetails": {
+      "type": "string"
+    },
+    "AddressListMembership": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "SKUAssigned": {
+      "type": [
+        "null",
+        "boolean"
+      ]
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:09:58.127Z",
+  "_endpoint": "ListGlobalAddressList",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 50
+}

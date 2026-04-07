@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListBPATemplates",
+  "description": "Shape schema for /api/ListBPATemplates",
+  "_metadata": {
+    "endpoint": "ListBPATemplates",
+    "generatedAt": "2026-04-05T12:15:06.078Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListBPATemplates.json"
+  },
+  "type": "object",
+  "properties": {
+    "Data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "FrontendFields": {},
+          "name": {},
+          "StoreAs": {},
+          "UseExistingInfo": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Style": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

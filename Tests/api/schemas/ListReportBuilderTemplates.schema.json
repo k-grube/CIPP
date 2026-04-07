@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListReportBuilderTemplates",
+  "description": "Shape schema for /api/ListReportBuilderTemplates",
+  "_metadata": {
+    "endpoint": "ListReportBuilderTemplates",
+    "generatedAt": "2026-04-05T12:15:06.103Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListReportBuilderTemplates.json"
+  },
+  "type": "object",
+  "properties": {
+    "Blocks": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "dbType": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "format": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "selectedHeaders": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "static": {
+          "type": "boolean"
+        },
+        "status": {
+          "type": "string"
+        },
+        "testCategory": {
+          "type": "string"
+        },
+        "testId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "CreatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "CustomCount": {
+      "type": "number"
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "RowKey": {
+      "type": "string"
+    },
+    "Sections": {
+      "type": "number"
+    },
+    "TestCount": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": true
+}

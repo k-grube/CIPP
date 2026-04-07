@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListUserSettings",
+  "description": "Shape schema for /api/ListUserSettings",
+  "type": "object",
+  "properties": {
+    "direction": {
+      "type": "string"
+    },
+    "paletteMode": {
+      "type": "string"
+    },
+    "currentTheme": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "pinNav": {
+      "type": "boolean"
+    },
+    "showDevtools": {
+      "type": "boolean"
+    },
+    "customBranding": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "type": "null"
+        },
+        "colour": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:13.883Z",
+  "_endpoint": "ListUserSettings",
+  "_case": null,
+  "_tenantFilter": null,
+  "_requiresTenant": false,
+  "_sampledRows": 1
+}

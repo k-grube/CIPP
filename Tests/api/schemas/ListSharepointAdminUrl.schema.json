@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListSharepointAdminUrl",
+  "description": "Shape schema for /api/ListSharepointAdminUrl",
+  "_metadata": {
+    "endpoint": "ListSharepointAdminUrl",
+    "generatedAt": "2026-04-05T12:15:06.107Z",
+    "tenantFilter": "7ngn50.onmicrosoft.com",
+    "requiresTenant": true,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListSharepointAdminUrl.json"
+  },
+  "type": "string"
+}

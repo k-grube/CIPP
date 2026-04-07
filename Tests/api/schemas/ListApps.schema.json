@@ -1,0 +1,484 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListApps",
+  "description": "Shape schema for /api/ListApps",
+  "type": "object",
+  "properties": {
+    "@odata.type": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "publisher": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "largeIcon": {
+      "type": "null"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lastModifiedDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "isFeatured": {
+      "type": "boolean"
+    },
+    "privacyInformationUrl": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "informationUrl": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "owner": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "developer": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "notes": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "uploadState": {
+      "type": "number"
+    },
+    "publishingState": {
+      "type": "string"
+    },
+    "isAssigned": {
+      "type": "boolean"
+    },
+    "roleScopeTagIds": {
+      "type": "array",
+      "items": {}
+    },
+    "dependentAppCount": {
+      "type": "number"
+    },
+    "supersedingAppCount": {
+      "type": "number"
+    },
+    "supersededAppCount": {
+      "type": "number"
+    },
+    "manifestHash": {
+      "type": "null"
+    },
+    "packageIdentifier": {
+      "type": "string"
+    },
+    "installExperience": {
+      "type": "object",
+      "properties": {
+        "runAsAccount": {
+          "type": "string"
+        },
+        "maxRunTimeInMinutes": {
+          "type": "number"
+        },
+        "deviceRestartBehavior": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "assignments@odata.context": {
+      "type": "string"
+    },
+    "assignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "intent": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "sourceId": {
+            "type": "null"
+          },
+          "target": {
+            "type": "object",
+            "properties": {
+              "@odata.type": {
+                "type": "string"
+              },
+              "deviceAndAppManagementAssignmentFilterId": {
+                "type": "null"
+              },
+              "deviceAndAppManagementAssignmentFilterType": {
+                "type": "string"
+              },
+              "groupId": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": true
+          },
+          "settings": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "@odata.type": {
+                "type": "string"
+              },
+              "notifications": {
+                "type": "string"
+              },
+              "restartSettings": {
+                "type": "null"
+              },
+              "installTimeSettings": {
+                "type": "null"
+              },
+              "deliveryOptimizationPriority": {
+                "type": "string"
+              },
+              "autoUpdateSettings": {
+                "type": "null"
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "AppAssignment": {
+      "type": "string"
+    },
+    "AppExclude": {
+      "type": "string"
+    },
+    "committedContentVersion": {
+      "type": "string"
+    },
+    "fileName": {
+      "type": "string"
+    },
+    "size": {
+      "type": "number"
+    },
+    "installCommandLine": {
+      "type": "string"
+    },
+    "uninstallCommandLine": {
+      "type": "string"
+    },
+    "applicableArchitectures": {
+      "type": "string"
+    },
+    "allowedArchitectures": {
+      "type": "null"
+    },
+    "minimumFreeDiskSpaceInMB": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "minimumMemoryInMB": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "minimumNumberOfProcessors": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "minimumCpuSpeedInMHz": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "msiInformation": {
+      "type": "null"
+    },
+    "setupFilePath": {
+      "type": "string"
+    },
+    "minimumSupportedWindowsRelease": {
+      "type": "string"
+    },
+    "displayVersion": {
+      "type": "null"
+    },
+    "allowAvailableUninstall": {
+      "type": "boolean"
+    },
+    "activeInstallScript": {
+      "type": "null"
+    },
+    "activeUninstallScript": {
+      "type": "null"
+    },
+    "minimumSupportedOperatingSystem": {
+      "type": "object",
+      "properties": {
+        "v8_0": {
+          "type": "boolean"
+        },
+        "v8_1": {
+          "type": "boolean"
+        },
+        "v10_0": {
+          "type": "boolean"
+        },
+        "v10_1607": {
+          "type": "boolean"
+        },
+        "v10_1703": {
+          "type": "boolean"
+        },
+        "v10_1709": {
+          "type": "boolean"
+        },
+        "v10_1803": {
+          "type": "boolean"
+        },
+        "v10_1809": {
+          "type": "boolean"
+        },
+        "v10_1903": {
+          "type": "boolean"
+        },
+        "v10_1909": {
+          "type": "boolean"
+        },
+        "v10_2004": {
+          "type": "boolean"
+        },
+        "v10_2H20": {
+          "type": "boolean"
+        },
+        "v10_21H1": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "detectionRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "@odata.type": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "fileOrFolderName": {
+            "type": "string"
+          },
+          "check32BitOn64System": {
+            "type": "boolean"
+          },
+          "detectionType": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "detectionValue": {
+            "type": "null"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "requirementRules": {
+      "type": "array",
+      "items": {}
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "@odata.type": {
+            "type": "string"
+          },
+          "ruleType": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "fileOrFolderName": {
+            "type": "string"
+          },
+          "check32BitOn64System": {
+            "type": "boolean"
+          },
+          "operationType": {
+            "type": "string"
+          },
+          "operator": {
+            "type": "string"
+          },
+          "comparisonValue": {
+            "type": "null"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "returnCodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "returnCode": {
+            "type": "number"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "autoAcceptEula": {
+      "type": "boolean"
+    },
+    "productIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "useSharedComputerActivation": {
+      "type": "boolean"
+    },
+    "updateChannel": {
+      "type": "string"
+    },
+    "officeSuiteAppDefaultFileFormat": {
+      "type": "string"
+    },
+    "officePlatformArchitecture": {
+      "type": "string"
+    },
+    "localesToInstall": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "installProgressDisplayLevel": {
+      "type": "string"
+    },
+    "shouldUninstallOlderVersionsOfOffice": {
+      "type": "boolean"
+    },
+    "targetVersion": {
+      "type": "null"
+    },
+    "updateVersion": {
+      "type": "null"
+    },
+    "officeConfigurationXml": {
+      "type": "null"
+    },
+    "excludedApps": {
+      "type": "object",
+      "properties": {
+        "access": {
+          "type": "boolean"
+        },
+        "bing": {
+          "type": "boolean"
+        },
+        "excel": {
+          "type": "boolean"
+        },
+        "groove": {
+          "type": "boolean"
+        },
+        "infoPath": {
+          "type": "boolean"
+        },
+        "lync": {
+          "type": "boolean"
+        },
+        "oneDrive": {
+          "type": "boolean"
+        },
+        "oneNote": {
+          "type": "boolean"
+        },
+        "outlook": {
+          "type": "boolean"
+        },
+        "powerPoint": {
+          "type": "boolean"
+        },
+        "publisher": {
+          "type": "boolean"
+        },
+        "sharePointDesigner": {
+          "type": "boolean"
+        },
+        "teams": {
+          "type": "boolean"
+        },
+        "visio": {
+          "type": "boolean"
+        },
+        "word": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:38.170Z",
+  "_endpoint": "ListApps",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 17
+}

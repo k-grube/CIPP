@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListMDEOnboarding",
+  "description": "Shape schema for /api/ListMDEOnboarding",
+  "type": "object",
+  "properties": {
+    "Tenant": {
+      "type": "string"
+    },
+    "partnerState": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:10:18.577Z",
+  "_endpoint": "ListMDEOnboarding",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 1
+}

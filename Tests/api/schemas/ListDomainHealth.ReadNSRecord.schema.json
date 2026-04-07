@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListDomainHealth.ReadNSRecord",
+  "description": "Shape schema for /api/ListDomainHealth (ReadNSRecord)",
+  "type": "object",
+  "properties": {
+    "Domain": {
+      "type": "string"
+    },
+    "Records": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ValidationPasses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ValidationWarns": {
+      "type": "array",
+      "items": {}
+    },
+    "ValidationFails": {
+      "type": "array",
+      "items": {}
+    },
+    "NameProvider": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:11.642Z",
+  "_endpoint": "ListDomainHealth",
+  "_case": "ReadNSRecord",
+  "_tenantFilter": null,
+  "_requiresTenant": false,
+  "_sampledRows": 1
+}

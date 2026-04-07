@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListRooms",
+  "description": "Shape schema for /api/ListRooms",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "mailNickname": {
+      "type": "string"
+    },
+    "accountDisabled": {
+      "type": "boolean"
+    },
+    "hiddenFromAddressListsEnabled": {
+      "type": "boolean"
+    },
+    "isDirSynced": {
+      "type": "null"
+    },
+    "bookingType": {
+      "type": "null"
+    },
+    "resourceDelegates": {
+      "type": "null"
+    },
+    "capacity": {
+      "type": "number"
+    },
+    "building": {
+      "type": "null"
+    },
+    "floor": {
+      "type": "null"
+    },
+    "floorLabel": {
+      "type": "null"
+    },
+    "street": {
+      "type": "null"
+    },
+    "city": {
+      "type": "null"
+    },
+    "state": {
+      "type": "null"
+    },
+    "postalCode": {
+      "type": "null"
+    },
+    "countryOrRegion": {
+      "type": "null"
+    },
+    "audioDeviceName": {
+      "type": "null"
+    },
+    "videoDeviceName": {
+      "type": "null"
+    },
+    "displayDeviceName": {
+      "type": "null"
+    },
+    "mtrEnabled": {
+      "type": "null"
+    },
+    "isWheelChairAccessible": {
+      "type": "null"
+    },
+    "phone": {
+      "type": "null"
+    },
+    "tags": {
+      "type": "null"
+    },
+    "spaceType": {
+      "type": "null"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:11:33.350Z",
+  "_endpoint": "ListRooms",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 1
+}

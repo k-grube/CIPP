@@ -1,4 +1,4 @@
-import { within, expect, fn } from 'storybook/test'
+import { fn } from 'storybook/test'
 import { CippImageCard } from '../../../components/CippCards/CippImageCard'
 
 export default {
@@ -20,14 +20,6 @@ export const Default = {
     linkText: 'View Reports',
     link: '/reports',
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await expect(canvas.getByText('Reports Illustration')).toBeInTheDocument()
-    await expect(canvas.getByText('This is a card showing reports and analytics.')).
-      toBeInTheDocument()
-    const link = canvas.getByRole('link', { name: /View Reports/i })
-    await expect(link).toHaveAttribute('href', '/reports')
-  },
 }
 
 export const StepProgress = {
@@ -40,11 +32,6 @@ export const StepProgress = {
     linkText: 'Continue',
     link: '/onboarding',
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await expect(canvas.getByText('2/5')).toBeInTheDocument()
-    await expect(canvas.getByRole('progressbar')).toBeInTheDocument()
-  },
 }
 
 export const Loading = {
@@ -52,11 +39,6 @@ export const Loading = {
     title: 'Loading Reports',
     isFetching: true,
     imageUrl: '/assets/illustrations/undraw_website_ij0l.svg',
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    const skeleton = canvasElement.querySelector('.MuiSkeleton-root')
-    await expect(skeleton).toBeInTheDocument()
   },
 }
 

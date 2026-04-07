@@ -1,0 +1,459 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListUsers",
+  "description": "Shape schema for /api/ListUsers",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "deletedDateTime": {
+      "type": "null"
+    },
+    "accountEnabled": {
+      "type": "boolean"
+    },
+    "ageGroup": {
+      "type": "null"
+    },
+    "businessPhones": {
+      "type": "array",
+      "items": {}
+    },
+    "city": {
+      "type": "null"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "creationType": {
+      "type": "null"
+    },
+    "companyName": {
+      "type": "null"
+    },
+    "consentProvidedForMinor": {
+      "type": "null"
+    },
+    "country": {
+      "type": "null"
+    },
+    "department": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "employeeId": {
+      "type": "null"
+    },
+    "employeeHireDate": {
+      "type": "null"
+    },
+    "employeeLeaveDateTime": {
+      "type": "null"
+    },
+    "employeeType": {
+      "type": "null"
+    },
+    "faxNumber": {
+      "type": "null"
+    },
+    "givenName": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "imAddresses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "infoCatalogs": {
+      "type": "array",
+      "items": {}
+    },
+    "isLicenseReconciliationNeeded": {
+      "type": "boolean"
+    },
+    "isManagementRestricted": {
+      "type": "null"
+    },
+    "isResourceAccount": {
+      "type": "null"
+    },
+    "jobTitle": {
+      "type": "null"
+    },
+    "legalAgeGroupClassification": {
+      "type": "null"
+    },
+    "mail": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mailNickname": {
+      "type": "string"
+    },
+    "mobilePhone": {
+      "type": "null"
+    },
+    "onPremisesDistinguishedName": {
+      "type": "null"
+    },
+    "officeLocation": {
+      "type": "null"
+    },
+    "onPremisesDomainName": {
+      "type": "null"
+    },
+    "onPremisesImmutableId": {
+      "type": "null"
+    },
+    "onPremisesLastSyncDateTime": {
+      "type": "null"
+    },
+    "onPremisesObjectIdentifier": {
+      "type": "null"
+    },
+    "onPremisesSecurityIdentifier": {
+      "type": "null"
+    },
+    "onPremisesSamAccountName": {
+      "type": "null"
+    },
+    "onPremisesUserPrincipalName": {
+      "type": "null"
+    },
+    "otherMails": {
+      "type": "array",
+      "items": {}
+    },
+    "passwordPolicies": {
+      "type": "null"
+    },
+    "postalCode": {
+      "type": "null"
+    },
+    "preferredDataLocation": {
+      "type": "null"
+    },
+    "preferredLanguage": {
+      "type": "string"
+    },
+    "proxyAddresses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "refreshTokensValidFromDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "securityIdentifier": {
+      "type": "string"
+    },
+    "showInAddressList": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "signInSessionsValidFromDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "state": {
+      "type": "null"
+    },
+    "streetAddress": {
+      "type": "null"
+    },
+    "surname": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "usageLocation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userPrincipalName": {
+      "type": "string"
+    },
+    "externalUserConvertedOn": {
+      "type": "null"
+    },
+    "externalUserState": {
+      "type": "null"
+    },
+    "externalUserStateChangeDateTime": {
+      "type": "null"
+    },
+    "userType": {
+      "type": "string"
+    },
+    "identityParentId": {
+      "type": "null"
+    },
+    "agentIdentityBlueprintId": {
+      "type": "null"
+    },
+    "employeeOrgData": {
+      "type": "null"
+    },
+    "passwordProfile": {
+      "type": [
+        "null",
+        "object"
+      ],
+      "properties": {
+        "password": {
+          "type": "null"
+        },
+        "forceChangePasswordNextSignIn": {
+          "type": "boolean"
+        },
+        "forceChangePasswordNextSignInWithMfa": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    },
+    "assignedLicenses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "disabledPlans": {
+            "type": "array",
+            "items": {}
+          },
+          "skuId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "assignedPlans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "assignedDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "capabilityStatus": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "servicePlanId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "authorizationInfo": {
+      "type": "object",
+      "properties": {
+        "certificateUserIds": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "additionalProperties": true
+    },
+    "cloudRealtimeCommunicationInfo": {
+      "type": "object",
+      "properties": {
+        "isSipEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "deviceKeys": {
+      "type": "array",
+      "items": {}
+    },
+    "identities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "signInType": {
+            "type": "string"
+          },
+          "issuer": {
+            "type": "string"
+          },
+          "issuerAssignedId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "onPremisesExtensionAttributes": {
+      "type": "object",
+      "properties": {
+        "extensionAttribute1": {
+          "type": "null"
+        },
+        "extensionAttribute2": {
+          "type": "null"
+        },
+        "extensionAttribute3": {
+          "type": "null"
+        },
+        "extensionAttribute4": {
+          "type": "null"
+        },
+        "extensionAttribute5": {
+          "type": "null"
+        },
+        "extensionAttribute6": {
+          "type": "null"
+        },
+        "extensionAttribute7": {
+          "type": "null"
+        },
+        "extensionAttribute8": {
+          "type": "null"
+        },
+        "extensionAttribute9": {
+          "type": "null"
+        },
+        "extensionAttribute10": {
+          "type": "null"
+        },
+        "extensionAttribute11": {
+          "type": "null"
+        },
+        "extensionAttribute12": {
+          "type": "null"
+        },
+        "extensionAttribute13": {
+          "type": "null"
+        },
+        "extensionAttribute14": {
+          "type": "null"
+        },
+        "extensionAttribute15": {
+          "type": "null"
+        }
+      },
+      "additionalProperties": true
+    },
+    "onPremisesProvisioningErrors": {
+      "type": "array",
+      "items": {}
+    },
+    "onPremisesSipInfo": {
+      "type": "object",
+      "properties": {
+        "isSipEnabled": {
+          "type": "boolean"
+        },
+        "sipDeploymentLocation": {
+          "type": "null"
+        },
+        "sipPrimaryAddress": {
+          "type": "null"
+        }
+      },
+      "additionalProperties": true
+    },
+    "provisionedPlans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "capabilityStatus": {
+            "type": "string"
+          },
+          "provisioningStatus": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "serviceProvisioningErrors": {
+      "type": "array",
+      "items": {}
+    },
+    "onPremisesSyncEnabled": {
+      "type": "boolean"
+    },
+    "username": {
+      "type": "string"
+    },
+    "Aliases": {
+      "type": "string"
+    },
+    "LicJoined": {
+      "type": "string"
+    },
+    "primDomain": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "extension_db27f3ff5ab44bc58b3044eb20097514_mailboxPermissions@odata.type": {
+      "type": "string"
+    },
+    "extension_db27f3ff5ab44bc58b3044eb20097514_mailboxPermissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "extension_72f71a9c4da142deaa01b194448aaea8_mailboxPermissions@odata.type": {
+      "type": "string"
+    },
+    "extension_72f71a9c4da142deaa01b194448aaea8_mailboxPermissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:15:07.271Z",
+  "_endpoint": "ListUsers",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 50
+}

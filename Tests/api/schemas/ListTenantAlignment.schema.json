@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListTenantAlignment",
+  "description": "Shape schema for /api/ListTenantAlignment",
+  "_metadata": {
+    "endpoint": "ListTenantAlignment",
+    "generatedAt": "2026-04-05T12:15:06.112Z",
+    "tenantFilter": "7ngn50.onmicrosoft.com",
+    "requiresTenant": true,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListTenantAlignment.json"
+  },
+  "type": "object",
+  "properties": {
+    "alignmentScore": {
+      "type": "number"
+    },
+    "combinedAlignmentScore": {
+      "type": "number"
+    },
+    "latestDataCollection": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "LicenseMissingPercentage": {
+      "type": "number"
+    },
+    "standardId": {
+      "type": "string"
+    },
+    "standardName": {
+      "type": "string"
+    },
+    "standardType": {
+      "type": "string"
+    },
+    "tenantFilter": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

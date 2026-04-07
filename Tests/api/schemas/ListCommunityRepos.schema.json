@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListCommunityRepos",
+  "description": "Shape schema for /api/ListCommunityRepos",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "URL": {
+      "type": "string"
+    },
+    "FullName": {
+      "type": "string"
+    },
+    "Owner": {
+      "type": "string"
+    },
+    "Visibility": {
+      "type": "string"
+    },
+    "WriteAccess": {
+      "type": "boolean"
+    },
+    "DefaultBranch": {
+      "type": "string"
+    },
+    "UploadBranch": {
+      "type": "string"
+    },
+    "RepoPermissions": {
+      "type": "object",
+      "properties": {
+        "admin": {
+          "type": "boolean"
+        },
+        "maintain": {
+          "type": "boolean"
+        },
+        "push": {
+          "type": "boolean"
+        },
+        "triage": {
+          "type": "boolean"
+        },
+        "pull": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:07.952Z",
+  "_endpoint": "ListCommunityRepos",
+  "_case": null,
+  "_tenantFilter": null,
+  "_requiresTenant": false,
+  "_sampledRows": 5
+}

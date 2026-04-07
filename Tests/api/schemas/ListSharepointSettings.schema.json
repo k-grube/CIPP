@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListSharepointSettings",
+  "description": "Shape schema for /api/ListSharepointSettings",
+  "_metadata": {
+    "endpoint": "ListSharepointSettings",
+    "generatedAt": "2026-04-05T12:15:06.108Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListSharepointSettings.json"
+  },
+  "type": "object",
+  "properties": {
+    "@odata.context": {
+      "type": "string"
+    },
+    "allowedDomainGuidsForSyncApp": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "availableManagedPathsForSiteCreation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "deletedUserPersonalSiteRetentionPeriodInDays": {
+      "type": "number"
+    },
+    "excludedFileExtensionsForSyncApp": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "idleSessionSignOut": {
+      "type": "object",
+      "properties": {
+        "isEnabled": {
+          "type": "boolean"
+        },
+        "signOutAfterInSeconds": {
+          "type": "number"
+        },
+        "warnAfterInSeconds": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "imageTaggingOption": {
+      "type": "string"
+    },
+    "isCommentingOnSitePagesEnabled": {
+      "type": "boolean"
+    },
+    "isFileActivityNotificationEnabled": {
+      "type": "boolean"
+    },
+    "isLegacyAuthProtocolsEnabled": {
+      "type": "boolean"
+    },
+    "isLoopEnabled": {
+      "type": "boolean"
+    },
+    "isMacSyncAppEnabled": {
+      "type": "boolean"
+    },
+    "isResharingByExternalUsersEnabled": {
+      "type": "boolean"
+    },
+    "isSharePointMobileNotificationEnabled": {
+      "type": "boolean"
+    },
+    "isSharePointNewsfeedEnabled": {
+      "type": "boolean"
+    },
+    "isSiteCreationEnabled": {
+      "type": "boolean"
+    },
+    "isSiteCreationUIEnabled": {
+      "type": "boolean"
+    },
+    "isSitePagesCreationEnabled": {
+      "type": "boolean"
+    },
+    "isSitesStorageLimitAutomatic": {
+      "type": "boolean"
+    },
+    "isSyncButtonHiddenOnPersonalSite": {
+      "type": "boolean"
+    },
+    "isUnmanagedSyncAppForTenantRestricted": {
+      "type": "boolean"
+    },
+    "personalSiteDefaultStorageLimitInMB": {
+      "type": "number"
+    },
+    "sharingAllowedDomainList": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "sharingBlockedDomainList": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "sharingCapability": {
+      "type": "string"
+    },
+    "sharingDomainRestrictionMode": {
+      "type": "string"
+    },
+    "siteCreationDefaultManagedPath": {
+      "type": "string"
+    },
+    "siteCreationDefaultStorageLimitInMB": {
+      "type": "number"
+    },
+    "tenantDefaultTimezone": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

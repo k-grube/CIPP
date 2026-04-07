@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListDomainHealth.ReadDmarcPolicy",
+  "description": "Shape schema for /api/ListDomainHealth (ReadDmarcPolicy)",
+  "type": "object",
+  "properties": {
+    "Domain": {
+      "type": "string"
+    },
+    "Record": {
+      "type": "string"
+    },
+    "Version": {
+      "type": "string"
+    },
+    "Policy": {
+      "type": "string"
+    },
+    "SubdomainPolicy": {
+      "type": "string"
+    },
+    "Percent": {
+      "type": "number"
+    },
+    "DkimAlignment": {
+      "type": "string"
+    },
+    "SpfAlignment": {
+      "type": "string"
+    },
+    "ReportFormat": {
+      "type": "string"
+    },
+    "ReportInterval": {
+      "type": "number"
+    },
+    "ReportingEmails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ForensicEmails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "FailureReport": {
+      "type": "string"
+    },
+    "ValidationPasses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ValidationWarns": {
+      "type": "array",
+      "items": {}
+    },
+    "ValidationFails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:09.011Z",
+  "_endpoint": "ListDomainHealth",
+  "_case": "ReadDmarcPolicy",
+  "_tenantFilter": null,
+  "_requiresTenant": false,
+  "_sampledRows": 1
+}

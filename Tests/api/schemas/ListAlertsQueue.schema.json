@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListAlertsQueue",
+  "description": "Shape schema for /api/ListAlertsQueue",
+  "_metadata": {
+    "endpoint": "ListAlertsQueue",
+    "generatedAt": "2026-04-05T12:15:06.068Z",
+    "tenantFilter": "7ngn50.onmicrosoft.com",
+    "requiresTenant": true,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListAlertsQueue.json"
+  },
+  "type": "object",
+  "properties": {
+    "Actions": {
+      "type": "string"
+    },
+    "AlertComment": {
+      "type": "string"
+    },
+    "Conditions": {
+      "type": "string"
+    },
+    "EventType": {
+      "type": "string"
+    },
+    "excludedTenants": {
+      "type": "object",
+      "properties": {
+        "addedFields": {
+          "type": "object",
+          "properties": {
+            "customerId": {},
+            "defaultDomainName": {},
+            "displayName": {}
+          },
+          "additionalProperties": true
+        },
+        "label": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "LogType": {
+      "type": "string"
+    },
+    "PartitionKey": {
+      "type": "string"
+    },
+    "RawAlert": {
+      "type": "object",
+      "properties": {
+        "Actions": {
+          "type": "object",
+          "properties": {
+            "label": {},
+            "value": {}
+          },
+          "additionalProperties": true
+        },
+        "AlertComment": {
+          "type": "string"
+        },
+        "Conditions": {
+          "type": "array",
+          "items": {}
+        },
+        "PartitionKey": {
+          "type": "string"
+        },
+        "RowKey": {
+          "type": "string"
+        },
+        "Tenants": {
+          "type": "object",
+          "properties": {
+            "addedFields": {},
+            "label": {},
+            "type": {},
+            "value": {}
+          },
+          "additionalProperties": true
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "RepeatsEvery": {
+      "type": "string"
+    },
+    "RowKey": {
+      "type": "string"
+    },
+    "Tenants": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListServiceHealth",
+  "description": "Shape schema for /api/ListServiceHealth",
+  "type": "object",
+  "properties": {
+    "TenantName": {
+      "type": "null"
+    },
+    "DefaultDomainName": {
+      "type": "null"
+    },
+    "issueId": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:11:37.102Z",
+  "_endpoint": "ListServiceHealth",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 9
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListPerUserMFA",
+  "description": "Shape schema for /api/ListPerUserMFA",
+  "type": "object",
+  "properties": {
+    "PerUserMFAState": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "UserPrincipalName": {
+      "type": "null"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:11:27.506Z",
+  "_endpoint": "ListPerUserMFA",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 1
+}

@@ -19,10 +19,11 @@ const config = {
         ...config.resolve,
         alias: {
           ...config.resolve?.alias,
-          'next/router': path.resolve(dirname, 'mocks/next-router.js'),
-          'next/navigation': path.resolve(dirname, 'mocks/next-navigation.js'),
-          'next/head': path.resolve(dirname, 'mocks/next-head.js'),
-          'next/image': path.resolve(dirname, 'mocks/next-image.js'),
+          'next/router': path.resolve(dirname, '../src/stories/mocks/next-router.js'),
+          'next/navigation': path.resolve(dirname, '../src/stories/mocks/next-navigation.js'),
+          'next/head': path.resolve(dirname, '../src/stories/mocks/next-head.js'),
+          'next/image': path.resolve(dirname, '../src/stories/mocks/next-image.js'),
+          'next/link': path.resolve(dirname, '../src/stories/mocks/next-link.js'),
         },
       },
       define: {

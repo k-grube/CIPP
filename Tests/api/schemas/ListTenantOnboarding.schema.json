@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListTenantOnboarding",
+  "description": "Shape schema for /api/ListTenantOnboarding",
+  "_metadata": {
+    "endpoint": "ListTenantOnboarding",
+    "generatedAt": "2026-04-05T12:15:06.115Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListTenantOnboarding.json"
+  },
+  "type": "object",
+  "properties": {
+    "CustomerId": {
+      "type": "string"
+    },
+    "ETag": {
+      "type": "string"
+    },
+    "Exception": {
+      "type": "string"
+    },
+    "Logs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Date": {},
+          "Log": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "OnboardingSteps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Message": {},
+          "Status": {},
+          "Title": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "PartitionKey": {
+      "type": "string"
+    },
+    "Relationship": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string"
+        },
+        "@odata.etag": {
+          "type": "string"
+        },
+        "accessDetails": {
+          "type": "object",
+          "properties": {
+            "unifiedRoles": {}
+          },
+          "additionalProperties": true
+        },
+        "activatedDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "autoExtendDuration": {
+          "type": "string"
+        },
+        "createdDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "customer": {
+          "type": "object",
+          "properties": {
+            "displayName": {},
+            "tenantId": {}
+          },
+          "additionalProperties": true
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "string"
+        },
+        "endDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "string"
+        },
+        "lastModifiedDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "RowKey": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    },
+    "Timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}

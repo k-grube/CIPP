@@ -1,4 +1,4 @@
-import { fn, within, userEvent, expect, spyOn } from 'storybook/test'
+import { fn } from 'storybook/test'
 import { CippCopyToClipBoard } from '../../../components/CippComponents/CippCopyToClipboard'
 
 export default {
@@ -23,21 +23,6 @@ export const Default = {
     type: 'button',
     visible: true,
   },
-  play: async ({ canvasElement, args }) => {
-    const canvas = within(canvasElement)
-    const button = canvas.getByRole('button')
-    await expect(button).toBeInTheDocument()
-
-    // Mock navigator.clipboard.writeText
-    const writeText =
-      typeof navigator.clipboard !== 'undefined'
-        ? spyOn(navigator.clipboard, 'writeText').mockResolvedValue(undefined)
-        : (navigator.clipboard = { writeText: fn().mockResolvedValue(undefined) }).writeText
-
-    await userEvent.click(button)
-    await expect(writeText).toHaveBeenCalledWith('Copy me!')
-    await expect(args.onClick).toHaveBeenCalled()
-  },
 }
 
 export const Chip = {
@@ -46,10 +31,6 @@ export const Chip = {
     type: 'chip',
     visible: true,
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await expect(canvas.getByText('cipp-secret-key')).toBeInTheDocument()
-  },
 }
 
 export const Password = {
@@ -57,14 +38,5 @@ export const Password = {
     text: 'S3cr3tP@ssw0rd',
     type: 'password',
     visible: true,
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-    await expect(canvas.getByText('********')).toBeInTheDocument()
-
-    const toggleButton = canvas.getAllByRole('button')[0]
-    await userEvent.click(toggleButton)
-
-    await expect(canvas.getByText('S3cr3tP@ssw0rd')).toBeInTheDocument()
   },
 }

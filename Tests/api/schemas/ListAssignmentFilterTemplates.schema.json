@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListAssignmentFilterTemplates",
+  "description": "Shape schema for /api/ListAssignmentFilterTemplates",
+  "_metadata": {
+    "endpoint": "ListAssignmentFilterTemplates",
+    "generatedAt": "2026-04-05T12:15:06.075Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListAssignmentFilterTemplates.json"
+  },
+  "type": "object",
+  "properties": {
+    "assignmentFilterManagementType": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "rule": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

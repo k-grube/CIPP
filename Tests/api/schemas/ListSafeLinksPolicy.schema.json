@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListSafeLinksPolicy",
+  "description": "Shape schema for /api/ListSafeLinksPolicy",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+    "AdminDisplayName": {
+      "type": "string"
+    },
+    "EnableSafeLinksForEmail": {
+      "type": "boolean"
+    },
+    "EnableSafeLinksForTeams": {
+      "type": "boolean"
+    },
+    "EnableSafeLinksForOffice": {
+      "type": "boolean"
+    },
+    "TrackClicks": {
+      "type": "boolean"
+    },
+    "AllowClickThrough": {
+      "type": "boolean"
+    },
+    "ScanUrls": {
+      "type": "boolean"
+    },
+    "EnableForInternalSenders": {
+      "type": "boolean"
+    },
+    "DeliverMessageAfterScan": {
+      "type": "boolean"
+    },
+    "DisableUrlRewrite": {
+      "type": "boolean"
+    },
+    "DoNotRewriteUrls": {
+      "type": "array",
+      "items": {}
+    },
+    "CustomNotificationText": {
+      "type": "string"
+    },
+    "EnableOrganizationBranding": {
+      "type": "boolean"
+    },
+    "PolicyName": {
+      "type": "string"
+    },
+    "RuleName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Priority": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SentTo": {
+      "type": "null"
+    },
+    "SentToMemberOf": {
+      "type": "null"
+    },
+    "RecipientDomainIs": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "ExceptIfSentTo": {
+      "type": "null"
+    },
+    "ExceptIfSentToMemberOf": {
+      "type": "null"
+    },
+    "ExceptIfRecipientDomainIs": {
+      "type": "null"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "IsBuiltIn": {
+      "type": "boolean"
+    },
+    "IsValid": {
+      "type": "boolean"
+    },
+    "ConfigurationStatus": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:11:34.704Z",
+  "_endpoint": "ListSafeLinksPolicy",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 2
+}

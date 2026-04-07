@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListAssignmentFilters",
+  "description": "Shape schema for /api/ListAssignmentFilters",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "createdDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lastModifiedDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "rule": {
+      "type": "string"
+    },
+    "roleScopeTags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assignmentFilterManagementType": {
+      "type": "string"
+    },
+    "payloads": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:41.798Z",
+  "_endpoint": "ListAssignmentFilters",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 2
+}

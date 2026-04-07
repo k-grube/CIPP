@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListMailboxes",
+  "description": "Shape schema for /api/ListMailboxes",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string"
+    },
+    "ExchangeGuid": {
+      "type": "string"
+    },
+    "ArchiveGuid": {
+      "type": "string"
+    },
+    "WhenSoftDeleted": {
+      "type": "null"
+    },
+    "UPN": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "primarySmtpAddress": {
+      "type": "string"
+    },
+    "recipientType": {
+      "type": "string"
+    },
+    "recipientTypeDetails": {
+      "type": "string"
+    },
+    "AdditionalEmailAddresses": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "ForwardingSmtpAddress": {
+      "type": "string"
+    },
+    "InternalForwardingAddress": {
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    "DeliverToMailboxAndForward": {
+      "type": "boolean"
+    },
+    "HiddenFromAddressListsEnabled": {
+      "type": "boolean"
+    },
+    "ExternalDirectoryObjectId": {
+      "type": "string"
+    },
+    "IsDirSynced": {
+      "type": "boolean"
+    },
+    "MessageCopyForSendOnBehalfEnabled": {
+      "type": "boolean"
+    },
+    "MessageCopyForSentAsEnabled": {
+      "type": "boolean"
+    },
+    "LitigationHoldEnabled": {
+      "type": "boolean"
+    },
+    "LitigationHoldDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "LitigationHoldDuration": {
+      "type": "string"
+    },
+    "LicensedForLitigationHold": {
+      "type": "boolean"
+    },
+    "ComplianceTagHoldApplied": {
+      "type": "boolean"
+    },
+    "RetentionHoldEnabled": {
+      "type": "boolean"
+    },
+    "InPlaceHolds": {
+      "type": "array",
+      "items": {}
+    },
+    "RetentionPolicy": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:11:09.948Z",
+  "_endpoint": "ListMailboxes",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 50
+}

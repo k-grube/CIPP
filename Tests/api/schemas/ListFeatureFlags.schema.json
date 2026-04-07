@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListFeatureFlags",
+  "description": "Shape schema for /api/ListFeatureFlags",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "AllowUserToggle": {
+      "type": "boolean"
+    },
+    "Timers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Endpoints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Pages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Enabled": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:11.840Z",
+  "_endpoint": "ListFeatureFlags",
+  "_case": null,
+  "_tenantFilter": null,
+  "_requiresTenant": false,
+  "_sampledRows": 1
+}

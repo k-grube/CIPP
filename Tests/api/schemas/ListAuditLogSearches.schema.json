@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListAuditLogSearches",
+  "description": "Shape schema for /api/ListAuditLogSearches",
+  "_metadata": {
+    "endpoint": "ListAuditLogSearches",
+    "generatedAt": "2026-04-05T12:15:06.075Z",
+    "tenantFilter": "7ngn50.onmicrosoft.com",
+    "requiresTenant": true,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListAuditLogSearches.json"
+  },
+  "type": "object",
+  "properties": {
+    "CippStatus": {
+      "type": "string"
+    },
+    "EndTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "MatchedLogs": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "MatchedRules": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "Query": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string"
+        },
+        "administrativeUnitIdFilters": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "filterEndDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "filterStartDateTime": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "id": {
+          "type": "string"
+        },
+        "ipAddressFilters": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "keywordFilter": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "objectIdFilters": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "operationFilters": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "recordTypeFilters": {
+          "type": "array",
+          "items": {}
+        },
+        "serviceFilters": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "userPrincipalNameFilters": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "SearchId": {
+      "type": "string"
+    },
+    "StartTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "TotalLogs": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

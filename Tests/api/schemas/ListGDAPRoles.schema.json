@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListGDAPRoles",
+  "description": "Shape schema for /api/ListGDAPRoles",
+  "_metadata": {
+    "endpoint": "ListGDAPRoles",
+    "generatedAt": "2026-04-05T12:15:06.091Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListGDAPRoles.json"
+  },
+  "type": "object",
+  "properties": {
+    "GroupId": {
+      "type": "string"
+    },
+    "GroupName": {
+      "type": "string"
+    },
+    "roleDefinitionId": {
+      "type": "string"
+    },
+    "RoleName": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

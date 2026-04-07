@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListTestReports",
+  "description": "Shape schema for /api/ListTestReports",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:12.752Z",
+  "_endpoint": "ListTestReports",
+  "_case": null,
+  "_tenantFilter": null,
+  "_requiresTenant": false,
+  "_sampledRows": 6
+}

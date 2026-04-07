@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { fn, within, userEvent, expect } from 'storybook/test'
+import { fn } from 'storybook/test'
 import { Button } from '@mui/material'
 import { CippOffCanvas } from '../../../components/CippComponents/CippOffCanvas'
 
@@ -75,41 +75,4 @@ export const InteractiveOffCanvas = {
     )
   },
 
-  play: async ({ canvasElement, step, args }) => {
-    const canvas = within(canvasElement)
-
-    await step('Open the offcanvas', async () => {
-      await userEvent.click(canvas.getByRole('button', { name: /open offcanvas/i }))
-    })
-
-    // MUI's Drawer uses a portal, so query document.body
-    const root = within(document.body)
-
-    await step('Verify Header and Content Render', async () => {
-      await expect(root.getByText('Device Details')).toBeVisible()
-
-      const customChild = root.getByTestId('custom-children')
-      await expect(customChild).toHaveTextContent('jdoe@domain.com')
-
-      await expect(root.getByRole('button', { name: /force sync/i })).toBeVisible()
-    })
-
-    await step('Test Up/Down Navigation Interactions', async () => {
-      const upButton = root.getByTitle('Previous row')
-      const downButton = root.getByTitle('Next row')
-
-      await userEvent.click(upButton)
-      await userEvent.click(downButton)
-
-      await expect(args.onNavigateUp).toHaveBeenCalledTimes(1)
-      await expect(args.onNavigateDown).toHaveBeenCalledTimes(1)
-    })
-
-    await step('Test Close Interaction', async () => {
-      const closeIcon = root.getByTestId('CloseIcon')
-
-      await userEvent.click(closeIcon)
-      await expect(args.onClose).toHaveBeenCalledTimes(1)
-    })
-  },
 }

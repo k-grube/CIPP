@@ -1,0 +1,107 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListDomainAnalyser",
+  "description": "Shape schema for /api/ListDomainAnalyser",
+  "_metadata": {
+    "endpoint": "ListDomainAnalyser",
+    "generatedAt": "2026-04-05T12:15:06.086Z",
+    "tenantFilter": "7ngn50.onmicrosoft.com",
+    "requiresTenant": true,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListDomainAnalyser.json"
+  },
+  "type": "object",
+  "properties": {
+    "ActualMXRecords": {
+      "type": "object",
+      "properties": {
+        "Hostname": {
+          "type": "string"
+        },
+        "Priority": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ActualSPFRecord": {
+      "type": "string"
+    },
+    "DKIMEnabled": {
+      "type": "boolean"
+    },
+    "DKIMRecords": {
+      "type": "string"
+    },
+    "DMARCActionPolicy": {
+      "type": "string"
+    },
+    "DMARCFullPolicy": {
+      "type": "string"
+    },
+    "DMARCPercentagePass": {
+      "type": "string"
+    },
+    "DMARCPresent": {
+      "type": "boolean"
+    },
+    "DMARCReportingActive": {
+      "type": "string"
+    },
+    "DNSSECPresent": {
+      "type": "boolean"
+    },
+    "Domain": {
+      "type": "string"
+    },
+    "ExpectedSPFRecord": {
+      "type": "string"
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "LastRefresh": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "MailProvider": {
+      "type": "string"
+    },
+    "MaximumScore": {
+      "type": "number"
+    },
+    "MSCNAMEDKIMSelectors": {
+      "type": "string"
+    },
+    "MXPassTest": {
+      "type": "boolean"
+    },
+    "NSRecords": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "Score": {
+      "type": "number"
+    },
+    "ScoreExplanation": {
+      "type": "string"
+    },
+    "ScorePercentage": {
+      "type": "number"
+    },
+    "SPFPassAll": {
+      "type": "boolean"
+    },
+    "Tenant": {
+      "type": "string"
+    },
+    "TenantID": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

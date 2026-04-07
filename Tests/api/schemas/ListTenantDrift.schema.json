@@ -1,0 +1,225 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListTenantDrift",
+  "description": "Shape schema for /api/ListTenantDrift",
+  "_metadata": {
+    "endpoint": "ListTenantDrift",
+    "generatedAt": "2026-04-05T12:15:06.114Z",
+    "tenantFilter": "7ngn50.onmicrosoft.com",
+    "requiresTenant": true,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListTenantDrift.json"
+  },
+  "type": "object",
+  "properties": {
+    "acceptedDeviations": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "acceptedDeviationsCount": {
+      "type": "number"
+    },
+    "alignedCount": {
+      "type": "number"
+    },
+    "alignmentScore": {
+      "type": "number"
+    },
+    "allDeviations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "CurrentValue": {},
+          "ExpectedValue": {},
+          "lastChangedByUser": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "LicenseAvailable": {},
+          "Reason": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "receivedValue": {},
+          "standardDescription": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "standardDisplayName": {},
+          "standardName": {},
+          "state": {},
+          "Status": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "currentDeviations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "CurrentValue": {},
+          "ExpectedValue": {},
+          "lastChangedByUser": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "LicenseAvailable": {},
+          "Reason": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "receivedValue": {},
+          "standardDescription": {
+            "type": [
+              "string",
+              "number",
+              "boolean",
+              "null"
+            ]
+          },
+          "standardDisplayName": {},
+          "standardName": {},
+          "state": {},
+          "Status": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "currentDeviationsCount": {
+      "type": "number"
+    },
+    "customerSpecificDeviations": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "customerSpecificDeviationsCount": {
+      "type": "number"
+    },
+    "deniedDeviations": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "deniedDeviationsCount": {
+      "type": "number"
+    },
+    "driftSettings": {
+      "type": "object",
+      "properties": {
+        "AlignmentScore": {
+          "type": "number"
+        },
+        "CombinedScore": {
+          "type": "number"
+        },
+        "ComparisonDetails": {
+          "type": "array",
+          "items": {}
+        },
+        "CompliantStandards": {
+          "type": "number"
+        },
+        "driftAlertDisableEmail": {
+          "type": "boolean"
+        },
+        "driftAlertEmail": {
+          "type": "string"
+        },
+        "driftAlertWebhook": {
+          "type": "string"
+        },
+        "LatestDataCollection": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "LicenseMissingPercentage": {
+          "type": "number"
+        },
+        "LicenseMissingStandards": {
+          "type": "number"
+        },
+        "NonCompliantStandards": {
+          "type": "number"
+        },
+        "ReportingDisabledCount": {
+          "type": "number"
+        },
+        "StandardId": {
+          "type": "string"
+        },
+        "StandardName": {
+          "type": "string"
+        },
+        "standardSettings": {
+          "type": "object",
+          "properties": {
+            "AuditLog": {},
+            "ConditionalAccessTemplate": {},
+            "IntuneTemplate": {}
+          },
+          "additionalProperties": true
+        },
+        "standardType": {
+          "type": "string"
+        },
+        "TenantFilter": {
+          "type": "string"
+        },
+        "TotalStandards": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "latestDataCollection": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "newDeviationsCount": {
+      "type": "number"
+    },
+    "standardId": {
+      "type": "string"
+    },
+    "standardName": {
+      "type": "string"
+    },
+    "tenantFilter": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

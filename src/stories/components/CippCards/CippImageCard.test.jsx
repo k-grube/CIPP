@@ -1,18 +1,7 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
-import { ThemeProvider } from '@mui/material/styles'
-import { createTheme } from '../../../theme'
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from '../../test-utils'
 import { CippImageCard } from '../../../components/CippCards/CippImageCard'
-
-const theme = createTheme({
-  colorPreset: 'orange',
-  direction: 'ltr',
-  paletteMode: 'light',
-  contrast: 'high',
-})
-
-const renderWithTheme = (ui) =>
-  render(<ThemeProvider theme={theme}>{ui}</ThemeProvider>)
 
 describe('CippImageCard', () => {
   it('renders title, text, and link', () => {

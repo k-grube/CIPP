@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListCustomRole",
+  "description": "Shape schema for /api/ListCustomRole",
+  "type": "object",
+  "properties": {
+    "RoleName": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "string"
+    },
+    "Permissions": {
+      "type": "string"
+    },
+    "AllowedTenants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "BlockedTenants": {
+      "type": "array",
+      "items": {}
+    },
+    "EntraGroup": {
+      "type": "null"
+    },
+    "EntraGroupId": {
+      "type": "null"
+    },
+    "IPRange": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:08.072Z",
+  "_endpoint": "ListCustomRole",
+  "_case": null,
+  "_tenantFilter": null,
+  "_requiresTenant": false,
+  "_sampledRows": 4
+}

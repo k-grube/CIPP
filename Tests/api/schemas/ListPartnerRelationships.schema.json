@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListPartnerRelationships",
+  "description": "Shape schema for /api/ListPartnerRelationships",
+  "type": "object",
+  "properties": {
+    "TenantInfo": {
+      "type": "object",
+      "properties": {
+        "@odata.context": {
+          "type": "string"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "federationBrandName": {
+          "type": "null"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "defaultDomainName": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "tenantId": {
+      "type": "string"
+    },
+    "deletedDateTime": {
+      "type": "null"
+    },
+    "isServiceProvider": {
+      "type": "boolean"
+    },
+    "isInMultiTenantOrganization": {
+      "type": "boolean"
+    },
+    "blockServiceProviderOutboundAccess": {
+      "type": "null"
+    },
+    "serviceProviderType": {
+      "type": "string"
+    },
+    "inboundTrust": {
+      "type": "null"
+    },
+    "b2bCollaborationOutbound": {
+      "type": "null"
+    },
+    "b2bCollaborationInbound": {
+      "type": "null"
+    },
+    "b2bDirectConnectOutbound": {
+      "type": "null"
+    },
+    "b2bDirectConnectInbound": {
+      "type": "null"
+    },
+    "tenantRestrictions": {
+      "type": "null"
+    },
+    "invitationRedemptionIdentityProviderConfiguration": {
+      "type": "null"
+    },
+    "m365CollaborationInbound": {
+      "type": "null"
+    },
+    "m365CollaborationOutbound": {
+      "type": "null"
+    },
+    "appServiceConnectInbound": {
+      "type": "null"
+    },
+    "crossCloudMeetingConfiguration": {
+      "type": "object",
+      "properties": {
+        "inboundAllowed": {
+          "type": "null"
+        },
+        "outboundAllowed": {
+          "type": "null"
+        }
+      },
+      "additionalProperties": true
+    },
+    "automaticUserConsentSettings": {
+      "type": "object",
+      "properties": {
+        "inboundAllowed": {
+          "type": "null"
+        },
+        "outboundAllowed": {
+          "type": "null"
+        }
+      },
+      "additionalProperties": true
+    },
+    "protectedContentSharing": {
+      "type": "object",
+      "properties": {
+        "inboundAllowed": {
+          "type": "null"
+        },
+        "outboundAllowed": {
+          "type": "null"
+        }
+      },
+      "additionalProperties": true
+    },
+    "Tenant": {
+      "type": "string"
+    },
+    "CippStatus": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:11:17.987Z",
+  "_endpoint": "ListPartnerRelationships",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 1
+}

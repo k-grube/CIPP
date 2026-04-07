@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListCustomDataMappings",
+  "description": "Shape schema for /api/ListCustomDataMappings",
+  "_metadata": {
+    "endpoint": "ListCustomDataMappings",
+    "generatedAt": "2026-04-05T12:15:06.083Z",
+    "tenantFilter": "7ngn50.onmicrosoft.com",
+    "requiresTenant": true,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListCustomDataMappings.json"
+  },
+  "type": "object",
+  "properties": {
+    "customDataAttribute": {
+      "type": "object",
+      "properties": {
+        "addedFields": {
+          "type": "object",
+          "properties": {
+            "dataType": {},
+            "isMultiValued": {},
+            "targetObject": {},
+            "type": {}
+          },
+          "additionalProperties": true
+        },
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "dataset": {
+      "type": "string"
+    },
+    "directoryObject": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "manualEntryFieldLabel": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "sourceType": {
+      "type": "string"
+    },
+    "syncProperty": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tenant": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

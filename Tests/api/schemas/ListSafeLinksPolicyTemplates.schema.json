@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListSafeLinksPolicyTemplates",
+  "description": "Shape schema for /api/ListSafeLinksPolicyTemplates",
+  "_metadata": {
+    "endpoint": "ListSafeLinksPolicyTemplates",
+    "generatedAt": "2026-04-05T12:15:06.106Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListSafeLinksPolicyTemplates.json"
+  },
+  "type": "object",
+  "properties": {
+    "AdminDisplayName": {
+      "type": "string"
+    },
+    "AllowClickThrough": {
+      "type": "boolean"
+    },
+    "DeliverMessageAfterScan": {
+      "type": "boolean"
+    },
+    "DisableUrlRewrite": {
+      "type": "boolean"
+    },
+    "DoNotRewriteUrls": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "EnableForInternalSenders": {
+      "type": "boolean"
+    },
+    "EnableOrganizationBranding": {
+      "type": "boolean"
+    },
+    "EnableSafeLinksForEmail": {
+      "type": "boolean"
+    },
+    "EnableSafeLinksForOffice": {
+      "type": "boolean"
+    },
+    "EnableSafeLinksForTeams": {
+      "type": "boolean"
+    },
+    "ExceptIfRecipientDomainIs": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "ExceptIfSentToMemberOf": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "PolicyName": {
+      "type": "string"
+    },
+    "RecipientDomainIs": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "RuleName": {
+      "type": "string"
+    },
+    "ScanUrls": {
+      "type": "boolean"
+    },
+    "SentToMemberOf": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "State": {
+      "type": "boolean"
+    },
+    "TemplateDescription": {
+      "type": "string"
+    },
+    "TemplateName": {
+      "type": "string"
+    },
+    "TrackClicks": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true
+}

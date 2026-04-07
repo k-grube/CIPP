@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListPotentialApps",
+  "description": "Shape schema for /api/ListPotentialApps",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:11:27.541Z",
+  "_endpoint": "ListPotentialApps",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 1
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListTenantAllowBlockListTemplates",
+  "description": "Shape schema for /api/ListTenantAllowBlockListTemplates",
+  "_metadata": {
+    "endpoint": "ListTenantAllowBlockListTemplates",
+    "generatedAt": "2026-04-05T12:15:06.113Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListTenantAllowBlockListTemplates.json"
+  },
+  "type": "object",
+  "properties": {
+    "entries": {
+      "type": "string"
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "listMethod": {
+      "type": "string"
+    },
+    "listType": {
+      "type": "string"
+    },
+    "NoExpiration": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "RemoveAfter": {
+      "type": "boolean"
+    },
+    "templateName": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

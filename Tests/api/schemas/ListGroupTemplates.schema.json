@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListGroupTemplates",
+  "description": "Shape schema for /api/ListGroupTemplates",
+  "_metadata": {
+    "endpoint": "ListGroupTemplates",
+    "generatedAt": "2026-04-05T12:15:06.093Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListGroupTemplates.json"
+  },
+  "type": "object",
+  "properties": {
+    "allowExternal": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "groupType": {
+      "type": "string"
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "isSynced": {
+      "type": "boolean"
+    },
+    "membershipRules": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "source": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

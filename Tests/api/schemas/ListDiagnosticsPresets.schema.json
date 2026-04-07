@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListDiagnosticsPresets",
+  "description": "Shape schema for /api/ListDiagnosticsPresets",
+  "_metadata": {
+    "endpoint": "ListDiagnosticsPresets",
+    "generatedAt": "2026-04-05T12:15:06.085Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListDiagnosticsPresets.json"
+  },
+  "type": "object",
+  "properties": {
+    "GUID": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "query": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListRoles",
+  "description": "Shape schema for /api/ListRoles",
+  "type": "object",
+  "properties": {
+    "Id": {
+      "type": "string"
+    },
+    "roleTemplateId": {
+      "type": "string"
+    },
+    "DisplayName": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Members": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string"
+          },
+          "userPrincipalName": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "SID": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:11:32.049Z",
+  "_endpoint": "ListRoles",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 19
+}

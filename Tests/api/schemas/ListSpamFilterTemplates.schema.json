@@ -1,0 +1,212 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListSpamFilterTemplates",
+  "description": "Shape schema for /api/ListSpamFilterTemplates",
+  "_metadata": {
+    "endpoint": "ListSpamFilterTemplates",
+    "generatedAt": "2026-04-05T12:15:06.110Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListSpamFilterTemplates.json"
+  },
+  "type": "object",
+  "properties": {
+    "AddXHeaderValue": {
+      "type": "string"
+    },
+    "AdminDisplayName": {
+      "type": "string"
+    },
+    "AllowedSenderDomains": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "AllowedSenders": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "BlockedSenderDomains": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "BlockedSenders": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "BulkQuarantineTag": {
+      "type": "string"
+    },
+    "BulkSpamAction": {
+      "type": "string"
+    },
+    "BulkThreshold": {
+      "type": "number"
+    },
+    "comments": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "DownloadLink": {
+      "type": "boolean"
+    },
+    "EnableLanguageBlockList": {
+      "type": "boolean"
+    },
+    "EnableRegionBlockList": {
+      "type": "boolean"
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "HighConfidencePhishAction": {
+      "type": "string"
+    },
+    "HighConfidencePhishQuarantineTag": {
+      "type": "string"
+    },
+    "HighConfidenceSpamAction": {
+      "type": "string"
+    },
+    "HighConfidenceSpamQuarantineTag": {
+      "type": "string"
+    },
+    "IncreaseScoreWithBizOrInfoUrls": {
+      "type": "string"
+    },
+    "IncreaseScoreWithImageLinks": {
+      "type": "string"
+    },
+    "IncreaseScoreWithNumericIps": {
+      "type": "string"
+    },
+    "IncreaseScoreWithRedirectToOtherPort": {
+      "type": "string"
+    },
+    "InlineSafetyTipsEnabled": {
+      "type": "boolean"
+    },
+    "LanguageBlockList": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "MarkAsSpamBulkMail": {
+      "type": "string"
+    },
+    "MarkAsSpamEmbedTagsInHtml": {
+      "type": "string"
+    },
+    "MarkAsSpamEmptyMessages": {
+      "type": "string"
+    },
+    "MarkAsSpamFormTagsInHtml": {
+      "type": "string"
+    },
+    "MarkAsSpamFramesInHtml": {
+      "type": "string"
+    },
+    "MarkAsSpamFromAddressAuthFail": {
+      "type": "string"
+    },
+    "MarkAsSpamJavaScriptInHtml": {
+      "type": "string"
+    },
+    "MarkAsSpamNdrBackscatter": {
+      "type": "string"
+    },
+    "MarkAsSpamObjectTagsInHtml": {
+      "type": "string"
+    },
+    "MarkAsSpamSensitiveWordList": {
+      "type": "string"
+    },
+    "MarkAsSpamSpfRecordHardFail": {
+      "type": "string"
+    },
+    "MarkAsSpamWebBugsInHtml": {
+      "type": "string"
+    },
+    "ModifySubjectValue": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "PhishQuarantineTag": {
+      "type": "string"
+    },
+    "PhishSpamAction": {
+      "type": "string"
+    },
+    "PhishZapEnabled": {
+      "type": "boolean"
+    },
+    "QuarantineRetentionPeriod": {
+      "type": "number"
+    },
+    "RecommendedPolicyType": {
+      "type": "string"
+    },
+    "RedirectToRecipients": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "RegionBlockList": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "SpamAction": {
+      "type": "string"
+    },
+    "SpamQuarantineTag": {
+      "type": "string"
+    },
+    "SpamZapEnabled": {
+      "type": "boolean"
+    },
+    "TestModeAction": {
+      "type": "string"
+    },
+    "TestModeBccToRecipients": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

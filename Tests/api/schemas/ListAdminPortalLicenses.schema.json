@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListAdminPortalLicenses",
+  "description": "Shape schema for /api/ListAdminPortalLicenses",
+  "type": "object",
+  "properties": {
+    "aadSkuId": {
+      "type": "string"
+    },
+    "aadSkuPartNumber": {
+      "type": "string"
+    },
+    "allotments": {
+      "type": "array",
+      "items": {}
+    },
+    "allotmentsMetadata": {
+      "type": "object",
+      "properties": {
+        "consumedUnits": {
+          "type": "number"
+        },
+        "allotmentsCount": {
+          "type": "number"
+        },
+        "licenseCount": {
+          "type": "number"
+        },
+        "catalogIdsCount": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "appliesTo": {
+      "type": "string"
+    },
+    "capabilityStatus": {
+      "type": "string"
+    },
+    "consumedUnits": {
+      "type": "number"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "prepaidUnits": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "number"
+        },
+        "suspended": {
+          "type": "number"
+        },
+        "warning": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": true
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string"
+          },
+          "serviceId": {
+            "type": "string"
+          },
+          "serviceName": {
+            "type": "string"
+          },
+          "provisioningStatus": {
+            "type": "string"
+          },
+          "appliesTo": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true,
+  "_generatedAt": "2026-04-06T04:08:21.861Z",
+  "_endpoint": "ListAdminPortalLicenses",
+  "_case": null,
+  "_tenantFilter": "7ngn50.onmicrosoft.com",
+  "_requiresTenant": true,
+  "_sampledRows": 3
+}

@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "ListAppApprovalTemplates",
+  "description": "Shape schema for /api/ListAppApprovalTemplates",
+  "_metadata": {
+    "endpoint": "ListAppApprovalTemplates",
+    "generatedAt": "2026-04-05T12:15:06.070Z",
+    "tenantFilter": null,
+    "requiresTenant": false,
+    "sampledRows": 1,
+    "convertedFrom": "Tests/Shapes/ListAppApprovalTemplates.json"
+  },
+  "type": "object",
+  "properties": {
+    "AppId": {
+      "type": "string"
+    },
+    "AppName": {
+      "type": "string"
+    },
+    "AppType": {
+      "type": "string"
+    },
+    "CreatedBy": {
+      "type": "string"
+    },
+    "CreatedOn": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "GUID": {
+      "type": "string"
+    },
+    "Permissions": {
+      "type": "object",
+      "properties": {
+        "00000002-0000-0ff1-ce00-000000000000": {
+          "type": "object",
+          "properties": {
+            "applicationPermissions": {},
+            "delegatedPermissions": {}
+          },
+          "additionalProperties": true
+        },
+        "00000003-0000-0000-c000-000000000000": {
+          "type": "object",
+          "properties": {
+            "applicationPermissions": {},
+            "delegatedPermissions": {}
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "PermissionSetId": {
+      "type": "string"
+    },
+    "PermissionSetName": {
+      "type": "string"
+    },
+    "TemplateId": {
+      "type": "string"
+    },
+    "TemplateName": {
+      "type": "string"
+    },
+    "Timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": true
+}
