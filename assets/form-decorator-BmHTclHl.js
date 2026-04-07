@@ -1,0 +1,1 @@
+import{j as o}from"./iframe-Kds-RheI.js";import{u as a}from"./CippFormCondition-Bd3-ef2F.js";const m=(s,r)=>{const e=a({defaultValues:r.args.defaultValues||{}});return o.jsx("form",{onSubmit:t=>t.preventDefault(),children:o.jsx(s,{args:{...r.args,formControl:e}})})};m.__docgenInfo={description:"",methods:[],displayName:"FormDecorator"};export{m as F};

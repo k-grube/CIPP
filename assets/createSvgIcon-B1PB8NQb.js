@@ -1,0 +1,1 @@
+import{c as r,r as t,j as m}from"./iframe-Kds-RheI.js";function c(o,i){function e(a,n){return m.jsx(r,{"data-testid":void 0,ref:n,...a,children:o})}return e.muiName=r.muiName,t.memo(t.forwardRef(e))}export{c};
