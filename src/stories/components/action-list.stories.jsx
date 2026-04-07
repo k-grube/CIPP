@@ -1,4 +1,4 @@
-import { fn } from 'storybook/test'
+import { fn, within, expect, userEvent } from 'storybook/test'
 import { ActionList } from '../../components/action-list'
 import { ActionListItem } from '../../components/action-list-item'
 import { SvgIcon } from '@mui/material'
@@ -6,62 +6,57 @@ import CheckCircleIcon from '@heroicons/react/24/outline/CheckCircleIcon'
 import DocumentDuplicateIcon from '@heroicons/react/24/outline/DocumentDuplicateIcon'
 import ReceiptRefundIcon from '@heroicons/react/24/outline/ReceiptRefundIcon'
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
-  title: 'ActionList',
+export default {
+  title: 'Components/ActionList',
   component: ActionList,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 }
 
-export default meta
-
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
-  args: {
-    children: [],
-  },
-}
-
-export const Example = {
+export const WithActions = {
   args: {
     children: [
       <ActionListItem
         key="mark-as-paid"
-        icon={
-          <SvgIcon fontSize="small">
-            <CheckCircleIcon />
-          </SvgIcon>
-        }
+        icon={<SvgIcon fontSize="small"><CheckCircleIcon /></SvgIcon>}
         label="Mark as Paid"
+        onClick={fn()}
       />,
       <ActionListItem
         key="duplicate-order"
         disabled
-        icon={
-          <SvgIcon fontSize="small">
-            <DocumentDuplicateIcon />
-          </SvgIcon>
-        }
+        icon={<SvgIcon fontSize="small"><DocumentDuplicateIcon /></SvgIcon>}
         label="Duplicate Order"
+        onClick={fn()}
       />,
       <ActionListItem
         key="request-refund"
-        icon={
-          <SvgIcon fontSize="small">
-            <ReceiptRefundIcon />
-          </SvgIcon>
-        }
+        icon={<SvgIcon fontSize="small"><ReceiptRefundIcon /></SvgIcon>}
         label="Request a Refund"
+        onClick={fn()}
       />,
     ],
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+
+    await expect(canvas.getByText('Mark as Paid')).toBeVisible()
+    await expect(canvas.getByText('Duplicate Order')).toBeVisible()
+    await expect(canvas.getByText('Request a Refund')).toBeVisible()
+
+    const buttons = canvas.getAllByRole('button')
+    await expect(buttons).toHaveLength(3)
+
+    const disabledButton = canvas.getByText('Duplicate Order').closest('[role="button"]')
+    await expect(disabledButton).toHaveAttribute('aria-disabled', 'true')
+
+    const enabledButton = canvas.getByText('Mark as Paid').closest('[role="button"]')
+    await expect(enabledButton).not.toHaveAttribute('aria-disabled', 'true')
+    await userEvent.click(enabledButton)
+  },
+}
+
+export const Empty = {
+  args: {
+    children: [],
   },
 }

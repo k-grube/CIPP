@@ -30,7 +30,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "test:browser": "vitest run --project browser",
+    "test:storybook": "vitest run --project storybook",
     "test:api": "vitest run --config vitest.api.config.mjs",
     "test:api:update": "node Tools/generate-schemas.js --live"
   },
@@ -129,6 +129,7 @@
     "@storybook/addon-a11y": "^10.3.1",
     "@storybook/addon-docs": "^10.3.1",
     "@storybook/addon-themes": "^10.3.3",
+    "@storybook/addon-vitest": "10.3.5",
     "@storybook/react-vite": "^10.3.4",
     "@svgr/webpack": "8.1.0",
     "@testing-library/dom": "^10.4.1",
@@ -152,10 +153,9 @@
     "playwright": "^1.59.1",
     "prettier": "^3.8.1",
     "prettier-eslint": "^16.4.2",
-    "storybook": "^10.3.1",
+    "storybook": "10.3.5",
     "vite": "^7.3.1",
-    "vitest": "^3.2.1",
-    "vitest-browser-react": "0.1.0"
+    "vitest": "^3.2.1"
   },
   "msw": {
     "workerDirectory": [

@@ -6,13 +6,31 @@ import { Provider } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { initialize, mswLoader } from 'msw-storybook-addon'
+import { LocalizationProvider } from '@mui/x-date-pickers'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import TimeAgo from 'javascript-time-ago'
 import en from 'javascript-time-ago/locale/en.json'
 import { createTheme } from '../src/theme'
+import { SettingsContext } from '../src/contexts/settings-context'
 import { handlers } from '../src/stories/mocks/handlers'
 
+const mockSettings = {
+  currentTenant: 'testdomain.com',
+  currentTheme: { value: 'light', label: 'light' },
+  paletteMode: 'light',
+  direction: 'ltr',
+  pinNav: true,
+  showDevtools: false,
+  handleUpdate: () => {},
+  handleReset: () => {},
+  isCustom: false,
+}
+
 TimeAgo.addDefaultLocale(en)
-initialize()
+// 'bypass' silences MSW warnings for unhandled requests (Vite module imports,
+// static assets, CDN). 'quiet' suppresses console logging for handled requests
+// to avoid flooding the dev server console with large API responses.
+initialize({ onUnhandledRequest: 'bypass', quiet: true })
 
 const darkTheme = createTheme({
   colorPreset: 'orange',
@@ -65,7 +83,11 @@ const preview = {
       return (
         <Provider store={mockStore}>
           <QueryClientProvider client={queryClient}>
-            <Story />
+            <SettingsContext.Provider value={mockSettings}>
+              <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <Story />
+              </LocalizationProvider>
+            </SettingsContext.Provider>
           </QueryClientProvider>
         </Provider>
       )

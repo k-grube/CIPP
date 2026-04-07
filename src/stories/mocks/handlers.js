@@ -14,6 +14,9 @@ export const handlers = [
   http.get('/.auth/me', () => {
     return HttpResponse.json({ clientPrincipal: null })
   }),
+  http.get('/api/ListGraphExplorerPresets', () => {
+    return HttpResponse.json({ Results: [] })
+  }),
   http.get('/api/listTenants', () => {
     return HttpResponse.json([
       {

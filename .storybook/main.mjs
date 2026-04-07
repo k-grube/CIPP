@@ -10,13 +10,21 @@ const config = {
     '@storybook/addon-a11y',
     '@storybook/addon-docs',
     '@storybook/addon-themes',
+    '@storybook/addon-vitest',
   ],
+  features: {
+    sidebarOnboardingChecklist: false,
+  },
+  disableWhatsNewNotifications: true,
   framework: '@storybook/react-vite',
   async viteFinal(config) {
     return {
       ...config,
       resolve: {
         ...config.resolve,
+        // CIPP is a Next.js app but uses @storybook/react-vite because @storybook/nextjs
+        // doesn't work with this project. These aliases replace Next.js modules with
+        // lightweight mocks so components render without a Next.js runtime.
         alias: {
           ...config.resolve?.alias,
           'next/router': path.resolve(dirname, '../src/stories/mocks/next-router.js'),
@@ -28,11 +36,15 @@ const config = {
       },
       define: {
         ...(config.define || {}),
+        // Next.js components reference process.env and global — these don't exist in a
+        // pure Vite browser context, so we shim them to avoid ReferenceErrors.
         'process.env': '{}',
         global: 'window',
       },
       esbuild: {
         ...config.esbuild,
+        // The codebase uses .js files with JSX syntax. Vite's default esbuild loader
+        // only handles JSX in .jsx files, so we override the loader for all .js files.
         jsx: 'automatic',
         jsxImportSource: 'react',
         loader: 'jsx',
@@ -44,6 +56,9 @@ const config = {
         rollupOptions: {
           ...config.build?.rollupOptions,
           onwarn(warning, warn) {
+            // Suppress "use client" directive warnings from React Server Components-aware
+            // libraries (e.g. @mui/material). These directives are harmless in Storybook
+            // since everything runs client-side, but Rollup treats them as errors.
             if (warning.code === 'MODULE_LEVEL_DIRECTIVE') return
             warn(warning)
           },
@@ -51,6 +66,8 @@ const config = {
       },
       optimizeDeps: {
         ...config.optimizeDeps,
+        // Same JSX-in-.js fix as above, but for Vite's dependency pre-bundling step
+        // (esbuild runs separately for optimizeDeps vs transform).
         esbuildOptions: {
           ...config.optimizeDeps?.esbuildOptions,
           jsx: 'automatic',

@@ -1,5 +1,5 @@
 import React from 'react'
-import { fn } from 'storybook/test'
+import { fn, within, expect, userEvent, waitFor } from 'storybook/test'
 import { CippDataTable } from '../../../components/CippTable/CippDataTable'
 import { SettingsProvider } from '../../../contexts/settings-context'
 import { Delete, Edit, Visibility, Block, CheckCircle } from '@mui/icons-material'
@@ -138,6 +138,13 @@ export const BasicUsage = {
     title: 'Basic User List',
     data: basicData,
   },
+  play: async ({ canvasElement }) => {
+    await waitFor(() => {
+      expect(canvasElement.textContent).toContain('Alice Smith')
+    }, { timeout: 5000 })
+    expect(canvasElement.textContent).toContain('bob@contoso.com')
+    expect(canvasElement.textContent).toContain('HR')
+  },
 }
 
 export const SimpleColumns = {
@@ -232,6 +239,25 @@ export const WithActions = {
       },
     ],
   },
+  play: async ({ canvasElement, args }) => {
+    const root = within(document.body)
+
+    await waitFor(() => {
+      const icons = canvasElement.querySelectorAll('[data-testid="MoreHorizIcon"]')
+      expect(icons.length).toBeGreaterThan(0)
+    }, { timeout: 5000 })
+
+    const actionButton = canvasElement.querySelectorAll('[data-testid="MoreHorizIcon"]')[0].closest('button')
+    await userEvent.click(actionButton)
+
+    await waitFor(() => {
+      expect(root.getByText('View User')).toBeVisible()
+    }, { timeout: 3000 })
+    await expect(root.getByText('Delete User')).toBeVisible()
+
+    await userEvent.click(root.getByText('View User'))
+    await expect(args.actions[0].customFunction).toHaveBeenCalledTimes(1)
+  },
 }
 
 export const WithOffCanvas = {
@@ -312,6 +338,13 @@ export const LoadingState = {
     data: [],
     isFetching: true,
     simpleColumns: ['displayName', 'mail', 'department'],
+  },
+  play: async ({ canvasElement }) => {
+    await waitFor(() => {
+      const skeletons = canvasElement.querySelectorAll('.MuiSkeleton-root')
+      expect(skeletons.length).toBeGreaterThan(0)
+    }, { timeout: 3000 })
+    expect(canvasElement.textContent).not.toContain('Alice Smith')
   },
 }
 
