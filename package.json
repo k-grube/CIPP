@@ -28,7 +28,9 @@
     "storybook-serve": "npx http-server build-storybook -p 6006",
     "storybook-deploy": "npx storybook build -o build-storybook && node .storybook/rebase-storybook.js && npx gh-pages -d build-storybook",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "test:api": "vitest run --config vitest.api.config.mjs",
+    "test:api:update": "node Tools/generate-schemas.js --live"
   },
   "dependencies": {
     "@emotion/cache": "11.14.0",
@@ -132,6 +134,9 @@
     "@testing-library/user-event": "^14.6.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
+    "dotenv": "^17.4.0",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.1",
     "eslint-config-prettier": "^10.1.8",
