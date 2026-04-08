@@ -1,5 +1,11 @@
 import { CippInfoBar } from '../../../components/CippCards/CippInfoBar'
-import { infoBarData } from '../../fixtures/property-items'
+
+const infoBarData = [
+  { name: 'Total Users', data: '1,234' },
+  { name: 'Licensed', data: '1,100' },
+  { name: 'Guests', data: '134' },
+  { name: 'Blocked', data: '12' },
+]
 
 export default {
   title: 'Components/CippCards/CippInfoBar',

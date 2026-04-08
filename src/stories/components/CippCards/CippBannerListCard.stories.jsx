@@ -1,6 +1,43 @@
 import { fn, within, expect, userEvent, waitFor } from 'storybook/test'
 import { CippBannerListCard } from '../../../components/CippCards/CippBannerListCard'
-import { bannerListItems, userPropertyItems } from '../../fixtures/property-items'
+
+const userPropertyItems = [
+  { label: 'Display Name', value: 'Alice Smith' },
+  { label: 'UPN', value: 'alice@contoso.com' },
+  { label: 'Department', value: 'Engineering' },
+  { label: 'Job Title', value: 'Senior Developer' },
+  { label: 'Location', value: 'Seattle, WA' },
+  { label: 'Account Enabled', value: 'Yes' },
+  { label: 'MFA Status', value: 'Enabled' },
+  { label: 'Last Sign-In', value: '2026-04-05T14:30:00Z' },
+]
+
+const bannerListItems = [
+  {
+    id: '1',
+    cardLabelBox: { cardLabelBoxHeader: '15', cardLabelBoxText: 'Apr' },
+    text: 'Password Expiration Policy',
+    subtext: 'Applies to all users in contoso.com',
+    statusText: 'Enabled',
+    statusColor: 'success.main',
+  },
+  {
+    id: '2',
+    cardLabelBox: { cardLabelBoxHeader: '22', cardLabelBoxText: 'Mar' },
+    text: 'Conditional Access - Require MFA',
+    subtext: 'All users, all cloud apps',
+    statusText: 'Report Only',
+    statusColor: 'warning.main',
+  },
+  {
+    id: '3',
+    cardLabelBox: 'CA',
+    text: 'Block Legacy Authentication',
+    subtext: 'Exchange ActiveSync, POP3, IMAP',
+    statusText: 'Disabled',
+    statusColor: 'error.main',
+  },
+]
 
 export default {
   title: 'Components/CippCards/CippBannerListCard',

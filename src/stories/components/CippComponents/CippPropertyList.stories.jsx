@@ -1,5 +1,13 @@
 import { CippPropertyList } from '../../../components/CippComponents/CippPropertyList'
-import { tenantPropertyItems } from '../../fixtures/property-items'
+
+const tenantPropertyItems = [
+  { label: 'Display Name', value: 'Contoso Ltd' },
+  { label: 'Default Domain', value: 'contoso.onmicrosoft.com' },
+  { label: 'Custom Domain', value: 'contoso.com' },
+  { label: 'Tenant ID', value: '72f988bf-86f1-41af-91ab-2d7cd011db47' },
+  { label: 'License Count', value: '250' },
+  { label: 'Created', value: '2021-01-15' },
+]
 
 export default {
   title: 'Components/CippComponents/CippPropertyList',

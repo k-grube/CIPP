@@ -1,5 +1,15 @@
 import { CippPropertyListCard } from '../../../components/CippCards/CippPropertyListCard'
-import { userPropertyItems } from '../../fixtures/property-items'
+
+const userPropertyItems = [
+  { label: 'Display Name', value: 'Alice Smith' },
+  { label: 'UPN', value: 'alice@contoso.com' },
+  { label: 'Department', value: 'Engineering' },
+  { label: 'Job Title', value: 'Senior Developer' },
+  { label: 'Location', value: 'Seattle, WA' },
+  { label: 'Account Enabled', value: 'Yes' },
+  { label: 'MFA Status', value: 'Enabled' },
+  { label: 'Last Sign-In', value: '2026-04-05T14:30:00Z' },
+]
 
 export default {
   title: 'Components/CippCards/CippPropertyListCard',
