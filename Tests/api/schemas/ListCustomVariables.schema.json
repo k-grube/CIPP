@@ -2,29 +2,56 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListCustomVariables",
   "description": "Shape schema for /api/ListCustomVariables",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "Category": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Description": {
-      "type": "string"
-    },
-    "Type": {
-      "type": "string"
-    },
-    "Variable": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Name": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Scope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Value": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Variable": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:09:24.356Z",
   "_endpoint": "ListCustomVariables",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 21
+  "_requiresTenant": true
 }

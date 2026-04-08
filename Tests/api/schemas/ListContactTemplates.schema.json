@@ -2,40 +2,62 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListContactTemplates",
   "description": "Shape schema for /api/ListContactTemplates",
-  "_metadata": {
-    "endpoint": "ListContactTemplates",
-    "generatedAt": "2026-04-05T12:15:06.082Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListContactTemplates.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
+    "GUID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "comments": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "displayName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "email": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "firstName": {
-      "type": "string"
-    },
-    "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "hidefromGAL": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "lastName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "name": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListContactTemplates",
+  "_case": null,
+  "_requiresTenant": false
 }

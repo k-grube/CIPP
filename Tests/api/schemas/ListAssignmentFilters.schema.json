@@ -2,50 +2,83 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAssignmentFilters",
   "description": "Shape schema for /api/ListAssignmentFilters",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "id": {
-      "type": "string"
+    "assignmentFilterManagementType": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "createdDateTime": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
-    },
-    "lastModifiedDateTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "displayName": {
-      "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "platform": {
-      "type": "string"
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "rule": {
-      "type": "string"
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "roleScopeTags": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "assignmentFilterManagementType": {
-      "type": "string"
+    "lastModifiedDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
     },
     "payloads": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
+    },
+    "platform": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "roleScopeTags": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "rule": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:41.798Z",
   "_endpoint": "ListAssignmentFilters",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 2
+  "_requiresTenant": true
 }

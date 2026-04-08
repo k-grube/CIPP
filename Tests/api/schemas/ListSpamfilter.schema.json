@@ -2,251 +2,464 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListSpamfilter",
   "description": "Shape schema for /api/ListSpamfilter",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "AdminDisplayName": {
-      "type": "string"
-    },
     "AddXHeaderValue": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "BulkMovesEnabled": {
-      "type": "string"
-    },
-    "ModifySubjectValue": {
-      "type": "string"
-    },
-    "RedirectToRecipients": {
-      "type": "array",
-      "items": {}
-    },
-    "TestModeBccToRecipients": {
-      "type": "array",
-      "items": {}
-    },
-    "FalsePositiveAdditionalRecipients": {
-      "type": "array",
-      "items": {}
-    },
-    "QuarantineRetentionPeriod": {
-      "type": "number"
-    },
-    "TestModeAction": {
-      "type": "string"
-    },
-    "IncreaseScoreWithImageLinks": {
-      "type": "string"
-    },
-    "IncreaseScoreWithNumericIps": {
-      "type": "string"
-    },
-    "IncreaseScoreWithRedirectToOtherPort": {
-      "type": "string"
-    },
-    "IncreaseScoreWithBizOrInfoUrls": {
-      "type": "string"
-    },
-    "MarkAsSpamEmptyMessages": {
-      "type": "string"
-    },
-    "MarkAsSpamJavaScriptInHtml": {
-      "type": "string"
-    },
-    "MarkAsSpamFramesInHtml": {
-      "type": "string"
-    },
-    "MarkAsSpamObjectTagsInHtml": {
-      "type": "string"
-    },
-    "MarkAsSpamEmbedTagsInHtml": {
-      "type": "string"
-    },
-    "MarkAsSpamFormTagsInHtml": {
-      "type": "string"
-    },
-    "MarkAsSpamWebBugsInHtml": {
-      "type": "string"
-    },
-    "MarkAsSpamSensitiveWordList": {
-      "type": "string"
-    },
-    "MarkAsSpamSpfRecordHardFail": {
-      "type": "string"
-    },
-    "MarkAsSpamFromAddressAuthFail": {
-      "type": "string"
-    },
-    "MarkAsSpamBulkMail": {
-      "type": "string"
-    },
-    "MarkAsSpamNdrBackscatter": {
-      "type": "string"
-    },
-    "IsDefault": {
-      "type": "boolean"
-    },
-    "LanguageBlockList": {
-      "type": "array",
-      "items": {}
-    },
-    "RegionBlockList": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "HighConfidenceSpamAction": {
-      "type": "string"
-    },
-    "SpamAction": {
-      "type": "string"
-    },
-    "DownloadLink": {
-      "type": "boolean"
-    },
-    "EnableRegionBlockList": {
-      "type": "boolean"
-    },
-    "EnableLanguageBlockList": {
-      "type": "boolean"
-    },
-    "BulkThreshold": {
-      "type": "number"
-    },
-    "AllowedSenders": {
-      "type": "array",
-      "items": {}
+    "AdminDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "AllowedSenderDomains": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
-    "BlockedSenders": {
-      "type": "array",
+    "AllowedSenders": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
     "BlockedSenderDomains": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
-    "ZapEnabled": {
-      "type": "boolean"
+    "BlockedSenders": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
     },
-    "InlineSafetyTipsEnabled": {
-      "type": "boolean"
-    },
-    "BulkSpamAction": {
-      "type": "string"
-    },
-    "PhishSpamAction": {
-      "type": "string"
-    },
-    "SpamZapEnabled": {
-      "type": "boolean"
-    },
-    "PhishZapEnabled": {
-      "type": "boolean"
-    },
-    "IntraOrgFilterState": {
-      "type": "string"
-    },
-    "HighConfidencePhishAction": {
-      "type": "string"
-    },
-    "RecommendedPolicyType": {
-      "type": "string"
-    },
-    "SpamQuarantineTag": {
-      "type": "string"
-    },
-    "HighConfidenceSpamQuarantineTag": {
-      "type": "string"
-    },
-    "PhishQuarantineTag": {
-      "type": "string"
-    },
-    "HighConfidencePhishQuarantineTag": {
-      "type": "string"
+    "BulkMovesEnabled": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "BulkQuarantineTag": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Identity": {
-      "type": "string"
+    "BulkSpamAction": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Id": {
-      "type": "string"
-    },
-    "IsValid": {
-      "type": "boolean"
-    },
-    "ExchangeVersion": {
-      "type": "string"
-    },
-    "Name": {
-      "type": "string"
+    "BulkThreshold": {
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "DistinguishedName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DownloadLink": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "EnableLanguageBlockList": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "EnableRegionBlockList": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExchangeObjectId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ExchangeVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "FalsePositiveAdditionalRecipients": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "Guid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "HighConfidencePhishAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "HighConfidencePhishQuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "HighConfidenceSpamAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "HighConfidenceSpamQuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Identity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IncreaseScoreWithBizOrInfoUrls": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IncreaseScoreWithImageLinks": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IncreaseScoreWithNumericIps": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IncreaseScoreWithRedirectToOtherPort": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "InlineSafetyTipsEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "IntraOrgFilterState": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IsDefault": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "IsValid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "LanguageBlockList": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "MarkAsSpamBulkMail": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamEmbedTagsInHtml": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamEmptyMessages": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamFormTagsInHtml": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamFramesInHtml": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamFromAddressAuthFail": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamJavaScriptInHtml": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamNdrBackscatter": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamObjectTagsInHtml": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamSensitiveWordList": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamSpfRecordHardFail": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MarkAsSpamWebBugsInHtml": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ModifySubjectValue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ObjectCategory": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ObjectClass": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
-    "WhenChanged": {
-      "type": "string",
-      "format": "date-time"
+    "OrganizationId": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "WhenCreated": {
-      "type": "string",
+    "OrganizationalUnitRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OriginatingServer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PhishQuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PhishSpamAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PhishZapEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "QuarantineRetentionPeriod": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "RecommendedPolicyType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RedirectToRecipients": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "RegionBlockList": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "SpamAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SpamQuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SpamZapEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "TestModeAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TestModeBccToRecipients": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "WhenChanged": {
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
     "WhenChangedUTC": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
     "WhenCreatedUTC": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
-    "ExchangeObjectId": {
-      "type": "string"
-    },
-    "OrganizationalUnitRoot": {
-      "type": "string"
-    },
-    "OrganizationId": {
-      "type": "string"
-    },
-    "Guid": {
-      "type": "string"
-    },
-    "OriginatingServer": {
-      "type": "string"
-    },
-    "ruleState": {
+    "ZapEnabled": {
       "type": [
-        "null",
-        "string"
+        "boolean",
+        "null"
       ]
     },
     "rulePrio": {
       "type": [
-        "null",
-        "number"
+        "number",
+        "null"
+      ]
+    },
+    "ruleState": {
+      "type": [
+        "string",
+        "null"
       ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:13:37.858Z",
   "_endpoint": "ListSpamfilter",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 2
+  "_requiresTenant": true
 }

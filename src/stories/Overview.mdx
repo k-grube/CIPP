@@ -22,26 +22,30 @@ npm run test:coverage
 
 ```
 src/stories/
-  components/           # Stories and tests, mirroring src/components/
-    CippCards/           # Card component stories
-    CippComponents/      # Shared component stories
-    CippTable/           # Table component stories
-  fixtures/              # Shared mock data for stories
-    property-items.js    # Property list, banner list, info bar data
-    form-options.js      # Select/radio/autocomplete option arrays
-  layouts/               # Layout stories
-  mocks/                 # Next.js module mocks + MSW API handlers
-    next-router.js       # Mock useRouter()
-    next-navigation.js   # Mock usePathname(), useSearchParams()
-    next-head.js         # Mock Head component
-    next-image.js        # Mock Image component
-    next-link.js         # Mock Link component
-    handlers.js          # MSW request handlers for API mocking
-    users-10k.json       # Large dataset for table stories
-  pages/                 # Page-level stories
+  components/            # Stories and tests, mirroring src/components/
+    CippCards/            # Card component stories and tests
+    CippComponents/       # Shared component stories and tests
+    CippTable/            # Table component stories and tests
+    action-list.stories.jsx
+  fixtures/               # Shared mock data for stories
+    property-items.js     # Property list, banner list, info bar data
+    form-options.js       # Select/radio/autocomplete option arrays
+  layouts/                # Layout stories and tests
+  mocks/                  # Next.js module mocks + MSW API handlers
+    next-router.js        # Mock useRouter()
+    next-navigation.js    # Mock usePathname(), useSearchParams()
+    next-head.js          # Mock Head component
+    next-image.js         # Mock Image component
+    next-link.js          # Mock Link component
+    handlers.js           # MSW request handlers for API mocking
+    users-10k.json        # Large dataset for table stories
+    fileMock.js           # Generic file import mock
+    node.js               # Node.js MSW server setup (for vitest unit tests)
+  pages/                  # Page-level stories and tests
   utils/
-    form-decorator.jsx   # Storybook decorator for react-hook-form
-  test-utils.jsx         # Shared render helpers for vitest unit tests
+    form-decorator.jsx    # Storybook decorator for react-hook-form
+  test-utils.jsx          # Shared render helpers for vitest unit tests
+  Overview.mdx            # This file
 ```
 
 ## Writing a New Story
@@ -54,8 +58,9 @@ Stories use CSF3 format. Each story file should:
 4. Follow the title convention: `Components/CippCards/ComponentName`
 
 ```jsx
+// File: src/stories/components/CippCards/MyComponent.stories.jsx
 import { fn } from 'storybook/test'
-import { MyComponent } from '../../../components/MyComponent'
+import { MyComponent } from '../../../components/CippCards/MyComponent'
 
 export default {
   title: 'Components/CippCards/MyComponent',
@@ -199,9 +204,10 @@ Unit tests live alongside stories in `src/stories/components/` with a `.test.jsx
 They run in jsdom via `npm run test`.
 
 ```jsx
+// File: src/stories/components/CippCards/MyComponent.test.jsx
 import { screen } from '@testing-library/react'
 import { renderWithTheme, renderWithProviders } from '../../test-utils'
-import { MyComponent } from '../../../components/MyComponent'
+import { MyComponent } from '../../../components/CippCards/MyComponent'
 
 describe('MyComponent', () => {
   it('renders title', () => {
@@ -218,9 +224,13 @@ describe('MyComponent', () => {
 ## Architecture Notes
 
 ### Why @storybook/react-vite instead of @storybook/nextjs?
-The Next.js framework adapter doesn't work with this project. Instead, we use
-`@storybook/react-vite` and manually mock Next.js modules (router, navigation, head, image, link)
-via Vite aliases in `.storybook/main.mjs`.
+`@storybook/nextjs` uses webpack + babel under the hood. Many dependencies in this project are
+ESM-only (heroicons, MUI v7, tiptap, etc.), and webpack's babel transpilation fails on them
+without explicit per-package config. The codebase also uses JSX syntax in `.js` files, which
+needs another babel plugin. With `@storybook/react-vite`, Vite handles ESM natively and the
+esbuild loader override handles JSX-in-.js — no transpilation config needed. The tradeoff is
+manually mocking Next.js modules (router, navigation, head, image, link) via Vite aliases in
+`.storybook/main.mjs`.
 
 ### Why .js files need JSX loader config?
 The codebase uses JSX syntax in `.js` files (not `.jsx`). Vite's esbuild only handles JSX

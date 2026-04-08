@@ -2,55 +2,112 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListSafeLinksPolicy",
   "description": "Shape schema for /api/ListSafeLinksPolicy",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Name": {
-      "type": "string"
-    },
     "AdminDisplayName": {
-      "type": "string"
-    },
-    "EnableSafeLinksForEmail": {
-      "type": "boolean"
-    },
-    "EnableSafeLinksForTeams": {
-      "type": "boolean"
-    },
-    "EnableSafeLinksForOffice": {
-      "type": "boolean"
-    },
-    "TrackClicks": {
-      "type": "boolean"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "AllowClickThrough": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "ScanUrls": {
-      "type": "boolean"
-    },
-    "EnableForInternalSenders": {
-      "type": "boolean"
-    },
-    "DeliverMessageAfterScan": {
-      "type": "boolean"
-    },
-    "DisableUrlRewrite": {
-      "type": "boolean"
-    },
-    "DoNotRewriteUrls": {
-      "type": "array",
-      "items": {}
+    "ConfigurationStatus": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "CustomNotificationText": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DeliverMessageAfterScan": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DisableUrlRewrite": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "DoNotRewriteUrls": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "EnableForInternalSenders": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "EnableOrganizationBranding": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "EnableSafeLinksForEmail": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "EnableSafeLinksForOffice": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "EnableSafeLinksForTeams": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExceptIfRecipientDomainIs": {},
+    "ExceptIfSentTo": {},
+    "ExceptIfSentToMemberOf": {},
+    "IsBuiltIn": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "IsValid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "PolicyName": {
-      "type": "string"
-    },
-    "RuleName": {
       "type": [
         "string",
         "null"
@@ -62,54 +119,47 @@
         "null"
       ]
     },
-    "State": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "SentTo": {
-      "type": "null"
-    },
-    "SentToMemberOf": {
-      "type": "null"
-    },
     "RecipientDomainIs": {
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
-    "ExceptIfSentTo": {
-      "type": "null"
+    "RuleName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ExceptIfSentToMemberOf": {
-      "type": "null"
+    "ScanUrls": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "ExceptIfRecipientDomainIs": {
-      "type": "null"
+    "SentTo": {},
+    "SentToMemberOf": {},
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Description": {
-      "type": "string"
-    },
-    "IsBuiltIn": {
-      "type": "boolean"
-    },
-    "IsValid": {
-      "type": "boolean"
-    },
-    "ConfigurationStatus": {
-      "type": "string"
+    "TrackClicks": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:11:34.704Z",
   "_endpoint": "ListSafeLinksPolicy",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 2
+  "_requiresTenant": true
 }

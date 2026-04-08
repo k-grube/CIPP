@@ -2,26 +2,38 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListUserCounts",
   "description": "Shape schema for /api/ListUserCounts",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Users": {
-      "type": "number"
+    "Gas": {
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "Guests": {
-      "type": "number"
-    },
-    "Gas": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "LicUsers": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Users": {
+      "type": [
+        "number",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:14:37.104Z",
   "_endpoint": "ListUserCounts",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

@@ -2,49 +2,47 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListConnectionFilterTemplates",
   "description": "Shape schema for /api/ListConnectionFilterTemplates",
-  "_metadata": {
-    "endpoint": "ListConnectionFilterTemplates",
-    "generatedAt": "2026-04-05T12:15:06.081Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListConnectionFilterTemplates.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "comments": {
+    "EnableSafeList": {
       "type": [
-        "string",
-        "number",
         "boolean",
         "null"
       ]
     },
-    "EnableSafeList": {
-      "type": "boolean"
-    },
     "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "IPAllowList": {
       "type": [
-        "string",
-        "number",
-        "boolean",
+        "array",
         "null"
-      ]
+      ],
+      "items": {}
     },
     "IPBlockList": {
       "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "comments": {},
+    "name": {
+      "type": [
         "string",
-        "number",
-        "boolean",
         "null"
       ]
-    },
-    "name": {
-      "type": "string"
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListConnectionFilterTemplates",
+  "_case": null,
+  "_requiresTenant": false
 }

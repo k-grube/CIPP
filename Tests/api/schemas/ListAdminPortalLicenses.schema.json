@@ -2,84 +2,156 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAdminPortalLicenses",
   "description": "Shape schema for /api/ListAdminPortalLicenses",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "aadSkuId": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "aadSkuPartNumber": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "allotments": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
     "allotmentsMetadata": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
-        "consumedUnits": {
-          "type": "number"
-        },
         "allotmentsCount": {
-          "type": "number"
-        },
-        "licenseCount": {
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "catalogIdsCount": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {},
           "additionalProperties": true
+        },
+        "consumedUnits": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "licenseCount": {
+          "type": [
+            "number",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
     },
     "appliesTo": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "capabilityStatus": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "consumedUnits": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "displayName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "prepaidUnits": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "enabled": {
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "suspended": {
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "warning": {
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
     },
     "services": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
+          "appliesTo": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "displayName": {
-            "type": "string"
-          },
-          "serviceId": {
-            "type": "string"
-          },
-          "serviceName": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "provisioningStatus": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "appliesTo": {
-            "type": "string"
+          "serviceId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "serviceName": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "additionalProperties": true
@@ -87,10 +159,7 @@
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:21.861Z",
   "_endpoint": "ListAdminPortalLicenses",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 3
+  "_requiresTenant": true
 }

@@ -2,107 +2,478 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAlertsQueue",
   "description": "Shape schema for /api/ListAlertsQueue",
-  "_metadata": {
-    "endpoint": "ListAlertsQueue",
-    "generatedAt": "2026-04-05T12:15:06.068Z",
-    "tenantFilter": "7ngn50.onmicrosoft.com",
-    "requiresTenant": true,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListAlertsQueue.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "Actions": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "AlertComment": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Conditions": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "EventType": {
-      "type": "string"
-    },
-    "excludedTenants": {
-      "type": "object",
-      "properties": {
-        "addedFields": {
-          "type": "object",
-          "properties": {
-            "customerId": {},
-            "defaultDomainName": {},
-            "displayName": {}
-          },
-          "additionalProperties": true
-        },
-        "label": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        },
-        "value": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": true
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "LogType": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "PartitionKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RawAlert": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "Actions": {
-          "type": "object",
-          "properties": {
-            "label": {},
-            "value": {}
-          },
-          "additionalProperties": true
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "label": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "AdditionalProperties": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "AlertComment": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Command": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "Conditions": {
-          "type": "array",
-          "items": {}
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "Input": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "label": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "Operator": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "label": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "Property": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "label": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "CustomSubject": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DesiredStartTime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ETag": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExecutedTime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Hidden": {
+          "type": [
+            "boolean",
+            "null",
+            "string"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Parameters": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "PartitionKey": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PostExecution": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Recurrence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Results": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "RowKey": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ScheduledTime": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TaskState": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Tenant": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantGroup": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "Tenants": {
-          "type": "object",
-          "properties": {
-            "addedFields": {},
-            "label": {},
-            "type": {},
-            "value": {}
-          },
-          "additionalProperties": true
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "addedFields": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "customerId": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "defaultDomainName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "displayName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "label": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "Timestamp": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "excludedTenants": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "table": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "type": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
     },
     "RepeatsEvery": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RowKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
+    "ScriptName": {},
     "Tenants": {
-      "type": "string"
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null",
+          "object"
+        ],
+        "properties": {
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "excludedTenants": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null",
+          "string"
+        ],
+        "properties": {
+          "addedFields": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "customerId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "defaultDomainName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "displayName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListAlertsQueue",
+  "_case": null,
+  "_requiresTenant": true
 }

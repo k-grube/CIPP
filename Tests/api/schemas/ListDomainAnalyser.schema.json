@@ -2,106 +2,221 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListDomainAnalyser",
   "description": "Shape schema for /api/ListDomainAnalyser",
-  "_metadata": {
-    "endpoint": "ListDomainAnalyser",
-    "generatedAt": "2026-04-05T12:15:06.086Z",
-    "tenantFilter": "7ngn50.onmicrosoft.com",
-    "requiresTenant": true,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListDomainAnalyser.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "ActualMXRecords": {
-      "type": "object",
-      "properties": {
-        "Hostname": {
-          "type": "string"
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "Hostname": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Priority": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
         },
-        "Priority": {
-          "type": "number"
-        }
-      },
-      "additionalProperties": true
+        "additionalProperties": true
+      }
     },
     "ActualSPFRecord": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "DKIMEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "DKIMRecords": {
-      "type": "string"
+      "type": [
+        "array",
+        "null",
+        "string"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "Record": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Selector": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
     },
     "DMARCActionPolicy": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "DMARCFullPolicy": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "DMARCPercentagePass": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "DMARCPresent": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "DMARCReportingActive": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "DNSSECPresent": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "Domain": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "EnterpriseEnrollment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "EnterpriseRegistration": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ExpectedSPFRecord": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "LastRefresh": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
-    "MailProvider": {
-      "type": "string"
-    },
-    "MaximumScore": {
-      "type": "number"
-    },
     "MSCNAMEDKIMSelectors": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "MXPassTest": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "MailProvider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MaximumScore": {
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "NSRecords": {
       "type": [
-        "string",
-        "number",
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "SPFPassAll": {
+      "type": [
         "boolean",
         "null"
       ]
     },
     "Score": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "ScoreExplanation": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ScorePercentage": {
-      "type": "number"
-    },
-    "SPFPassAll": {
-      "type": "boolean"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "Tenant": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "TenantID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListDomainAnalyser",
+  "_case": null,
+  "_requiresTenant": true
 }

@@ -2,101 +2,151 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListIntuneReusableSettings",
   "description": "Shape schema for /api/ListIntuneReusableSettings",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "displayName": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "settingDefinitionId": {
-      "type": "string"
-    },
-    "version": {
-      "type": "number"
-    },
-    "referencingConfigurationPolicyCount": {
-      "type": "number"
+    "RawJSON": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "createdDateTime": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "lastModifiedDateTime": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
+    "referencingConfigurationPolicyCount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "settingDefinitionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "settingInstance": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "@odata.type": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
-        "settingDefinitionId": {
-          "type": "string"
-        },
-        "settingInstanceTemplateReference": {
-          "type": "null"
-        },
-        "auditRuleInformation": {
-          "type": "null"
-        },
+        "auditRuleInformation": {},
         "groupSettingCollectionValue": {
-          "type": "array",
+          "type": [
+            "array",
+            "null"
+          ],
           "items": {
-            "type": "object",
+            "type": [
+              "object",
+              "null"
+            ],
             "properties": {
-              "settingValueTemplateReference": {
-                "type": "null"
-              },
               "children": {
-                "type": "array",
+                "type": [
+                  "array",
+                  "null"
+                ],
                 "items": {
-                  "type": "object",
+                  "type": [
+                    "object",
+                    "null"
+                  ],
                   "properties": {
                     "@odata.type": {
-                      "type": "string"
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
-                    "settingDefinitionId": {
-                      "type": "string"
-                    },
-                    "settingInstanceTemplateReference": {
-                      "type": "null"
-                    },
-                    "auditRuleInformation": {
-                      "type": "null"
-                    },
-                    "simpleSettingValue": {
-                      "type": "object",
+                    "auditRuleInformation": {},
+                    "choiceSettingValue": {
+                      "type": [
+                        "object",
+                        "null"
+                      ],
                       "properties": {
-                        "@odata.type": {
-                          "type": "string"
+                        "children": {
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {}
                         },
-                        "settingValueTemplateReference": {
-                          "type": "null"
-                        },
+                        "settingValueTemplateReference": {},
                         "value": {
-                          "type": "string"
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         }
                       },
                       "additionalProperties": true
                     },
-                    "choiceSettingValue": {
-                      "type": "object",
+                    "settingDefinitionId": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "settingInstanceTemplateReference": {},
+                    "simpleSettingValue": {
+                      "type": [
+                        "object",
+                        "null"
+                      ],
                       "properties": {
-                        "settingValueTemplateReference": {
-                          "type": "null"
+                        "@odata.type": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         },
+                        "settingValueTemplateReference": {},
                         "value": {
-                          "type": "string"
-                        },
-                        "children": {
-                          "type": "array",
-                          "items": {}
+                          "type": [
+                            "string",
+                            "null"
+                          ]
                         }
                       },
                       "additionalProperties": true
@@ -104,23 +154,31 @@
                   },
                   "additionalProperties": true
                 }
-              }
+              },
+              "settingValueTemplateReference": {}
             },
             "additionalProperties": true
           }
-        }
+        },
+        "settingDefinitionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "settingInstanceTemplateReference": {}
       },
       "additionalProperties": true
     },
-    "RawJSON": {
-      "type": "string"
+    "version": {
+      "type": [
+        "number",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:10:08.402Z",
   "_endpoint": "ListIntuneReusableSettings",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

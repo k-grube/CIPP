@@ -2,255 +2,42 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListSignIns",
   "description": "Shape schema for /api/ListSignIns",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "createdDateTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "userDisplayName": {
-      "type": "string"
-    },
-    "userPrincipalName": {
-      "type": "string"
-    },
-    "userId": {
-      "type": "string"
-    },
-    "appId": {
-      "type": "string"
-    },
-    "appDisplayName": {
-      "type": "string"
-    },
-    "ipAddress": {
-      "type": "string"
-    },
-    "ipAddressFromResourceProvider": {
-      "type": "null"
-    },
-    "clientAppUsed": {
-      "type": "string"
-    },
-    "userAgent": {
-      "type": "string"
-    },
-    "correlationId": {
-      "type": "string"
-    },
-    "conditionalAccessStatus": {
-      "type": "string"
-    },
-    "originalRequestId": {
-      "type": "string"
-    },
-    "isInteractive": {
-      "type": "boolean"
-    },
-    "tokenIssuerName": {
-      "type": "string"
-    },
-    "tokenIssuerType": {
-      "type": "string"
-    },
-    "clientCredentialType": {
-      "type": "string"
-    },
-    "processingTimeInMilliseconds": {
-      "type": "number"
-    },
-    "riskDetail": {
-      "type": "string"
-    },
-    "riskLevelAggregated": {
-      "type": "string"
-    },
-    "riskLevelDuringSignIn": {
-      "type": "string"
-    },
-    "riskState": {
-      "type": "string"
-    },
-    "riskEventTypes_v2": {
-      "type": "array",
-      "items": {}
-    },
-    "resourceDisplayName": {
-      "type": "string"
-    },
-    "resourceId": {
-      "type": "string"
-    },
-    "resourceTenantId": {
-      "type": "string"
-    },
-    "homeTenantId": {
-      "type": "string"
-    },
-    "homeTenantName": {
-      "type": "string"
-    },
-    "authenticationMethodsUsed": {
-      "type": "array",
-      "items": {}
-    },
-    "authenticationRequirement": {
-      "type": "string"
-    },
-    "signInIdentifier": {
-      "type": "string"
-    },
-    "signInIdentifierType": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "servicePrincipalName": {
-      "type": "null"
-    },
-    "signInEventTypes": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "servicePrincipalId": {
-      "type": "string"
-    },
-    "federatedCredentialId": {
-      "type": "null"
-    },
-    "userType": {
+    "additionalDetails": {
       "type": [
         "string",
         "null"
       ]
     },
-    "flaggedForReview": {
-      "type": "boolean"
-    },
-    "isTenantRestricted": {
-      "type": "boolean"
-    },
-    "autonomousSystemNumber": {
-      "type": "number"
-    },
-    "crossTenantAccessType": {
-      "type": "string"
-    },
-    "servicePrincipalCredentialKeyId": {
-      "type": "null"
-    },
-    "servicePrincipalCredentialThumbprint": {
-      "type": "string"
-    },
-    "uniqueTokenIdentifier": {
-      "type": "string"
-    },
-    "incomingTokenType": {
-      "type": "string"
-    },
-    "authenticationProtocol": {
-      "type": "string"
-    },
-    "resourceServicePrincipalId": {
-      "type": "string"
-    },
-    "signInTokenProtectionStatus": {
-      "type": "string"
-    },
-    "originalTransferMethod": {
-      "type": "string"
-    },
-    "isThroughGlobalSecureAccess": {
-      "type": "boolean"
-    },
-    "globalSecureAccessIpAddress": {
-      "type": "string"
-    },
-    "conditionalAccessAudiences": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "sessionId": {
-      "type": "string"
-    },
-    "appOwnerTenantId": {
-      "type": "string"
-    },
-    "resourceOwnerTenantId": {
-      "type": "string"
-    },
-    "mfaDetail": {
-      "type": [
-        "null",
-        "object"
-      ],
-      "properties": {
-        "authMethod": {
-          "type": "string"
-        },
-        "authDetail": {
-          "type": "null"
-        }
-      },
-      "additionalProperties": true
-    },
-    "authenticationAppDeviceDetails": {
-      "type": [
-        "null",
-        "object"
-      ],
-      "properties": {
-        "deviceId": {
-          "type": "string"
-        },
-        "operatingSystem": {
-          "type": "string"
-        },
-        "clientApp": {
-          "type": "string"
-        },
-        "appVersion": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": true
-    },
     "agent": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
-        "agentType": {
-          "type": "string"
-        },
-        "parentAppId": {
-          "type": "string"
+        "agentSubjectParentId": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "agentSubjectType": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
-        "agentSubjectParentId": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": true
-    },
-    "status": {
-      "type": "object",
-      "properties": {
-        "errorCode": {
-          "type": "number"
+        "agentType": {
+          "type": [
+            "string",
+            "null"
+          ]
         },
-        "failureReason": {
-          "type": "string"
-        },
-        "additionalDetails": {
+        "parentAppId": {
           "type": [
             "string",
             "null"
@@ -259,199 +46,219 @@
       },
       "additionalProperties": true
     },
-    "deviceDetail": {
-      "type": "object",
-      "properties": {
-        "deviceId": {
-          "type": "string"
-        },
-        "displayName": {
-          "type": "string"
-        },
-        "operatingSystem": {
-          "type": "string"
-        },
-        "browser": {
-          "type": "string"
-        },
-        "isCompliant": {
-          "type": "boolean"
-        },
-        "isManaged": {
-          "type": "boolean"
-        },
-        "trustType": {
-          "type": "null"
-        }
-      },
-      "additionalProperties": true
+    "appDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "location": {
-      "type": "object",
-      "properties": {
-        "city": {
-          "type": "string"
-        },
-        "state": {
-          "type": "string"
-        },
-        "countryOrRegion": {
-          "type": "string"
-        },
-        "geoCoordinates": {
-          "type": "object",
-          "properties": {
-            "altitude": {
-              "type": "null"
-            },
-            "latitude": {
-              "type": "number"
-            },
-            "longitude": {
-              "type": "number"
-            }
-          },
-          "additionalProperties": true
-        }
-      },
-      "additionalProperties": true
+    "appId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "appOwnerTenantId": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "appliedConditionalAccessPolicies": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "displayName": {
-            "type": "string"
-          },
-          "enforcedGrantControls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "enforcedSessionControls": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "sessionControlsNotSatisfied": {
-            "type": "array",
-            "items": {}
-          },
-          "result": {
-            "type": "string"
-          },
-          "conditionsSatisfied": {
-            "type": "string"
-          },
-          "conditionsNotSatisfied": {
-            "type": "string"
-          },
           "authenticationStrength": {
             "type": [
-              "null",
-              "object"
+              "object",
+              "null"
             ],
             "properties": {
-              "displayName": {
-                "type": "string"
-              },
               "authenticationStrengthId": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "authenticationStrengthResult": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "displayName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "additionalProperties": true
           },
-          "includeRulesSatisfied": {
-            "type": "array",
+          "conditionsNotSatisfied": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "conditionsSatisfied": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "enforcedGrantControls": {
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
-              "type": "object",
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "enforcedSessionControls": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "excludeRulesSatisfied": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
               "properties": {
                 "conditionalAccessCondition": {
-                  "type": "string"
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "ruleSatisfied": {
-                  "type": "string"
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 }
               },
               "additionalProperties": true
             }
           },
-          "excludeRulesSatisfied": {
-            "type": "array",
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "includeRulesSatisfied": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "conditionalAccessCondition": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ruleSatisfied": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "result": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sessionControlsNotSatisfied": {
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {}
           }
         },
         "additionalProperties": true
       }
     },
+    "appliedEventListeners": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "authenticationAppDeviceDetails": {},
+    "authenticationAppPolicyEvaluationDetails": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
     "authenticationContextClassReferences": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "detail": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "authenticationProcessingDetails": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "key": {
-            "type": "string"
-          },
-          "value": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "networkLocationDetails": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "networkType": {
-            "type": "string"
-          },
-          "networkNames": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "additionalProperties": true
-      }
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
     },
     "authenticationDetails": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "authenticationStepDateTime": {
-            "type": "string",
-            "format": "date-time"
-          },
           "authenticationMethod": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "authenticationMethodDetail": {
             "type": [
@@ -459,140 +266,662 @@
               "null"
             ]
           },
-          "succeeded": {
-            "type": "boolean"
-          },
-          "authenticationStepResultDetail": {
-            "type": "string"
+          "authenticationStepDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
           },
           "authenticationStepRequirement": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "authenticationRequirementPolicies": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "requirementProvider": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "detail": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "sessionLifetimePolicies": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "expirationRequirement": {
-            "type": "string"
+          "authenticationStepResultDetail": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "detail": {
-            "type": "string"
+          "succeeded": {
+            "type": [
+              "boolean",
+              "null"
+            ]
           }
         },
         "additionalProperties": true
       }
     },
-    "privateLinkDetails": {
-      "type": "object",
-      "properties": {
-        "policyId": {
-          "type": "string"
-        },
-        "policyName": {
-          "type": "string"
-        },
-        "resourceId": {
-          "type": "string"
-        },
-        "policyTenantId": {
-          "type": "null"
-        }
-      },
-      "additionalProperties": true
-    },
-    "appliedEventListeners": {
-      "type": "array",
+    "authenticationMethodsUsed": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
-    "authenticationAppPolicyEvaluationDetails": {
-      "type": "array",
+    "authenticationProcessingDetails": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "policyName": {
-            "type": "string"
+          "key": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "adminConfiguration": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string"
-          },
-          "authenticationEvaluation": {
-            "type": "string"
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "additionalProperties": true
       }
     },
-    "managedServiceIdentity": {
-      "type": "object",
-      "properties": {
-        "msiType": {
-          "type": "string"
-        },
-        "associatedResourceId": {
-          "type": "null"
-        },
-        "federatedTokenId": {
-          "type": "null"
-        },
-        "federatedTokenIssuer": {
-          "type": "null"
-        }
-      },
-      "additionalProperties": true
-    },
-    "tokenProtectionStatusDetails": {
-      "type": "object",
-      "properties": {
-        "signInSessionStatus": {
-          "type": "string"
-        },
-        "signInSessionStatusCode": {
-          "type": "number"
-        }
-      },
-      "additionalProperties": true
-    },
-    "additionalDetails": {
+    "authenticationProtocol": {
       "type": [
         "string",
         "null"
       ]
     },
+    "authenticationRequirement": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authenticationRequirementPolicies": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "detail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "requirementProvider": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "autonomousSystemNumber": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "clientAppUsed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "clientCredentialType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "conditionalAccessAudiences": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "conditionalAccessStatus": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "correlationId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "crossTenantAccessType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deviceDetail": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "browser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "deviceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "displayName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isCompliant": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "isManaged": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "operatingSystem": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "trustType": {}
+      },
+      "additionalProperties": true
+    },
     "errorCode": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "federatedCredentialId": {},
+    "flaggedForReview": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "globalSecureAccessIpAddress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "homeTenantId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "homeTenantName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "incomingTokenType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ipAddress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ipAddressFromResourceProvider": {},
+    "isInteractive": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isTenantRestricted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "isThroughGlobalSecureAccess": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "location": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "countryOrRegion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "geoCoordinates": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "altitude": {},
+            "latitude": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "longitude": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
     },
     "locationcipp": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "managedServiceIdentity": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "associatedResourceId": {},
+        "federatedTokenId": {},
+        "federatedTokenIssuer": {},
+        "msiType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "mfaDetail": {},
+    "networkLocationDetails": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "networkNames": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "networkType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "originalRequestId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "originalTransferMethod": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "privateLinkDetails": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "policyId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "policyName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "policyTenantId": {},
+        "resourceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "processingTimeInMilliseconds": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "resourceDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resourceId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resourceOwnerTenantId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resourceServicePrincipalId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "resourceTenantId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "riskDetail": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "riskEventTypes_v2": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "riskLevelAggregated": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "riskLevelDuringSignIn": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "riskState": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "servicePrincipalCredentialKeyId": {},
+    "servicePrincipalCredentialThumbprint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "servicePrincipalId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "servicePrincipalName": {},
+    "sessionId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sessionLifetimePolicies": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "detail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "expirationRequirement": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "signInEventTypes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "signInIdentifier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "signInIdentifierType": {},
+    "signInTokenProtectionStatus": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "additionalDetails": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "errorCode": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "failureReason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "tokenIssuerName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tokenIssuerType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tokenProtectionStatusDetails": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "signInSessionStatus": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "signInSessionStatusCode": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "uniqueTokenIdentifier": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userAgent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userPrincipalName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "userType": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:13:47.337Z",
   "_endpoint": "ListSignIns",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 7
+  "_requiresTenant": true
 }

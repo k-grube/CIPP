@@ -2,38 +2,186 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListBPATemplates",
   "description": "Shape schema for /api/ListBPATemplates",
-  "_metadata": {
-    "endpoint": "ListBPATemplates",
-    "generatedAt": "2026-04-05T12:15:06.078Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListBPATemplates.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "Data": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "FrontendFields": {},
-          "name": {},
-          "StoreAs": {},
-          "UseExistingInfo": {}
+          "API": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Command": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ExtractFields": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "FrontendFields": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "desc": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "formatter": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "showAs": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "Parameters": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "Nopagination": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "RecipientTypeDetails": {
+                "type": [
+                  "array",
+                  "null",
+                  "string"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "asApp": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "StoreAs": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "URL": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "UseExistingInfo": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "desc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "where": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
         "additionalProperties": true
       }
     },
     "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Name": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Style": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListBPATemplates",
+  "_case": null,
+  "_requiresTenant": false
 }

@@ -2,94 +2,114 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListReportBuilderTemplates",
   "description": "Shape schema for /api/ListReportBuilderTemplates",
-  "_metadata": {
-    "endpoint": "ListReportBuilderTemplates",
-    "generatedAt": "2026-04-05T12:15:06.103Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListReportBuilderTemplates.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "Blocks": {
-      "type": "object",
-      "properties": {
-        "content": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "content": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "static": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "testCategory": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "testId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
-        "dbType": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        },
-        "format": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        },
-        "selectedHeaders": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        },
-        "static": {
-          "type": "boolean"
-        },
-        "status": {
-          "type": "string"
-        },
-        "testCategory": {
-          "type": "string"
-        },
-        "testId": {
-          "type": "string"
-        },
-        "title": {
-          "type": "string"
-        },
-        "type": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": true
+        "additionalProperties": true
+      }
     },
     "CreatedAt": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
     "CustomCount": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Name": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RowKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Sections": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "TestCount": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListReportBuilderTemplates",
+  "_case": null,
+  "_requiresTenant": false
 }

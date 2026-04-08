@@ -2,32 +2,81 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListTestReports",
   "description": "Shape schema for /api/ListTestReports",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "id": {
-      "type": "string"
+    "CustomTests": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
     },
-    "name": {
-      "type": "string"
+    "DevicesTests": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "IdentityTests": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     },
     "description": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "version": {
-      "type": "string"
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "source": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "type": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:12.752Z",
   "_endpoint": "ListTestReports",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 6
+  "_requiresTenant": false
 }

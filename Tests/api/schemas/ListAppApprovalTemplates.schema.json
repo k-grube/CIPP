@@ -2,73 +2,155 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAppApprovalTemplates",
   "description": "Shape schema for /api/ListAppApprovalTemplates",
-  "_metadata": {
-    "endpoint": "ListAppApprovalTemplates",
-    "generatedAt": "2026-04-05T12:15:06.070Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListAppApprovalTemplates.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "AppId": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "AppName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "AppType": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "CreatedBy": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "CreatedOn": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
     "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PermissionSetId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PermissionSetName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Permissions": {
-      "type": "object",
-      "properties": {
-        "00000002-0000-0ff1-ce00-000000000000": {
-          "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {},
+      "additionalProperties": true,
+      "patternProperties": {
+        "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$": {
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "applicationPermissions": {},
-            "delegatedPermissions": {}
-          },
-          "additionalProperties": true
-        },
-        "00000003-0000-0000-c000-000000000000": {
-          "type": "object",
-          "properties": {
-            "applicationPermissions": {},
-            "delegatedPermissions": {}
+            "applicationPermissions": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "delegatedPermissions": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            }
           },
           "additionalProperties": true
         }
-      },
-      "additionalProperties": true
-    },
-    "PermissionSetId": {
-      "type": "string"
-    },
-    "PermissionSetName": {
-      "type": "string"
+      }
     },
     "TemplateId": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "TemplateName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Timestamp": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListAppApprovalTemplates",
+  "_case": null,
+  "_requiresTenant": false
 }

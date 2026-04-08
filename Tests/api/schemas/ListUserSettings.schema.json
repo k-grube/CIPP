@@ -2,50 +2,333 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListUserSettings",
   "description": "Shape schema for /api/ListUserSettings",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "direction": {
-      "type": "string"
+    "bookmarkPopover": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "paletteMode": {
-      "type": "string"
+    "bookmarkSidebar": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "currentTheme": {
-      "type": "object",
-      "properties": {
-        "value": {
-          "type": "string"
-        },
-        "label": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": true
-    },
-    "pinNav": {
-      "type": "boolean"
-    },
-    "showDevtools": {
-      "type": "boolean"
+    "compactNav": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "customBranding": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
-        "logo": {
-          "type": "null"
+        "ETag": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PartitionKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "RowKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Timestamp": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
         },
         "colour": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logo": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
+    },
+    "offboardingDefaults": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "ClearImmutableId": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ConvertToShared": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "DeleteUser": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "DisableSignIn": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "HideFromGAL": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "KeepCopy": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RemoveGroups": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RemoveLicenses": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RemoveMFADevices": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RemoveMobile": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RemoveRules": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RemoveTeamsPhoneDID": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ResetPass": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RevokeSessions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "removeCalendarInvites": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "removePermissions": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "persistFilters": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "portalLinks": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Azure_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Compliance_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Entra_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Exchange_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Intune_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "M365_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Power_BI_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Power_Platform_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Security_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SharePoint_Admin": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Teams_Portal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "tablePageSize": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "usageLocation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "userAttributes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:13.883Z",
   "_endpoint": "ListUserSettings",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 1
+  "_requiresTenant": false
 }

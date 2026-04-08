@@ -1,43 +1,56 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "ListAssignmentFilterTemplates",
-  "description": "Shape schema for /api/ListAssignmentFilterTemplates",
+  "$id": "ListGitHubReleaseNotes",
+  "description": "Shape schema for /api/ListGitHubReleaseNotes",
   "type": [
     "object",
     "null"
   ],
   "properties": {
-    "GUID": {
+    "body": {
       "type": [
         "string",
         "null"
       ]
     },
-    "assignmentFilterManagementType": {
+    "commitish": {
       "type": [
         "string",
         "null"
       ]
     },
-    "description": {
+    "draft": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "htmlUrl": {
       "type": [
         "string",
         "null"
       ]
     },
-    "displayName": {
+    "name": {
       "type": [
         "string",
         "null"
       ]
     },
-    "platform": {
+    "prerelease": {
       "type": [
-        "string",
+        "boolean",
         "null"
       ]
     },
-    "rule": {
+    "publishedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "releaseTag": {
       "type": [
         "string",
         "null"
@@ -45,7 +58,7 @@
     }
   },
   "additionalProperties": true,
-  "_endpoint": "ListAssignmentFilterTemplates",
+  "_endpoint": "ListGitHubReleaseNotes",
   "_case": null,
   "_requiresTenant": false
 }

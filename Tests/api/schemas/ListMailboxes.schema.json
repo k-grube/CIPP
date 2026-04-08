@@ -2,70 +2,89 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListMailboxes",
   "description": "Shape schema for /api/ListMailboxes",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Id": {
-      "type": "string"
-    },
-    "ExchangeGuid": {
-      "type": "string"
-    },
-    "ArchiveGuid": {
-      "type": "string"
-    },
-    "WhenSoftDeleted": {
-      "type": "null"
-    },
-    "UPN": {
-      "type": "string"
-    },
-    "displayName": {
-      "type": "string"
-    },
-    "primarySmtpAddress": {
-      "type": "string"
-    },
-    "recipientType": {
-      "type": "string"
-    },
-    "recipientTypeDetails": {
-      "type": "string"
-    },
     "AdditionalEmailAddresses": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
       ]
     },
-    "ForwardingSmtpAddress": {
-      "type": "string"
-    },
-    "InternalForwardingAddress": {
+    "ArchiveGuid": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
+      ]
+    },
+    "ComplianceTagHoldApplied": {
+      "type": [
+        "boolean",
+        "null"
       ]
     },
     "DeliverToMailboxAndForward": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "HiddenFromAddressListsEnabled": {
-      "type": "boolean"
+    "ExchangeGuid": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ExternalDirectoryObjectId": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ForwardingSmtpAddress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "HiddenFromAddressListsEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "InPlaceHolds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "InternalForwardingAddress": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "IsDirSynced": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "MessageCopyForSendOnBehalfEnabled": {
-      "type": "boolean"
-    },
-    "MessageCopyForSentAsEnabled": {
-      "type": "boolean"
-    },
-    "LitigationHoldEnabled": {
-      "type": "boolean"
+    "LicensedForLitigationHold": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "LitigationHoldDate": {
       "type": [
@@ -75,30 +94,75 @@
       "format": "date-time"
     },
     "LitigationHoldDuration": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "LicensedForLitigationHold": {
-      "type": "boolean"
+    "LitigationHoldEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "ComplianceTagHoldApplied": {
-      "type": "boolean"
+    "MessageCopyForSendOnBehalfEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "MessageCopyForSentAsEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "RetentionHoldEnabled": {
-      "type": "boolean"
-    },
-    "InPlaceHolds": {
-      "type": "array",
-      "items": {}
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "RetentionPolicy": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "UPN": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenSoftDeleted": {},
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "primarySmtpAddress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recipientType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "recipientTypeDetails": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:11:09.948Z",
   "_endpoint": "ListMailboxes",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 50
+  "_requiresTenant": true
 }

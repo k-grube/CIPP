@@ -2,172 +2,416 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListCompliancePolicies",
   "description": "Shape schema for /api/ListCompliancePolicies",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "@odata.type": {
-      "type": "string"
-    },
-    "roleScopeTagIds": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "id": {
-      "type": "string"
-    },
-    "createdDateTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "description": {
-      "type": "null"
-    },
-    "lastModifiedDateTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "displayName": {
-      "type": "string"
-    },
-    "version": {
-      "type": "number"
-    },
-    "passwordRequired": {
-      "type": "boolean"
-    },
-    "passwordBlockSimple": {
-      "type": "boolean"
-    },
-    "passwordRequiredToUnlockFromIdle": {
-      "type": "boolean"
-    },
-    "passwordMinutesOfInactivityBeforeLock": {
-      "type": "null"
-    },
-    "passwordExpirationDays": {
-      "type": "null"
-    },
-    "passwordMinimumLength": {
-      "type": "null"
-    },
-    "passwordMinimumCharacterSetCount": {
-      "type": "null"
-    },
-    "passwordRequiredType": {
-      "type": "string"
-    },
-    "passwordPreviousPasswordBlockCount": {
-      "type": "null"
-    },
-    "requireHealthyDeviceReport": {
-      "type": "boolean"
-    },
-    "osMinimumVersion": {
-      "type": "null"
-    },
-    "osMaximumVersion": {
-      "type": "null"
-    },
-    "mobileOsMinimumVersion": {
-      "type": "null"
-    },
-    "mobileOsMaximumVersion": {
-      "type": "null"
-    },
-    "earlyLaunchAntiMalwareDriverEnabled": {
-      "type": "boolean"
-    },
-    "bitLockerEnabled": {
-      "type": "boolean"
-    },
-    "secureBootEnabled": {
-      "type": "boolean"
-    },
-    "codeIntegrityEnabled": {
-      "type": "boolean"
-    },
-    "memoryIntegrityEnabled": {
-      "type": "boolean"
-    },
-    "kernelDmaProtectionEnabled": {
-      "type": "boolean"
-    },
-    "virtualizationBasedSecurityEnabled": {
-      "type": "boolean"
-    },
-    "firmwareProtectionEnabled": {
-      "type": "boolean"
-    },
-    "storageRequireEncryption": {
-      "type": "boolean"
-    },
-    "activeFirewallRequired": {
-      "type": "boolean"
-    },
-    "defenderEnabled": {
-      "type": "boolean"
-    },
-    "defenderVersion": {
-      "type": "null"
-    },
-    "signatureOutOfDate": {
-      "type": "boolean"
-    },
-    "rtpEnabled": {
-      "type": "boolean"
-    },
-    "antivirusRequired": {
-      "type": "boolean"
-    },
-    "antiSpywareRequired": {
-      "type": "boolean"
-    },
-    "deviceThreatProtectionEnabled": {
-      "type": "boolean"
-    },
-    "deviceThreatProtectionRequiredSecurityLevel": {
-      "type": "string"
-    },
-    "configurationManagerComplianceRequired": {
-      "type": "boolean"
-    },
-    "tpmRequired": {
-      "type": "boolean"
-    },
-    "deviceCompliancePolicyScript": {
-      "type": "null"
-    },
-    "validOperatingSystemBuildRanges": {
-      "type": "array",
-      "items": {}
-    },
-    "wslDistributions": {
-      "type": "array",
-      "items": {}
-    },
-    "assignments@odata.context": {
-      "type": "string"
-    },
-    "assignments": {
-      "type": "array",
-      "items": {}
-    },
-    "PolicyTypeName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "PolicyAssignment": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "PolicyExclude": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PolicyTypeName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "activeFirewallRequired": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "advancedThreatProtectionRequiredSecurityLevel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "antiSpywareRequired": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "antivirusRequired": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "assignments": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "target": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "@odata.type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "deviceAndAppManagementAssignmentFilterId": {},
+              "deviceAndAppManagementAssignmentFilterType": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "groupId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "assignments@odata.context": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bitLockerEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "codeIntegrityEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "conditionStatementId": {},
+    "configurationManagerComplianceRequired": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "createdDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "defenderEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "defenderVersion": {},
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deviceCompliancePolicyScript": {},
+    "deviceThreatProtectionEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "deviceThreatProtectionRequiredSecurityLevel": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "earlyLaunchAntiMalwareDriverEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "firmwareProtectionEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "kernelDmaProtectionEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "lastModifiedDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "memoryIntegrityEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "minAndroidSecurityPatchLevel": {},
+    "mobileOsMaximumVersion": {},
+    "mobileOsMinimumVersion": {},
+    "osMaximumVersion": {},
+    "osMinimumVersion": {},
+    "passwordBlockSimple": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "passwordExpirationDays": {},
+    "passwordMinimumCharacterSetCount": {},
+    "passwordMinimumLength": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "passwordMinutesOfInactivityBeforeLock": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "passwordPreviousPasswordBlockCount": {},
+    "passwordRequired": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "passwordRequiredToUnlockFromIdle": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "passwordRequiredType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "passwordSignInFailureCountBeforeFactoryReset": {},
+    "requireHealthyDeviceReport": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "requiredPasswordComplexity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "restrictedApps": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "roleScopeTagIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "rtpEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "secureBootEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityBlockDeviceAdministratorManagedDevices": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityBlockJailbrokenDevices": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityDisableUsbDebugging": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityPreventInstallAppsFromUnknownSources": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityRequireCompanyPortalAppIntegrity": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityRequireGooglePlayServices": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityRequireSafetyNetAttestationBasicIntegrity": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityRequireSafetyNetAttestationCertifiedDevice": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityRequireUpToDateSecurityProviders": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "securityRequireVerifyApps": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "signatureOutOfDate": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "storageRequireEncryption": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "tpmRequired": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "validOperatingSystemBuildRanges": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "version": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "virtualizationBasedSecurityEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "wslDistributions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:09:16.565Z",
   "_endpoint": "ListCompliancePolicies",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

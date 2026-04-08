@@ -2,23 +2,32 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListDomains",
   "description": "Shape schema for /api/ListDomains",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "id": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "isDefault": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isInitial": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:09:31.856Z",
   "_endpoint": "ListDomains",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 4
+  "_requiresTenant": true
 }

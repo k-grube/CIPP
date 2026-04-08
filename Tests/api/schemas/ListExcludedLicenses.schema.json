@@ -2,33 +2,57 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListExcludedLicenses",
   "description": "Shape schema for /api/ListExcludedLicenses",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "ETag": {
-      "type": "string"
-    },
-    "PartitionKey": {
-      "type": "string"
-    },
-    "RowKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PartitionKey": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Product_Display_Name": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RowKey": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Timestamp": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
+    },
+    "table": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:11.730Z",
   "_endpoint": "ListExcludedLicenses",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 25
+  "_requiresTenant": false
 }

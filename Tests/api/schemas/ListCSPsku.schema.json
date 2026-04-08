@@ -1,20 +1,25 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "ListAvailableTests",
-  "description": "Shape schema for /api/ListAvailableTests",
+  "$id": "ListCSPsku",
+  "description": "Shape schema for /api/ListCSPsku",
   "type": [
     "object",
     "null"
   ],
   "properties": {
-    "CustomTests": {
+    "billingCycle": {
       "type": [
-        "array",
+        "string",
         "null"
-      ],
-      "items": {}
+      ]
     },
-    "DevicesTests": {
+    "commitmentTerm": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
       "type": [
         "array",
         "null"
@@ -25,25 +30,13 @@
           "null"
         ],
         "properties": {
-          "category": {
+          "culture": {
             "type": [
               "string",
               "null"
             ]
           },
-          "id": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "name": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "testFolder": {
+          "value": {
             "type": [
               "string",
               "null"
@@ -53,7 +46,7 @@
         "additionalProperties": true
       }
     },
-    "IdentityTests": {
+    "name": {
       "type": [
         "array",
         "null"
@@ -64,25 +57,13 @@
           "null"
         ],
         "properties": {
-          "category": {
+          "culture": {
             "type": [
               "string",
               "null"
             ]
           },
-          "id": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "name": {
-            "type": [
-              "string",
-              "null"
-            ]
-          },
-          "testFolder": {
+          "value": {
             "type": [
               "string",
               "null"
@@ -91,10 +72,16 @@
         },
         "additionalProperties": true
       }
+    },
+    "sku": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_endpoint": "ListAvailableTests",
+  "_endpoint": "ListCSPsku",
   "_case": null,
-  "_requiresTenant": false
+  "_requiresTenant": true
 }

@@ -2,135 +2,150 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAuditLogSearches",
   "description": "Shape schema for /api/ListAuditLogSearches",
-  "_metadata": {
-    "endpoint": "ListAuditLogSearches",
-    "generatedAt": "2026-04-05T12:15:06.075Z",
-    "tenantFilter": "7ngn50.onmicrosoft.com",
-    "requiresTenant": true,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListAuditLogSearches.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "CippStatus": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "EndTime": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
-    "MatchedLogs": {
-      "type": [
-        "string",
-        "number",
-        "boolean",
-        "null"
-      ]
-    },
-    "MatchedRules": {
-      "type": [
-        "string",
-        "number",
-        "boolean",
-        "null"
-      ]
-    },
+    "MatchedLogs": {},
+    "MatchedRules": {},
     "Query": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "@odata.context": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "administrativeUnitIdFilters": {
           "type": [
+            "array",
+            "null"
+          ],
+          "items": {}
+        },
+        "displayName": {
+          "type": [
             "string",
-            "number",
-            "boolean",
             "null"
           ]
         },
-        "displayName": {
-          "type": "string"
-        },
         "filterEndDateTime": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "filterStartDateTime": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "id": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "ipAddressFilters": {
           "type": [
-            "string",
-            "number",
-            "boolean",
+            "array",
             "null"
-          ]
+          ],
+          "items": {}
         },
-        "keywordFilter": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        },
+        "keywordFilter": {},
         "objectIdFilters": {
           "type": [
-            "string",
-            "number",
-            "boolean",
+            "array",
             "null"
-          ]
+          ],
+          "items": {}
         },
         "operationFilters": {
           "type": [
-            "string",
-            "number",
-            "boolean",
+            "array",
             "null"
-          ]
-        },
-        "recordTypeFilters": {
-          "type": "array",
+          ],
           "items": {}
         },
+        "recordTypeFilters": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
         "serviceFilters": {
-          "type": "string"
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
         "status": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "userPrincipalNameFilters": {
           "type": [
-            "string",
-            "number",
-            "boolean",
+            "array",
             "null"
-          ]
+          ],
+          "items": {}
         }
       },
       "additionalProperties": true
     },
     "SearchId": {
-      "type": "string"
-    },
-    "StartTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "TotalLogs": {
       "type": [
         "string",
-        "number",
-        "boolean",
         "null"
       ]
-    }
+    },
+    "StartTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "TotalLogs": {}
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListAuditLogSearches",
+  "_case": null,
+  "_requiresTenant": true
 }

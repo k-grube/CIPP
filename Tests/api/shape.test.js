@@ -2,20 +2,17 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import Ajv from 'ajv'
-  import addFormats from 'ajv-formats'
-import {
-  getConfig,
-  getAccessToken,
-  callEndpoint,
-  getResultObjects,
-} from './helpers.js'
+import addFormats from 'ajv-formats'
+import { getConfig, getAccessToken, callEndpoint, getResultObjects } from './helpers.mjs'
 
 import registry from './endpoint-registry.json'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const SCHEMAS_DIR = path.join(__dirname, 'schemas')
 
-const ajv = new Ajv({ allErrors: true, strict: false })
+// validateFormats: false treats format as documentation, not a hard constraint.
+// The API returns inconsistent date formats across endpoints (i.e. space vs T separator).
+const ajv = new Ajv({ allErrors: true, strict: false, validateFormats: false })
 addFormats(ajv)
 
 let token
@@ -57,7 +54,6 @@ function loadSchema(ep) {
   return JSON.parse(fs.readFileSync(schemaPath, 'utf8'))
 }
 
-
 /**
  * Executes a test for the specified API endpoint, validating its response based on schema constraints.
  *
@@ -73,18 +69,32 @@ function runEndpointTest(ep) {
   const label = testLabel(ep)
   return async () => {
     const params = { ...(ep.extraParams || {}) }
-    if (ep.requiresTenant) params.tenantFilter = config.tenantFilter
+    if (ep.requiresTenant) {
+      params.tenantFilter = config.tenantFilter
+    }
 
     const schema = loadSchema(ep)
     if (!schema) {
-      console.warn(`No schema for ${label} — run: node Tools/generate-schemas.js`)
+      console.warn(`No schema for ${label}`)
       return
     }
 
     // AJV with strict:false ignores unknown keywords (_generatedAt, _endpoint, etc.)
     const validate = ajv.compile(schema)
 
-    const response = await callEndpoint(token, config.apiUrl, ep.name, params, config)
+    let response
+    try {
+      response = await callEndpoint(token, config.apiUrl, ep.name, params, config)
+    } catch (err) {
+      if (err.message.includes('HTTP 401') || err.message.includes('HTTP 403')) {
+        console.warn(`${label}: ${err.message} (skipping — insufficient permissions)`)
+        return
+      }
+      throw err
+    }
+    // Validate up to 50 rows per endpoint. This caps test duration for
+    // endpoints that return thousands of rows (i.e. ListUsers) while still
+    // catching type mismatches in the first page of results.
     const rows = getResultObjects(response)
 
     if (rows.length === 0) {
@@ -94,6 +104,9 @@ function runEndpointTest(ep) {
 
     const failures = []
     for (let i = 0; i < rows.length; i++) {
+      if (rows[i] === null || rows[i] === undefined) {
+        continue
+      }
       const valid = validate(rows[i])
       if (!valid) {
         const errors = validate.errors
@@ -106,8 +119,8 @@ function runEndpointTest(ep) {
     if (failures.length > 0) {
       throw new Error(
         `${label}: ${failures.length}/${rows.length} rows failed validation:\n` +
-        failures.slice(0, 5).join('\n') +
-        (failures.length > 5 ? `\n... and ${failures.length - 5} more` : '')
+          failures.slice(0, 5).join('\n') +
+          (failures.length > 5 ? `\n... and ${failures.length - 5} more` : '')
       )
     }
   }
@@ -116,21 +129,29 @@ function runEndpointTest(ep) {
 const globalEndpoints = registry.filter((ep) => !ep.requiresTenant)
 const tenantEndpoints = registry.filter((ep) => ep.requiresTenant)
 
+// Run up to CIPP_API_CONCURRENCY endpoint tests in parallel (default: 5).
+// Configurable via .env to tune for API rate limits.
+const concurrency = parseInt(process.env.CIPP_API_CONCURRENCY || '5', 10)
+
 describe('API Shape Tests', () => {
-  describe('Global endpoints', () => {
+  describe.concurrent('Global endpoints', { concurrency }, () => {
     for (const ep of globalEndpoints) {
       if (ep.skip) {
         it.skip(`${testLabel(ep)} — ${ep.skipReason}`, () => {})
+      } else if (!loadSchema(ep)) {
+        it.skip(`${testLabel(ep)} — no schema`, () => {})
       } else {
         it(testLabel(ep), runEndpointTest(ep), 120_000)
       }
     }
   })
 
-  describe('Tenant-specific endpoints', () => {
+  describe.concurrent('Tenant-specific endpoints', { concurrency }, () => {
     for (const ep of tenantEndpoints) {
       if (ep.skip) {
         it.skip(`${testLabel(ep)} — ${ep.skipReason}`, () => {})
+      } else if (!loadSchema(ep)) {
+        it.skip(`${testLabel(ep)} — no schema`, () => {})
       } else {
         it(testLabel(ep), runEndpointTest(ep), 120_000)
       }

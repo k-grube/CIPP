@@ -2,119 +2,248 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListTenantOnboarding",
   "description": "Shape schema for /api/ListTenantOnboarding",
-  "_metadata": {
-    "endpoint": "ListTenantOnboarding",
-    "generatedAt": "2026-04-05T12:15:06.115Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListTenantOnboarding.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "CustomerId": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ETag": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Exception": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Logs": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "Date": {},
-          "Log": {}
+          "Date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "Log": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
         "additionalProperties": true
       }
     },
     "OnboardingSteps": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "Message": {},
-          "Status": {},
-          "Title": {}
+          "Message": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
         "additionalProperties": true
       }
     },
     "PartitionKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Relationship": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "@odata.context": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "@odata.etag": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "accessDetails": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "unifiedRoles": {}
+            "unifiedRoles": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "roleDefinitionId": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            }
           },
           "additionalProperties": true
         },
         "activatedDateTime": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "autoExtendDuration": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "createdDateTime": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "customer": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "displayName": {},
-            "tenantId": {}
+            "displayName": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "tenantId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
           },
           "additionalProperties": true
         },
         "displayName": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "duration": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "endDateTime": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "id": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "lastModifiedDateTime": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "status": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
     },
     "RowKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Status": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Timestamp": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListTenantOnboarding",
+  "_case": null,
+  "_requiresTenant": false
 }

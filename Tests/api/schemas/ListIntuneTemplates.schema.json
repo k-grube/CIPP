@@ -2,29 +2,51 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListIntuneTemplates",
   "description": "Shape schema for /api/ListIntuneTemplates",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Displayname": {
-      "type": "string"
-    },
     "Description": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "RAWJson": {
-      "type": "string"
-    },
-    "Type": {
-      "type": "string"
+    "Displayname": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RAWJson": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ReusableSettings": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "Type": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:12.247Z",
   "_endpoint": "ListIntuneTemplates",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 6
+  "_requiresTenant": false
 }

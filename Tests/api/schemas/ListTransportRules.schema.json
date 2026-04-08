@@ -2,61 +2,109 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListTransportRules",
   "description": "Shape schema for /api/ListTransportRules",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Priority@data.type": {
-      "type": "string"
-    },
-    "Priority": {
-      "type": "number"
-    },
-    "DlpPolicy": {
-      "type": "null"
-    },
-    "DlpPolicyId@data.type": {
-      "type": "string"
-    },
-    "DlpPolicyId@odata.type": {
-      "type": "string"
-    },
-    "DlpPolicyId": {
-      "type": "string"
-    },
-    "Comments": {
+    "ADComparisonAttribute": {},
+    "ADComparisonOperator": {},
+    "Actions": {
       "type": [
-        "null",
-        "string"
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "Actions@odata.type": {
+      "type": [
+        "string",
+        "null"
       ]
     },
-    "CreatedBy": {
-      "type": "string"
+    "ActivationDate": {},
+    "AddManagerAsRecipientType": {},
+    "AddToRecipients": {},
+    "AnyOfCcHeader": {},
+    "AnyOfCcHeaderMemberOf": {},
+    "AnyOfRecipientAddressContainsWords": {},
+    "AnyOfRecipientAddressMatchesPatterns": {},
+    "AnyOfToCcHeader": {},
+    "AnyOfToCcHeaderMemberOf": {},
+    "AnyOfToHeader": {},
+    "AnyOfToHeaderMemberOf": {},
+    "ApplyClassification": {},
+    "ApplyHtmlDisclaimerFallbackAction": {},
+    "ApplyHtmlDisclaimerLocation": {},
+    "ApplyHtmlDisclaimerText": {},
+    "ApplyOME": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "LastModifiedBy": {
-      "type": "string"
+    "ApplyRightsProtectionCustomizationTemplate": {},
+    "ApplyRightsProtectionTemplate": {},
+    "AttachmentContainsWords": {},
+    "AttachmentExtensionMatchesWords": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     },
-    "ManuallyModified": {
-      "type": "boolean"
+    "AttachmentExtensionMatchesWords@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ActivationDate": {
-      "type": "null"
+    "AttachmentHasExecutableContent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "ExpiryDate": {
-      "type": "null"
+    "AttachmentIsPasswordProtected": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "Description": {
-      "type": "string"
+    "AttachmentIsUnsupported": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "RuleVersion": {
-      "type": "string"
+    "AttachmentMatchesPatterns": {},
+    "AttachmentNameMatchesPatterns": {},
+    "AttachmentProcessingLimitExceeded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "Size@data.type": {
-      "type": "string"
-    },
-    "Size": {
-      "type": "number"
-    },
-    "Conditions@odata.type": {
-      "type": "string"
+    "AttachmentPropertyContainsWords": {},
+    "AttachmentSizeOver": {},
+    "BetweenMemberOf1": {},
+    "BetweenMemberOf2": {},
+    "BlindCopyTo": {},
+    "Comments": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Conditions": {
       "type": [
@@ -64,530 +112,360 @@
         "null"
       ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
-    "Exceptions": {
-      "type": "null"
+    "Conditions@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Actions@odata.type": {
-      "type": "string"
+    "ContentCharacterSetContainsWords": {},
+    "ContentMatchesPrompt": {},
+    "ContentMatchesPromptVerdict": {},
+    "CopyTo": {},
+    "CreatedBy": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Actions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    "DeleteMessage": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "State": {
-      "type": "string"
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Mode": {
-      "type": "string"
+    "Disconnect": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "IsRuleConfigurationSupported": {
-      "type": "boolean"
+    "DistinguishedName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "RuleConfigurationUnsupportedReason": {
-      "type": "string"
+    "DlpPolicy": {},
+    "DlpPolicyId": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "RuleErrorAction": {
-      "type": "string"
+    "DlpPolicyId@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "SenderAddressLocation": {
-      "type": "string"
+    "DlpPolicyId@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "RecipientAddressType": {
-      "type": "string"
+    "ExceptIfADComparisonAttribute": {},
+    "ExceptIfADComparisonOperator": {},
+    "ExceptIfAnyOfCcHeader": {},
+    "ExceptIfAnyOfCcHeaderMemberOf": {},
+    "ExceptIfAnyOfRecipientAddressContainsWords": {},
+    "ExceptIfAnyOfRecipientAddressMatchesPatterns": {},
+    "ExceptIfAnyOfToCcHeader": {},
+    "ExceptIfAnyOfToCcHeaderMemberOf": {},
+    "ExceptIfAnyOfToHeader": {},
+    "ExceptIfAnyOfToHeaderMemberOf": {},
+    "ExceptIfAttachmentContainsWords": {},
+    "ExceptIfAttachmentExtensionMatchesWords": {},
+    "ExceptIfAttachmentHasExecutableContent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "RuleSubType": {
-      "type": "string"
+    "ExceptIfAttachmentIsPasswordProtected": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "RegexSize@data.type": {
-      "type": "string"
+    "ExceptIfAttachmentIsUnsupported": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "RegexSize": {
-      "type": "number"
+    "ExceptIfAttachmentMatchesPatterns": {},
+    "ExceptIfAttachmentNameMatchesPatterns": {},
+    "ExceptIfAttachmentProcessingLimitExceeded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "UseLegacyRegex": {
-      "type": "boolean"
+    "ExceptIfAttachmentPropertyContainsWords": {},
+    "ExceptIfAttachmentSizeOver": {},
+    "ExceptIfBetweenMemberOf1": {},
+    "ExceptIfBetweenMemberOf2": {},
+    "ExceptIfContentCharacterSetContainsWords": {},
+    "ExceptIfContentMatchesPrompt": {},
+    "ExceptIfContentMatchesPromptVerdict": {},
+    "ExceptIfFrom": {},
+    "ExceptIfFromAddressContainsWords": {},
+    "ExceptIfFromAddressMatchesPatterns": {},
+    "ExceptIfFromMemberOf": {},
+    "ExceptIfFromScope": {},
+    "ExceptIfHasClassification": {},
+    "ExceptIfHasNoClassification": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "From@odata.type": {
-      "type": "string"
+    "ExceptIfHasSenderOverride": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
+    "ExceptIfHeaderContainsMessageHeader": {},
+    "ExceptIfHeaderContainsWords": {},
+    "ExceptIfHeaderMatchesMessageHeader": {},
+    "ExceptIfHeaderMatchesPatterns": {},
+    "ExceptIfManagerAddresses": {},
+    "ExceptIfManagerForEvaluatedUser": {},
+    "ExceptIfMessageContainsAllDataClassifications": {},
+    "ExceptIfMessageContainsDataClassifications": {},
+    "ExceptIfMessageSizeOver": {},
+    "ExceptIfMessageTypeMatches": {},
+    "ExceptIfRecipientADAttributeContainsWords": {},
+    "ExceptIfRecipientADAttributeMatchesPatterns": {},
+    "ExceptIfRecipientAddressContainsWords": {},
+    "ExceptIfRecipientAddressMatchesPatterns": {},
+    "ExceptIfRecipientDomainIs": {},
+    "ExceptIfRecipientInSenderList": {},
+    "ExceptIfSCLOver": {},
+    "ExceptIfSenderADAttributeContainsWords": {},
+    "ExceptIfSenderADAttributeMatchesPatterns": {},
+    "ExceptIfSenderDomainIs": {},
+    "ExceptIfSenderInRecipientList": {},
+    "ExceptIfSenderIpRanges": {},
+    "ExceptIfSenderManagementRelationship": {},
+    "ExceptIfSentTo": {},
+    "ExceptIfSentToMemberOf": {},
+    "ExceptIfSentToScope": {},
+    "ExceptIfSubjectContainsWords": {},
+    "ExceptIfSubjectMatchesPatterns": {},
+    "ExceptIfSubjectOrBodyContainsWords": {},
+    "ExceptIfSubjectOrBodyMatchesPatterns": {},
+    "ExceptIfWithImportance": {},
+    "Exceptions": {},
+    "ExpiryDate": {},
     "From": {
       "type": [
         "array",
         "null"
       ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
-    "FromMemberOf": {
-      "type": "null"
+    "From@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
+    "FromAddressContainsWords": {},
+    "FromAddressMatchesPatterns": {},
+    "FromMemberOf": {},
     "FromScope": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
       ]
     },
-    "SentTo": {
-      "type": "null"
-    },
-    "SentToMemberOf": {
-      "type": "null"
-    },
-    "SentToScope": {
+    "GenerateIncidentReport": {},
+    "GenerateNotification": {},
+    "Guid": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
       ]
     },
-    "BetweenMemberOf1": {
-      "type": "null"
+    "Guid@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "BetweenMemberOf2": {
-      "type": "null"
+    "Guid@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ManagerAddresses": {
-      "type": "null"
-    },
-    "ManagerForEvaluatedUser": {
-      "type": "null"
-    },
-    "SenderManagementRelationship": {
-      "type": "null"
-    },
-    "ADComparisonAttribute": {
-      "type": "null"
-    },
-    "ADComparisonOperator": {
-      "type": "null"
-    },
-    "SenderADAttributeContainsWords": {
-      "type": "null"
-    },
-    "SenderADAttributeMatchesPatterns": {
-      "type": "null"
-    },
-    "RecipientADAttributeContainsWords": {
-      "type": "null"
-    },
-    "RecipientADAttributeMatchesPatterns": {
-      "type": "null"
-    },
-    "AnyOfToHeader": {
-      "type": "null"
-    },
-    "AnyOfToHeaderMemberOf": {
-      "type": "null"
-    },
-    "AnyOfCcHeader": {
-      "type": "null"
-    },
-    "AnyOfCcHeaderMemberOf": {
-      "type": "null"
-    },
-    "AnyOfToCcHeader": {
-      "type": "null"
-    },
-    "AnyOfToCcHeaderMemberOf": {
-      "type": "null"
-    },
-    "HasClassification": {
-      "type": "null"
-    },
+    "HasClassification": {},
     "HasNoClassification": {
-      "type": "boolean"
-    },
-    "SubjectContainsWords": {
-      "type": "null"
-    },
-    "SubjectOrBodyContainsWords": {
       "type": [
-        "null",
-        "array"
-      ],
-      "items": {
-        "type": "string"
-      }
-    },
-    "HeaderContainsMessageHeader": {
-      "type": "null"
-    },
-    "HeaderContainsWords": {
-      "type": "null"
-    },
-    "FromAddressContainsWords": {
-      "type": "null"
-    },
-    "SenderDomainIs": {
-      "type": "null"
-    },
-    "RecipientDomainIs": {
-      "type": "null"
-    },
-    "SubjectMatchesPatterns": {
-      "type": "null"
-    },
-    "SubjectOrBodyMatchesPatterns": {
-      "type": "null"
-    },
-    "HeaderMatchesMessageHeader": {
-      "type": "null"
-    },
-    "HeaderMatchesPatterns": {
-      "type": "null"
-    },
-    "FromAddressMatchesPatterns": {
-      "type": "null"
-    },
-    "AttachmentNameMatchesPatterns": {
-      "type": "null"
-    },
-    "AttachmentExtensionMatchesWords": {
-      "type": [
-        "null",
-        "array"
-      ],
-      "items": {
-        "type": "string"
-      }
-    },
-    "AttachmentPropertyContainsWords": {
-      "type": "null"
-    },
-    "ContentCharacterSetContainsWords": {
-      "type": "null"
+        "boolean",
+        "null"
+      ]
     },
     "HasSenderOverride": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "MessageContainsDataClassifications": {
-      "type": "null"
+    "HeaderContainsMessageHeader": {},
+    "HeaderContainsWords": {},
+    "HeaderMatchesMessageHeader": {},
+    "HeaderMatchesPatterns": {},
+    "Identity": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "MessageContainsAllDataClassifications": {
-      "type": "null"
+    "ImmutableId": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "SenderIpRanges": {
-      "type": "null"
+    "ImmutableId@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "SCLOver": {
-      "type": "null"
+    "ImmutableId@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "AttachmentSizeOver": {
-      "type": "null"
+    "IncidentReportContent": {},
+    "IsRuleConfigurationSupported": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "MessageSizeOver": {
-      "type": "null"
+    "IsValid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "WithImportance": {
-      "type": "null"
+    "LastModifiedBy": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
+    "LogEventText": {},
+    "ManagerAddresses": {},
+    "ManagerForEvaluatedUser": {},
+    "ManuallyModified": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "MessageContainsAllDataClassifications": {},
+    "MessageContainsDataClassifications": {},
+    "MessageSizeOver": {},
     "MessageTypeMatches": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
       ]
     },
-    "ContentMatchesPrompt": {
-      "type": "null"
-    },
-    "ContentMatchesPromptVerdict": {
-      "type": "null"
-    },
-    "RecipientAddressContainsWords": {
-      "type": "null"
-    },
-    "RecipientAddressMatchesPatterns": {
-      "type": "null"
-    },
-    "SenderInRecipientList": {
-      "type": "null"
-    },
-    "RecipientInSenderList": {
-      "type": "null"
-    },
-    "AttachmentContainsWords": {
-      "type": "null"
-    },
-    "AttachmentMatchesPatterns": {
-      "type": "null"
-    },
-    "AttachmentIsUnsupported": {
-      "type": "boolean"
-    },
-    "AttachmentProcessingLimitExceeded": {
-      "type": "boolean"
-    },
-    "AttachmentHasExecutableContent": {
-      "type": "boolean"
-    },
-    "AttachmentIsPasswordProtected": {
-      "type": "boolean"
-    },
-    "AnyOfRecipientAddressContainsWords": {
-      "type": "null"
-    },
-    "AnyOfRecipientAddressMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfFrom": {
-      "type": "null"
-    },
-    "ExceptIfFromMemberOf": {
-      "type": "null"
-    },
-    "ExceptIfFromScope": {
-      "type": "null"
-    },
-    "ExceptIfSentTo": {
-      "type": "null"
-    },
-    "ExceptIfSentToMemberOf": {
-      "type": "null"
-    },
-    "ExceptIfSentToScope": {
-      "type": "null"
-    },
-    "ExceptIfBetweenMemberOf1": {
-      "type": "null"
-    },
-    "ExceptIfBetweenMemberOf2": {
-      "type": "null"
-    },
-    "ExceptIfManagerAddresses": {
-      "type": "null"
-    },
-    "ExceptIfManagerForEvaluatedUser": {
-      "type": "null"
-    },
-    "ExceptIfSenderManagementRelationship": {
-      "type": "null"
-    },
-    "ExceptIfADComparisonAttribute": {
-      "type": "null"
-    },
-    "ExceptIfADComparisonOperator": {
-      "type": "null"
-    },
-    "ExceptIfSenderADAttributeContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfSenderADAttributeMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfRecipientADAttributeContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfRecipientADAttributeMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfAnyOfToHeader": {
-      "type": "null"
-    },
-    "ExceptIfAnyOfToHeaderMemberOf": {
-      "type": "null"
-    },
-    "ExceptIfAnyOfCcHeader": {
-      "type": "null"
-    },
-    "ExceptIfAnyOfCcHeaderMemberOf": {
-      "type": "null"
-    },
-    "ExceptIfAnyOfToCcHeader": {
-      "type": "null"
-    },
-    "ExceptIfAnyOfToCcHeaderMemberOf": {
-      "type": "null"
-    },
-    "ExceptIfHasClassification": {
-      "type": "null"
-    },
-    "ExceptIfHasNoClassification": {
-      "type": "boolean"
-    },
-    "ExceptIfSubjectContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfSubjectOrBodyContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfHeaderContainsMessageHeader": {
-      "type": "null"
-    },
-    "ExceptIfHeaderContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfFromAddressContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfSenderDomainIs": {
-      "type": "null"
-    },
-    "ExceptIfRecipientDomainIs": {
-      "type": "null"
-    },
-    "ExceptIfSubjectMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfSubjectOrBodyMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfHeaderMatchesMessageHeader": {
-      "type": "null"
-    },
-    "ExceptIfHeaderMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfFromAddressMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfAttachmentNameMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfAttachmentExtensionMatchesWords": {
-      "type": "null"
-    },
-    "ExceptIfAttachmentPropertyContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfContentCharacterSetContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfSCLOver": {
-      "type": "null"
-    },
-    "ExceptIfAttachmentSizeOver": {
-      "type": "null"
-    },
-    "ExceptIfMessageSizeOver": {
-      "type": "null"
-    },
-    "ExceptIfWithImportance": {
-      "type": "null"
-    },
-    "ExceptIfMessageTypeMatches": {
-      "type": "null"
-    },
-    "ExceptIfContentMatchesPrompt": {
-      "type": "null"
-    },
-    "ExceptIfContentMatchesPromptVerdict": {
-      "type": "null"
-    },
-    "ExceptIfRecipientAddressContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfRecipientAddressMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfSenderInRecipientList": {
-      "type": "null"
-    },
-    "ExceptIfRecipientInSenderList": {
-      "type": "null"
-    },
-    "ExceptIfAttachmentContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfAttachmentMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfAttachmentIsUnsupported": {
-      "type": "boolean"
-    },
-    "ExceptIfAttachmentProcessingLimitExceeded": {
-      "type": "boolean"
-    },
-    "ExceptIfAttachmentHasExecutableContent": {
-      "type": "boolean"
-    },
-    "ExceptIfAttachmentIsPasswordProtected": {
-      "type": "boolean"
-    },
-    "ExceptIfAnyOfRecipientAddressContainsWords": {
-      "type": "null"
-    },
-    "ExceptIfAnyOfRecipientAddressMatchesPatterns": {
-      "type": "null"
-    },
-    "ExceptIfHasSenderOverride": {
-      "type": "boolean"
-    },
-    "ExceptIfMessageContainsDataClassifications": {
-      "type": "null"
-    },
-    "ExceptIfMessageContainsAllDataClassifications": {
-      "type": "null"
-    },
-    "ExceptIfSenderIpRanges": {
-      "type": "null"
-    },
-    "PrependSubject": {
-      "type": "null"
-    },
-    "SetAuditSeverity": {
+    "Mode": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
       ]
-    },
-    "ApplyClassification": {
-      "type": "null"
-    },
-    "ApplyHtmlDisclaimerLocation": {
-      "type": "null"
-    },
-    "ApplyHtmlDisclaimerText": {
-      "type": "null"
-    },
-    "ApplyHtmlDisclaimerFallbackAction": {
-      "type": "null"
-    },
-    "ApplyRightsProtectionTemplate": {
-      "type": "null"
-    },
-    "ApplyRightsProtectionCustomizationTemplate": {
-      "type": "null"
-    },
-    "SetSCL": {
-      "type": "null"
-    },
-    "SetHeaderName": {
-      "type": "null"
-    },
-    "SetHeaderValue": {
-      "type": "null"
-    },
-    "RemoveHeader": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "AddToRecipients": {
-      "type": "null"
-    },
-    "CopyTo": {
-      "type": "null"
-    },
-    "BlindCopyTo": {
-      "type": "null"
-    },
-    "AddManagerAsRecipientType": {
-      "type": "null"
-    },
-    "ModerateMessageByUser": {
-      "type": "null"
     },
     "ModerateMessageByManager": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "RedirectMessageTo": {
-      "type": "null"
+    "ModerateMessageByUser": {},
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OrganizationId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PrependSubject": {},
+    "Priority": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Priority@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Quarantine": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "RecipientADAttributeContainsWords": {},
+    "RecipientADAttributeMatchesPatterns": {},
+    "RecipientAddressContainsWords": {},
+    "RecipientAddressMatchesPatterns": {},
+    "RecipientAddressType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RecipientDomainIs": {},
+    "RecipientInSenderList": {},
+    "RedirectMessageTo": {},
+    "RegexSize": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "RegexSize@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RejectMessageEnhancedStatusCode": {
       "type": [
@@ -601,109 +479,162 @@
         "null"
       ]
     },
-    "DeleteMessage": {
-      "type": "boolean"
-    },
-    "Disconnect": {
-      "type": "boolean"
-    },
-    "Quarantine": {
-      "type": "boolean"
-    },
-    "SmtpRejectMessageRejectText": {
-      "type": "null"
-    },
-    "SmtpRejectMessageRejectStatusCode": {
-      "type": "null"
-    },
-    "LogEventText": {
-      "type": "null"
-    },
-    "StopRuleProcessing": {
-      "type": "boolean"
-    },
-    "SenderNotificationType": {
-      "type": "null"
-    },
-    "GenerateIncidentReport": {
-      "type": "null"
-    },
-    "IncidentReportContent": {
-      "type": "null"
-    },
-    "RouteMessageOutboundConnector": {
-      "type": "null"
-    },
-    "RouteMessageOutboundRequireTls": {
-      "type": "boolean"
-    },
-    "ApplyOME": {
-      "type": "boolean"
+    "RemoveHeader": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RemoveOME": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "RemoveOMEv2": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "RemoveRMSAttachmentEncryption": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "GenerateNotification": {
-      "type": "null"
+    "RouteMessageOutboundConnector": {},
+    "RouteMessageOutboundRequireTls": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "Identity": {
-      "type": "string"
+    "RuleConfigurationUnsupportedReason": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "DistinguishedName": {
-      "type": "string"
+    "RuleErrorAction": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Guid@data.type": {
-      "type": "string"
+    "RuleSubType": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Guid@odata.type": {
-      "type": "string"
+    "RuleVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Guid": {
-      "type": "string"
+    "SCLOver": {},
+    "SenderADAttributeContainsWords": {},
+    "SenderADAttributeMatchesPatterns": {},
+    "SenderAddressLocation": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ImmutableId@data.type": {
-      "type": "string"
+    "SenderDomainIs": {},
+    "SenderInRecipientList": {},
+    "SenderIpRanges": {},
+    "SenderManagementRelationship": {},
+    "SenderNotificationType": {},
+    "SentTo": {},
+    "SentToMemberOf": {},
+    "SentToScope": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ImmutableId@odata.type": {
-      "type": "string"
+    "SetAuditSeverity": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ImmutableId": {
-      "type": "string"
+    "SetHeaderName": {},
+    "SetHeaderValue": {},
+    "SetSCL": {},
+    "Size": {
+      "type": [
+        "number",
+        "null"
+      ]
     },
-    "OrganizationId": {
-      "type": "string"
+    "Size@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Name": {
-      "type": "string"
+    "SmtpRejectMessageRejectStatusCode": {},
+    "SmtpRejectMessageRejectText": {},
+    "State": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "IsValid": {
-      "type": "boolean"
+    "StopRuleProcessing": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "WhenChanged@data.type": {
-      "type": "string"
-    },
-    "WhenChanged": {
-      "type": "string",
-      "format": "date-time"
+    "SubjectContainsWords": {},
+    "SubjectMatchesPatterns": {},
+    "SubjectOrBodyContainsWords": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     },
     "SubjectOrBodyContainsWords@odata.type": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "AttachmentExtensionMatchesWords@odata.type": {
-      "type": "string"
-    }
+    "SubjectOrBodyMatchesPatterns": {},
+    "UseLegacyRegex": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "WhenChanged": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenChanged@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WithImportance": {}
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:14:34.511Z",
   "_endpoint": "ListTransportRules",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 10
+  "_requiresTenant": true
 }

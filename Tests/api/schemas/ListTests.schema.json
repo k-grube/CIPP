@@ -2,434 +2,543 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListTests",
   "description": "Shape schema for /api/ListTests",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "TestResults": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "ETag": {
-            "type": "string"
-          },
-          "PartitionKey": {
-            "type": "string"
-          },
-          "RowKey": {
-            "type": "string"
-          },
-          "ResultDataJson": {
-            "type": "string"
-          },
-          "Pillar": {
-            "type": "string"
-          },
-          "Risk": {
-            "type": "string"
-          },
-          "UserImpact": {
-            "type": "string"
-          },
-          "Category": {
-            "type": "string"
-          },
-          "Name": {
-            "type": "string"
-          },
-          "Status": {
-            "type": "string"
-          },
-          "ImplementationEffort": {
-            "type": "string"
-          },
-          "ResultMarkdown": {
-            "type": "string"
-          },
-          "TestType": {
-            "type": "string"
-          },
-          "Timestamp": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "Description": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
-    "TenantCounts": {
-      "type": "object",
-      "properties": {
-        "OneDriveUsage": {
-          "type": "number"
-        },
-        "ExoAdminAuditLogConfig": {
-          "type": "number"
-        },
-        "ExoOrganizationConfig": {
-          "type": "number"
-        },
-        "ExoTenantAllowBlockList": {
-          "type": "number"
-        },
-        "ManagedDevices": {
-          "type": "number"
-        },
-        "ServicePrincipals": {
-          "type": "number"
-        },
-        "IntuneAppProtectionPolicies": {
-          "type": "number"
-        },
-        "ExoSafeAttachmentPolicies": {
-          "type": "number"
-        },
-        "ExoAcceptedDomains": {
-          "type": "number"
-        },
-        "Apps": {
-          "type": "number"
-        },
-        "IntuneAndroidAppProtectionPolicies": {
-          "type": "number"
-        },
-        "NamedLocations": {
-          "type": "number"
-        },
-        "IntuneDeviceCompliancePolicies": {
-          "type": "number"
-        },
-        "Guests": {
-          "type": "number"
-        },
-        "CalendarPermissions": {
-          "type": "number"
-        },
-        "DetectedApps": {
-          "type": "number"
-        },
-        "ExoSharingPolicy": {
-          "type": "number"
-        },
-        "ExoAntiPhishPolicy": {
-          "type": "number"
-        },
-        "IntuneMobileAppConfigurations": {
-          "type": "number"
-        },
-        "IntuneIosAppProtectionPolicies": {
-          "type": "number"
-        },
-        "SecureScore": {
-          "type": "number"
-        },
-        "UserRegistrationDetails": {
-          "type": "number"
-        },
-        "ExoSafeLinksPolicy": {
-          "type": "number"
-        },
-        "ExoRemoteDomain": {
-          "type": "number"
-        },
-        "ExoSafeLinksRules": {
-          "type": "number"
-        },
-        "MDEOnboarding": {
-          "type": "number"
-        },
-        "Groups": {
-          "type": "number"
-        },
-        "Devices": {
-          "type": "number"
-        },
-        "IntuneConfigurationPolicies": {
-          "type": "number"
-        },
-        "ExoSafeLinksPolicies": {
-          "type": "number"
-        },
-        "ExoMalwareFilterRules": {
-          "type": "number"
-        },
-        "ExoHostedContentFilterPolicy": {
-          "type": "number"
-        },
-        "MailboxRules": {
-          "type": "number"
-        },
-        "ExoSafeAttachmentPolicy": {
-          "type": "number"
-        },
-        "ExoSafeAttachmentRules": {
-          "type": "number"
-        },
-        "Mailboxes": {
-          "type": "number"
-        },
-        "ExoHostedOutboundSpamFilterPolicy": {
-          "type": "number"
-        },
-        "RiskyUsers": {
-          "type": "number"
-        },
-        "MailboxPermissions": {
-          "type": "number"
-        },
-        "IntuneWindowsAutopilotDeploymentProfiles": {
-          "type": "number"
-        },
-        "CASMailbox": {
-          "type": "number"
-        },
-        "IntuneMobileApps": {
-          "type": "number"
-        },
-        "AuthenticationStrengths": {
-          "type": "number"
-        },
-        "Roles": {
-          "type": "number"
-        },
-        "ExoDkimSigningConfig": {
-          "type": "number"
-        },
-        "MFAState": {
-          "type": "number"
-        },
-        "IntuneDeviceEnrollmentConfigurations": {
-          "type": "number"
-        },
-        "ExoMalwareFilterPolicies": {
-          "type": "number"
-        },
-        "Users": {
-          "type": "number"
-        },
-        "IntuneDeviceConfigurations": {
-          "type": "number"
-        },
-        "ExoAntiPhishRules": {
-          "type": "number"
-        },
-        "ConditionalAccessPolicies": {
-          "type": "number"
-        },
-        "ExoQuarantinePolicy": {
-          "type": "number"
-        },
-        "ExoTransportRules": {
-          "type": "number"
-        },
-        "ExoMalwareFilterPolicy": {
-          "type": "number"
-        },
-        "ExoAntiPhishPolicies": {
-          "type": "number"
-        },
-        "DirectoryRecommendations": {
-          "type": "number"
-        },
-        "ExoAtpPolicyForO365": {
-          "type": "number"
-        }
-      },
-      "additionalProperties": true
-    },
     "LatestReportTimeStamp": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
-    "TestCounts": {
-      "type": "object",
-      "properties": {
-        "Custom": {
-          "type": "object",
-          "properties": {
-            "Passed": {
-              "type": "number"
-            },
-            "Failed": {
-              "type": "number"
-            },
-            "Skipped": {
-              "type": "number"
-            },
-            "Total": {
-              "type": "number"
-            },
-            "Informational": {
-              "type": "number"
-            }
-          },
-          "additionalProperties": true
-        },
-        "Identity": {
-          "type": "object",
-          "properties": {
-            "Skipped": {
-              "type": "number"
-            },
-            "Total": {
-              "type": "number"
-            },
-            "Failed": {
-              "type": "number"
-            },
-            "Informational": {
-              "type": "number"
-            },
-            "NeedsAttention": {
-              "type": "number"
-            },
-            "Passed": {
-              "type": "number"
-            }
-          },
-          "additionalProperties": true
-        },
-        "Devices": {
-          "type": "object",
-          "properties": {
-            "Skipped": {
-              "type": "number"
-            },
-            "Total": {
-              "type": "number"
-            },
-            "Failed": {
-              "type": "number"
-            },
-            "Informational": {
-              "type": "number"
-            },
-            "NeedsAttention": {
-              "type": "number"
-            },
-            "Passed": {
-              "type": "number"
-            }
-          },
-          "additionalProperties": true
-        }
-      },
-      "additionalProperties": true
-    },
-    "SecureScore": {
-      "type": "array",
+    "LicenseData": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "azureTenantId": {
-            "type": "string"
-          },
-          "activeUserCount": {
-            "type": "number"
-          },
-          "createdDateTime": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "currentScore": {
-            "type": "number"
-          },
-          "enabledServices": {
-            "type": "array",
+          "AssignedGroups": {},
+          "AssignedUsers": {
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
-              "type": "string"
-            }
-          },
-          "licensedUserCount": {
-            "type": "number"
-          },
-          "maxScore": {
-            "type": "number"
-          },
-          "vendorInformation": {
-            "type": "object",
-            "properties": {
-              "provider": {
-                "type": "string"
-              },
-              "providerVersion": {
-                "type": "null"
-              },
-              "subProvider": {
-                "type": "null"
-              },
-              "vendor": {
-                "type": "string"
-              }
-            },
-            "additionalProperties": true
-          },
-          "averageComparativeScores": {
-            "type": "array",
-            "items": {
-              "type": "object",
+              "type": [
+                "object",
+                "null"
+              ],
               "properties": {
-                "basis": {
-                  "type": "string"
+                "displayName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
-                "averageScore": {
-                  "type": "number"
+                "id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
-                "appsScore": {
-                  "type": "number"
-                },
-                "appsScoreMax": {
-                  "type": "number"
-                },
-                "dataScore": {
-                  "type": "number"
-                },
-                "dataScoreMax": {
-                  "type": "number"
-                },
-                "deviceScore": {
-                  "type": "number"
-                },
-                "deviceScoreMax": {
-                  "type": "number"
-                },
-                "identityScore": {
-                  "type": "number"
-                },
-                "identityScoreMax": {
-                  "type": "number"
-                },
-                "infrastructureScore": {
-                  "type": "number"
-                },
-                "infrastructureScoreMax": {
-                  "type": "number"
-                },
-                "SeatSizeRangeLowerValue": {
-                  "type": "string"
-                },
-                "SeatSizeRangeUpperValue": {
-                  "type": "string"
+                "userPrincipalName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 }
               },
               "additionalProperties": true
             }
           },
-          "controlScores": {
-            "type": "array",
+          "CountAvailable": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "CountUsed": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "License": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ServicePlans": {
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
-              "type": "object",
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "appliesTo": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "provisioningStatus": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "servicePlanId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "servicePlanName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "servicePlanType": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "Tenant": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "TermInfo": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "CSPSubscriptionId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "DaysUntilRenew": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "IsTrial": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "NextLifecycle": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                },
+                "OCPSubscriptionId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "Status": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "SubscriptionId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "Term": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "TotalLicenses": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "TotalLicenses": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "availableUnits": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "skuId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "skuPartNumber": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "MFAState": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "AccountEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "CAPolicies": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "AllApps": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "DisplayName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ExcludedViaGroup": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "PolicyState": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "UserIncluded": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "CoveredByCA": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "CoveredBySD": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "DisplayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ID": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "IsAdmin": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "MFACapable": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "MFAMethods": {
+            "type": [
+              "string",
+              "null",
+              "array"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "MFARegistration": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "PartitionKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "PerUser": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "RowKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Tenant": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "UPN": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "UserType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isLicensed": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "SecureScore": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "activeUserCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "averageComparativeScores": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "SeatSizeRangeLowerValue": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "SeatSizeRangeUpperValue": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "appsScore": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "appsScoreMax": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "averageScore": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "basis": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "dataScore": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "dataScoreMax": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "deviceScore": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "deviceScoreMax": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "identityScore": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "identityScoreMax": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "infrastructureScore": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "infrastructureScoreMax": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "azureTenantId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "controlScores": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
               "properties": {
                 "controlCategory": {
-                  "type": "string"
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "controlName": {
-                  "type": "string"
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "count": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "description": {
                   "type": [
@@ -437,109 +546,875 @@
                     "null"
                   ]
                 },
-                "score": {
-                  "type": "number"
+                "implementationStatus": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "lastSynced": {
-                  "type": "string",
+                  "type": [
+                    "string",
+                    "null"
+                  ],
                   "format": "date-time"
                 },
-                "implementationStatus": {
-                  "type": "string"
-                },
                 "on": {
-                  "type": "string"
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "score": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
                 },
                 "scoreInPercentage": {
-                  "type": "number"
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "total": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 }
               },
               "additionalProperties": true
             }
+          },
+          "createdDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "currentScore": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "enabledServices": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "licensedUserCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "maxScore": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "vendorInformation": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "provider": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "providerVersion": {},
+              "subProvider": {},
+              "vendor": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
           }
         },
         "additionalProperties": true
       }
     },
-    "MFAState": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "Tenant": {
-            "type": "string"
-          },
-          "ID": {
-            "type": "string"
-          },
-          "UPN": {
-            "type": "string"
-          },
-          "DisplayName": {
-            "type": "string"
-          },
-          "AccountEnabled": {
-            "type": "boolean"
-          },
-          "PerUser": {
-            "type": "string"
-          },
-          "isLicensed": {
-            "type": "boolean"
-          },
-          "MFARegistration": {
-            "type": [
-              "null",
-              "boolean"
-            ]
-          },
-          "MFACapable": {
-            "type": [
-              "null",
-              "boolean"
-            ]
-          },
-          "MFAMethods": {
-            "type": "null"
-          },
-          "CoveredByCA": {
-            "type": "string"
-          },
-          "CAPolicies": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "DisplayName": {
-                  "type": "string"
-                },
-                "UserIncluded": {
-                  "type": "boolean"
-                },
-                "AllApps": {
-                  "type": "boolean"
-                },
-                "PolicyState": {
-                  "type": "string"
-                }
-              },
-              "additionalProperties": true
+    "TenantCounts": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "AdminConsentRequestPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "AppRoleAssignments": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Apps": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "AuthenticationMethodsPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "AuthenticationStrengths": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "AuthorizationPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "BitlockerKeys": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CASMailbox": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CalendarPermissions": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ConditionalAccessPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CopilotReadinessActivity": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CopilotUsageUserDetail": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CopilotUserCountSummary": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CopilotUserCountTrend": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CredentialUserRegistrationDetails": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "CrossTenantAccessPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "DefaultAppManagementPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "DetectedApps": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "DeviceRegistrationPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "DeviceSettings": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Devices": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "DirectoryRecommendations": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "DlpCompliancePolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Domains": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoAcceptedDomains": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoAdminAuditLogConfig": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoAntiPhishPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoAntiPhishPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoAntiPhishRules": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoAtpPolicyForO365": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoDkimSigningConfig": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoHostedContentFilterPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoHostedOutboundSpamFilterPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoMalwareFilterPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoMalwareFilterPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoMalwareFilterRules": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoOrganizationConfig": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoQuarantinePolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoRemoteDomain": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoSafeAttachmentPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoSafeAttachmentPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoSafeAttachmentRules": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoSafeLinksPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoSafeLinksPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoSafeLinksRules": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoSharingPolicy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoTenantAllowBlockList": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ExoTransportRules": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Groups": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Guests": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneAndroidAppProtectionPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneAppProtectionPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneConfigurationPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneDeviceCompliancePolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneDeviceConfigurations": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneDeviceEnrollmentConfigurations": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneGroupPolicyConfigurations": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneIosAppProtectionPolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneMobileAppConfigurations": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneMobileApps": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneWindowsAutopilotDeploymentProfiles": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneWindowsDriverUpdateProfiles": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "IntuneWindowsQualityUpdatePolicies": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "LicenseOverview": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "MDEOnboarding": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "MFAState": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "MailboxPermissions": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "MailboxRules": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "MailboxUsage": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Mailboxes": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ManagedDevices": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "NamedLocations": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "OAuth2PermissionGrants": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "OfficeActivations": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "OneDriveUsage": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Organization": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "RiskyUsers": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Roles": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "SecureScore": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "SecureScoreControlProfiles": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "SensitivityLabels": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ServicePrincipals": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Settings": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "UserRegistrationDetails": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Users": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "TestCounts": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Custom": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "Failed": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Informational": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Passed": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Skipped": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Total": {
+              "type": [
+                "number",
+                "null"
+              ]
             }
           },
-          "CoveredBySD": {
-            "type": "boolean"
+          "additionalProperties": true
+        },
+        "Devices": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "Failed": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Informational": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "NeedsAttention": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Passed": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Skipped": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Total": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
           },
-          "IsAdmin": {
-            "type": "boolean"
+          "additionalProperties": true
+        },
+        "Identity": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "Failed": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Informational": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "NeedsAttention": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Passed": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Skipped": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "Total": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
           },
-          "UserType": {
-            "type": "string"
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "TestResults": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "Category": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "RowKey": {
-            "type": "string"
+          "Description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ETag": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ImplementationEffort": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Name": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "PartitionKey": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Pillar": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ResultDataJson": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ResultMarkdown": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Risk": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "RowKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "TestType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Timestamp": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "UserImpact": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "additionalProperties": true
@@ -547,10 +1422,7 @@
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:14:34.211Z",
   "_endpoint": "ListTests",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

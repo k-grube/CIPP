@@ -2,41 +2,63 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListTenantAlignment",
   "description": "Shape schema for /api/ListTenantAlignment",
-  "_metadata": {
-    "endpoint": "ListTenantAlignment",
-    "generatedAt": "2026-04-05T12:15:06.112Z",
-    "tenantFilter": "7ngn50.onmicrosoft.com",
-    "requiresTenant": true,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListTenantAlignment.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
+    "LicenseMissingPercentage": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
     "alignmentScore": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "combinedAlignmentScore": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "latestDataCollection": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
-    "LicenseMissingPercentage": {
-      "type": "number"
-    },
     "standardId": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "standardName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "standardType": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "tenantFilter": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListTenantAlignment",
+  "_case": null,
+  "_requiresTenant": true
 }

@@ -1,43 +1,38 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "ListAssignmentFilterTemplates",
-  "description": "Shape schema for /api/ListAssignmentFilterTemplates",
+  "$id": "ListIPWhitelist",
+  "description": "Shape schema for /api/ListIPWhitelist",
   "type": [
     "object",
     "null"
   ],
   "properties": {
-    "GUID": {
+    "ETag": {
       "type": [
         "string",
         "null"
       ]
     },
-    "assignmentFilterManagementType": {
+    "PartitionKey": {
       "type": [
         "string",
         "null"
       ]
     },
-    "description": {
+    "RowKey": {
       "type": [
         "string",
         "null"
       ]
     },
-    "displayName": {
+    "Timestamp": {
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "format": "date-time"
     },
-    "platform": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "rule": {
+    "state": {
       "type": [
         "string",
         "null"
@@ -45,7 +40,7 @@
     }
   },
   "additionalProperties": true,
-  "_endpoint": "ListAssignmentFilterTemplates",
+  "_endpoint": "ListIPWhitelist",
   "_case": null,
   "_requiresTenant": false
 }

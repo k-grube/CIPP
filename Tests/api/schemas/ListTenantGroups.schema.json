@@ -2,51 +2,233 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListTenantGroups",
   "description": "Shape schema for /api/ListTenantGroups",
-  "_metadata": {
-    "endpoint": "ListTenantGroups",
-    "generatedAt": "2026-04-05T12:15:06.115Z",
-    "tenantFilter": "7ngn50.onmicrosoft.com",
-    "requiresTenant": true,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListTenantGroups.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "Description": {
-      "type": "string"
-    },
-    "DynamicRules": {
       "type": [
         "string",
-        "number",
-        "boolean",
         "null"
       ]
     },
+    "DynamicRules": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "operator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "property": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "array",
+              "null",
+              "object"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "guid": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "id": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "label": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "value": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            },
+            "properties": {
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "variableName": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "addedFields": {
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {},
+                    "additionalProperties": true
+                  },
+                  "label": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "rawData": {
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "Category": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "Description": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "Name": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "Scope": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "Type": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "Value": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "Variable": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "value": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
     "GroupType": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Id": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Members": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "customerId": {},
-          "defaultDomainName": {},
-          "displayName": {}
+          "customerId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "defaultDomainName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
         "additionalProperties": true
       }
     },
     "Name": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RuleLogic": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListTenantGroups",
+  "_case": null,
+  "_requiresTenant": true
 }

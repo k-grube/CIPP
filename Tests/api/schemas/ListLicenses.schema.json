@@ -2,120 +2,211 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListLicenses",
   "description": "Shape schema for /api/ListLicenses",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Tenant": {
-      "type": "string"
-    },
-    "License": {
-      "type": "string"
-    },
-    "CountUsed": {
-      "type": "string"
-    },
-    "CountAvailable": {
-      "type": "number"
-    },
-    "TotalLicenses": {
-      "type": "string"
-    },
-    "skuId": {
-      "type": "string"
-    },
-    "skuPartNumber": {
-      "type": "string"
-    },
-    "availableUnits": {
-      "type": "number"
-    },
-    "TermInfo": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "Status": {
-            "type": "string"
-          },
-          "Term": {
-            "type": "string"
-          },
-          "TotalLicenses": {
-            "type": "number"
-          },
-          "DaysUntilRenew": {
-            "type": "number"
-          },
-          "NextLifecycle": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "IsTrial": {
-            "type": "boolean"
-          },
-          "SubscriptionId": {
-            "type": "string"
-          },
-          "CSPSubscriptionId": {
-            "type": "string"
-          },
-          "OCPSubscriptionId": {
-            "type": "string"
-          }
-        },
-        "additionalProperties": true
-      }
-    },
+    "AssignedGroups": {},
     "AssignedUsers": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
           "displayName": {
-            "type": "string"
-          },
-          "userPrincipalName": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "id": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "userPrincipalName": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "additionalProperties": true
       }
     },
-    "AssignedGroups": {
-      "type": "null"
+    "CountAvailable": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "CountUsed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "License": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ServicePlans": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "servicePlanId": {
-            "type": "string"
-          },
-          "servicePlanName": {
-            "type": "string"
-          },
-          "servicePlanType": {
-            "type": "string"
+          "appliesTo": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "provisioningStatus": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "appliesTo": {
-            "type": "string"
+          "servicePlanId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "servicePlanName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "servicePlanType": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "additionalProperties": true
       }
+    },
+    "Tenant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TermInfo": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "CSPSubscriptionId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DaysUntilRenew": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "IsTrial": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "NextLifecycle": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "OCPSubscriptionId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SubscriptionId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Term": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "TotalLicenses": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "TotalLicenses": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "availableUnits": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "skuId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "skuPartNumber": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:10:17.741Z",
   "_endpoint": "ListLicenses",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

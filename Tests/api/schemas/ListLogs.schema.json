@@ -2,59 +2,144 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListLogs",
   "description": "Shape schema for /api/ListLogs",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "DateTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "Tenant": {
-      "type": "string"
-    },
     "API": {
-      "type": "string"
-    },
-    "Message": {
-      "type": "string"
-    },
-    "User": {
-      "type": "string"
-    },
-    "Severity": {
-      "type": "string"
-    },
-    "LogData": {
-      "type": "string"
-    },
-    "TenantID": {
-      "type": "string"
-    },
-    "AppId": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
       ]
     },
-    "IP": {
-      "type": "null"
+    "AppId": {},
+    "DateFilter": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "IP": {},
+    "LogData": {
+      "type": [
+        "string",
+        "null",
+        "object"
+      ],
+      "properties": {
+        "Category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LineNumber": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "NormalizedError": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Position": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Response": {},
+        "ScriptName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StackTrace": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "StatusCode": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "WebhookUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "Message": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RowKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Severity": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "StandardInfo": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {},
       "additionalProperties": true
     },
-    "DateFilter": {
-      "type": "string"
+    "Tenant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TenantID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "User": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:12.339Z",
   "_endpoint": "ListLogs",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 30
+  "_requiresTenant": false
 }

@@ -2,36 +2,57 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ExecAlertsList",
   "description": "Shape schema for /api/ExecAlertsList",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "NewAlertsCount": {
-      "type": "number"
-    },
     "InProgressAlertsCount": {
-      "type": "number"
-    },
-    "SeverityHighAlertsCount": {
-      "type": "number"
-    },
-    "SeverityMediumAlertsCount": {
-      "type": "number"
-    },
-    "SeverityLowAlertsCount": {
-      "type": "number"
-    },
-    "SeverityInformationalCount": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "MSResults": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
+    },
+    "NewAlertsCount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "SeverityHighAlertsCount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "SeverityInformationalCount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "SeverityLowAlertsCount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "SeverityMediumAlertsCount": {
+      "type": [
+        "number",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:15:20.950Z",
   "_endpoint": "ExecAlertsList",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

@@ -1,29 +1,30 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "ListAssignmentFilterTemplates",
-  "description": "Shape schema for /api/ListAssignmentFilterTemplates",
+  "$id": "ListSharedMailboxAccountEnabled",
+  "description": "Shape schema for /api/ListSharedMailboxAccountEnabled",
   "type": [
     "object",
     "null"
   ],
   "properties": {
-    "GUID": {
+    "UserPrincipalName": {
       "type": [
         "string",
         "null"
       ]
     },
-    "assignmentFilterManagementType": {
+    "accountEnabled": {
       "type": [
-        "string",
+        "boolean",
         "null"
       ]
     },
-    "description": {
+    "assignedLicenses": {
       "type": [
-        "string",
+        "array",
         "null"
-      ]
+      ],
+      "items": {}
     },
     "displayName": {
       "type": [
@@ -31,13 +32,20 @@
         "null"
       ]
     },
-    "platform": {
+    "givenName": {
       "type": [
         "string",
         "null"
       ]
     },
-    "rule": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "onPremisesSyncEnabled": {},
+    "surname": {
       "type": [
         "string",
         "null"
@@ -45,7 +53,7 @@
     }
   },
   "additionalProperties": true,
-  "_endpoint": "ListAssignmentFilterTemplates",
+  "_endpoint": "ListSharedMailboxAccountEnabled",
   "_case": null,
-  "_requiresTenant": false
+  "_requiresTenant": true
 }

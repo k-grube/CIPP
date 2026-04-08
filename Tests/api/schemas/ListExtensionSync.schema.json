@@ -2,49 +2,119 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListExtensionSync",
   "description": "Shape schema for /api/ListExtensionSync",
-  "_metadata": {
-    "endpoint": "ListExtensionSync",
-    "generatedAt": "2026-04-05T12:15:06.089Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListExtensionSync.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "ExecutedTime": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Name": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "PartitionKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RepeatsEvery": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Results": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
+        "Devices": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "Errors": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Logs": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "Results": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Users": {
+          "type": [
+            "number",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
     },
     "RowKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ScheduledTime": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "SyncType": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Tenant": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListExtensionSync",
+  "_case": null,
+  "_requiresTenant": false
 }

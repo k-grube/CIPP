@@ -2,230 +2,488 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListTransportRulesTemplates",
   "description": "Shape schema for /api/ListTransportRulesTemplates",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "name": {
-      "type": "string"
+    "ApplyOME": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "AttachmentExtensionMatchesWords": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "AttachmentHasExecutableContent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "AttachmentIsPasswordProtected": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "AttachmentIsUnsupported": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "AttachmentProcessingLimitExceeded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "DeleteMessage": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExceptIfAttachmentHasExecutableContent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExceptIfAttachmentIsPasswordProtected": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExceptIfAttachmentIsUnsupported": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExceptIfAttachmentProcessingLimitExceeded": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExceptIfHasNoClassification": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExceptIfHasSenderOverride": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "From": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "FromScope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "GUID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "HasNoClassification": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "HasSenderOverride": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "MessageTypeMatches": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Mode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ModerateMessageByManager": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Quarantine": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "RecipientAddressType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RejectMessageEnhancedStatusCode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RejectMessageReasonText": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RemoveHeader": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RemoveOME": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "RemoveOMEv2": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "RemoveRMSAttachmentEncryption": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "RouteMessageOutboundRequireTls": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "RuleErrorAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RuleSubType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SenderAddressLocation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SetAuditSeverity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "StopRuleProcessing": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "UseLegacyRegex": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "applyome": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "applyrightsprotectiontemplate": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "attachmenthasexecutablecontent": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "attachmentispasswordprotected": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "attachmentisunsupported": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "attachmentprocessinglimitexceeded": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "comments": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "deletemessage": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "exceptifattachmenthasexecutablecontent": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "exceptifattachmentispasswordprotected": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "exceptifattachmentisunsupported": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "exceptifattachmentprocessinglimitexceeded": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "exceptifhasnoclassification": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "exceptifhassenderoverride": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "from": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "fromscope": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "hasnoclassification": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "hassenderoverride": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "messagetypematches": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "mode": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "moderatemessagebymanager": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "quarantine": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "recipientaddresstype": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rejectmessageenhancedstatuscode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rejectmessagereasontext": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "removeome": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "removeomev2": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "removermsattachmentencryption": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "routemessageoutboundrequiretls": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "ruleerroraction": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "rulesubtype": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "senderaddresslocation": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "senttoscope": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "stopruleprocessing": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "subjectcontainswords": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "subjectorbodycontainswords": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
     "uselegacyregex": {
-      "type": "boolean"
-    },
-    "GUID": {
-      "type": "string"
-    },
-    "ApplyOME": {
-      "type": "boolean"
-    },
-    "AttachmentHasExecutableContent": {
-      "type": "boolean"
-    },
-    "AttachmentIsPasswordProtected": {
-      "type": "boolean"
-    },
-    "AttachmentIsUnsupported": {
-      "type": "boolean"
-    },
-    "AttachmentProcessingLimitExceeded": {
-      "type": "boolean"
-    },
-    "DeleteMessage": {
-      "type": "boolean"
-    },
-    "ExceptIfAttachmentHasExecutableContent": {
-      "type": "boolean"
-    },
-    "ExceptIfAttachmentIsPasswordProtected": {
-      "type": "boolean"
-    },
-    "ExceptIfAttachmentIsUnsupported": {
-      "type": "boolean"
-    },
-    "ExceptIfAttachmentProcessingLimitExceeded": {
-      "type": "boolean"
-    },
-    "ExceptIfHasNoClassification": {
-      "type": "boolean"
-    },
-    "ExceptIfHasSenderOverride": {
-      "type": "boolean"
-    },
-    "FromScope": {
-      "type": "string"
-    },
-    "HasNoClassification": {
-      "type": "boolean"
-    },
-    "HasSenderOverride": {
-      "type": "boolean"
-    },
-    "MessageTypeMatches": {
-      "type": "string"
-    },
-    "Mode": {
-      "type": "string"
-    },
-    "ModerateMessageByManager": {
-      "type": "boolean"
-    },
-    "Quarantine": {
-      "type": "boolean"
-    },
-    "RecipientAddressType": {
-      "type": "string"
-    },
-    "RemoveOME": {
-      "type": "boolean"
-    },
-    "RemoveOMEv2": {
-      "type": "boolean"
-    },
-    "RemoveRMSAttachmentEncryption": {
-      "type": "boolean"
-    },
-    "RouteMessageOutboundRequireTls": {
-      "type": "boolean"
-    },
-    "RuleErrorAction": {
-      "type": "string"
-    },
-    "RuleSubType": {
-      "type": "string"
-    },
-    "SenderAddressLocation": {
-      "type": "string"
-    },
-    "StopRuleProcessing": {
-      "type": "boolean"
-    },
-    "UseLegacyRegex": {
-      "type": "boolean"
-    },
-    "fromscope": {
-      "type": "string"
-    },
-    "messagetypematches": {
-      "type": "string"
-    },
-    "rejectmessageenhancedstatuscode": {
-      "type": "string"
-    },
-    "rejectmessagereasontext": {
-      "type": "string"
-    },
-    "senttoscope": {
-      "type": "string"
-    },
-    "subjectorbodycontainswords": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "from": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "RemoveHeader": {
-      "type": "string"
+      "type": [
+        "boolean",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:12.800Z",
   "_endpoint": "ListTransportRulesTemplates",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 6
+  "_requiresTenant": false
 }

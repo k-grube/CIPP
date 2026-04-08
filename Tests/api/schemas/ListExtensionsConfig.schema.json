@@ -2,13 +2,549 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListExtensionsConfig",
   "description": "Shape schema for /api/ListExtensionsConfig",
-  "type": "object",
-  "properties": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "CFZTNA": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ClientID": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "WebhookEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "CloudFlareAPIKey": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "CloudFlareClientID": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "GitHub": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "HIBP": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "HaloPSA": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AuthURL": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ClientID": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ConsolidateTickets": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ResourceURL": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Tenant": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TicketType": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "addedFields": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {},
+              "additionalProperties": true
+            },
+            "label": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "Hudu": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "BaseUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CFEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "CreateMissingDevices": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "CreateMissingUsers": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ExcludeSerials": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ImportDomains": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "MonitorDomains": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "NinjaOne": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ClientID": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Instance": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "LicenseDocumentsEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "LicensedOnly": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "UserDocumentsEnabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "PWPush": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AccountId": {},
+        "BaseUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "DeletableByViewer": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "EmailAddress": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ExpireAfterDays": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExpireAfterViews": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "PWPushPro": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "RetrievalStep": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "UseBearerAuth": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "Sherweb": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "AllowedCustomRoles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "addedFields": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {},
+                "additionalProperties": true
+              },
+              "label": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "rawData": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "AllowedTenants": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "BlockedTenants": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "EntraGroup": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "EntraGroupId": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "IPRange": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "Permissions": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "RoleName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "Type": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "AutoMigrations": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "SubscriptionKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "clientId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "clientSecret": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "cippapi": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "APIKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Enabled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:11.808Z",
   "_endpoint": "ListExtensionsConfig",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 1
+  "_requiresTenant": false
 }

@@ -1,58 +1,55 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "ListCustomDataMappings",
-  "description": "Shape schema for /api/ListCustomDataMappings",
+  "$id": "ListCSPLicenses",
+  "description": "Shape schema for /api/ListCSPLicenses",
   "type": [
     "object",
     "null"
   ],
   "properties": {
-    "customDataAttribute": {
+    "commitmentTerm": {
       "type": [
         "object",
         "null"
       ],
       "properties": {
-        "addedFields": {
+        "committedMinimalQuantities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {}
+        },
+        "renewalConfiguration": {
           "type": [
             "object",
             "null"
           ],
           "properties": {
-            "dataType": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "isMultiValued": {
+            "renewToExtendedServiceTerm": {
               "type": [
                 "boolean",
                 "null"
               ]
             },
-            "targetObject": {
+            "renewalDate": {
               "type": [
                 "string",
                 "null"
-              ]
-            },
-            "type": {
-              "type": [
-                "string",
-                "null"
-              ]
+              ],
+              "format": "date-time"
             }
           },
           "additionalProperties": true
         },
-        "label": {
+        "termEndDate": {
           "type": [
             "string",
             "null"
-          ]
+          ],
+          "format": "date-time"
         },
-        "value": {
+        "type": {
           "type": [
             "string",
             "null"
@@ -61,13 +58,13 @@
       },
       "additionalProperties": true
     },
-    "dataset": {
+    "description": {
       "type": [
         "string",
         "null"
       ]
     },
-    "directoryObject": {
+    "estStatus": {
       "type": [
         "string",
         "null"
@@ -79,39 +76,67 @@
         "null"
       ]
     },
-    "manualEntryFieldLabel": {
+    "productName": {
       "type": [
         "string",
         "null"
       ]
     },
-    "sourceType": {
+    "purchaseDate": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "quantity": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "renewalSettingsConfigurable": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "sku": {
       "type": [
         "string",
         "null"
       ]
     },
-    "syncProperty": {
+    "skuComposition": {
       "type": [
         "array",
         "null"
       ],
       "items": {
         "type": [
-          "string",
+          "object",
           "null"
-        ]
+        ],
+        "properties": {
+          "vendorName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "vendorProductId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
       }
-    },
-    "tenant": {
-      "type": [
-        "string",
-        "null"
-      ]
     }
   },
   "additionalProperties": true,
-  "_endpoint": "ListCustomDataMappings",
+  "_endpoint": "ListCSPLicenses",
   "_case": null,
   "_requiresTenant": true
 }

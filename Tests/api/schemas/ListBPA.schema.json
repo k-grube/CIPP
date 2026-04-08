@@ -2,64 +2,413 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListBPA",
   "description": "Shape schema for /api/ListBPA",
-  "_metadata": {
-    "endpoint": "ListBPA",
-    "generatedAt": "2026-04-05T12:15:06.077Z",
-    "tenantFilter": "7ngn50.onmicrosoft.com",
-    "requiresTenant": true,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListBPA.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "Columns": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "formatter": {},
-          "name": {},
-          "value": {}
+          "formatter": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "showAs": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
         "additionalProperties": true
       }
     },
     "Data": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "AnonymousPrivacyReports": {},
-          "CurrentSecureScore": {},
-          "ETag": {},
-          "GUID": {},
-          "LastRefresh": {},
-          "MessageCopyforSentAsDisabled": {},
-          "MFANudgeState": {},
-          "OAuthAppConsent": {},
-          "PartitionKey": {},
-          "PasswordNeverExpires": {},
-          "RowKey": {},
-          "SecureDefaultState": {},
-          "SharedMailboxeswithenabledusers": {},
-          "TAPEnabled": {},
-          "Tenant": {},
-          "Timestamp": {},
-          "UnifiedAuditLog": {},
-          "Unusedlicenses": {}
+          "AnonymousPrivacyReports": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "CurrentSecureScore": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "averageComparativeScores": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "SeatSizeRangeLowerValue": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "SeatSizeRangeUpperValue": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "appsScore": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "appsScoreMax": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "averageScore": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "basis": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "dataScore": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "dataScoreMax": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "deviceScore": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "deviceScoreMax": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "identityScore": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "identityScoreMax": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "infrastructureScore": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "infrastructureScoreMax": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              },
+              "currentScore": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "maxScore": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "ETag": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "GUID": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "LastRefresh": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "MFANudgeState": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "MessageCopyforSentAsDisabled": {
+            "type": [
+              "string",
+              "null",
+              "object",
+              "array"
+            ],
+            "properties": {
+              "MessageCopyForSentAsEnabled": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "UserPrincipalName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true,
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "MessageCopyForSentAsEnabled": {
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "UserPrincipalName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "OAuthAppConsent": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "PartitionKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "PasswordNeverExpires": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "RowKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "SecureDefaultState": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "SharedMailboxeswithenabledusers": {
+            "type": [
+              "string",
+              "null",
+              "object"
+            ],
+            "properties": {},
+            "additionalProperties": true
+          },
+          "TAPEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Tenant": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Timestamp": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "UnifiedAuditLog": {
+            "type": [
+              "string",
+              "null",
+              "boolean"
+            ]
+          },
+          "Unusedlicenses": {
+            "type": [
+              "object",
+              "null",
+              "array"
+            ],
+            "properties": {
+              "CountUsed": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "License": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "TotalLicenses": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "availableUnits": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true,
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "CountUsed": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "License": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "TotalLicenses": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "availableUnits": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          }
         },
         "additionalProperties": true
       }
     },
     "Keys": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
     "Style": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListBPA",
+  "_case": null,
+  "_requiresTenant": true
 }

@@ -2,96 +2,86 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListStandardsCompare",
   "description": "Shape schema for /api/ListStandardsCompare",
-  "_metadata": {
-    "endpoint": "ListStandardsCompare",
-    "generatedAt": "2026-04-05T12:15:06.111Z",
-    "tenantFilter": "7ngn50.onmicrosoft.com",
-    "requiresTenant": true,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListStandardsCompare.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "standards.AntiPhishPolicy": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "CurrentValue": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "ExpectedValue": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "LastRefresh": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "LicenseAvailable": {
-          "type": "boolean"
+          "type": [
+            "boolean",
+            "null"
+          ]
         },
         "TemplateId": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "Value": {
-          "type": "boolean"
+          "type": [
+            "boolean",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
     },
     "standards.AuditLog": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "UnifiedAuditLogIngestionEnabled": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "UnifiedAuditLogIngestionEnabled": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
           "type": [
-            "string",
-            "number",
-            "boolean",
+            "object",
             "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.ConditionalAccessTemplate.5fe01a7f-8d81-419c-8a0d-0ef047cd9732": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
+          ],
           "properties": {
-            "Differences": {}
+            "UnifiedAuditLogIngestionEnabled": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
           },
           "additionalProperties": true
         },
         "ExpectedValue": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "Differences": {
+            "UnifiedAuditLogIngestionEnabled": {
               "type": [
-                "string",
-                "number",
                 "boolean",
                 "null"
               ]
@@ -100,521 +90,301 @@
           "additionalProperties": true
         },
         "LastRefresh": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
           "type": [
-            "string",
-            "number",
             "boolean",
             "null"
           ]
-        }
+        },
+        "TemplateId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Value": {}
       },
       "additionalProperties": true
     },
     "standards.DisableBasicAuthSMTP": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "CurrentValue": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "SmtpClientAuthenticationDisabled": {},
-            "UsersWithSmtpAuthEnabled": {
+            "SmtpClientAuthenticationDisabled": {
               "type": [
-                "string",
-                "number",
                 "boolean",
                 "null"
               ]
+            },
+            "UsersWithSmtpAuthEnabled": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {}
             }
           },
           "additionalProperties": true
         },
         "ExpectedValue": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "SmtpClientAuthenticationDisabled": {},
-            "UsersWithSmtpAuthEnabled": {
+            "SmtpClientAuthenticationDisabled": {
               "type": [
-                "string",
-                "number",
                 "boolean",
                 "null"
               ]
+            },
+            "UsersWithSmtpAuthEnabled": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {}
             }
           },
           "additionalProperties": true
         },
         "LastRefresh": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date-time"
         },
         "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
           "type": [
-            "string",
-            "number",
             "boolean",
             "null"
           ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.04e77498-4bb1-4f0b-9726-8ab3352d056e": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
         },
         "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
           "type": [
             "string",
-            "number",
-            "boolean",
             "null"
           ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.212e1653-551f-4592-903c-7dd32b2edd8c": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
         },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.257ebf97-40cd-4861-a7a0-f19ada1e2316": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.5e0c779e-21cf-459a-ae17-8bafa9982620": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.6c9e2009-f72e-4aba-9393-ed58b328a201": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.872ccbb0-0152-4dc9-94a6-0f785b6b70e8": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.92d4d6e0-b818-4c52-bffa-5921a6e30921": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.9fcfd67e-9f82-4a97-9364-50528bdeee88": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.c39e5044-929b-49ea-818f-d6585810aa2f": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
-      },
-      "additionalProperties": true
-    },
-    "standards.IntuneTemplate.f59b1553-9e7a-431d-9334-ab2c330e6215": {
-      "type": "object",
-      "properties": {
-        "CurrentValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "ExpectedValue": {
-          "type": "object",
-          "properties": {
-            "description": {},
-            "displayName": {},
-            "isAssigned": {},
-            "isCompliant": {}
-          },
-          "additionalProperties": true
-        },
-        "LastRefresh": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "LicenseAvailable": {
-          "type": "boolean"
-        },
-        "TemplateId": {
-          "type": "string"
-        },
-        "Value": {
-          "type": [
-            "string",
-            "number",
-            "boolean",
-            "null"
-          ]
-        }
+        "Value": {}
       },
       "additionalProperties": true
     },
     "tenantFilter": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "patternProperties": {
+    "^standards\\.ConditionalAccessTemplate\\.[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "CurrentValue": {
+          "type": [
+            "string",
+            "null",
+            "object"
+          ],
+          "properties": {
+            "Differences": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "ExpectedValue": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "Property": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "ReceivedValue": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            }
+          },
+          "additionalProperties": true
+        },
+        "ExpectedValue": {
+          "type": [
+            "string",
+            "null",
+            "object"
+          ],
+          "properties": {
+            "Differences": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {}
+            }
+          },
+          "additionalProperties": true
+        },
+        "LastRefresh": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "LicenseAvailable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "TemplateId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "^standards\\.IntuneTemplate\\.[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "CurrentValue": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "displayName": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "isAssigned": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "isCompliant": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "ExpectedValue": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "displayName": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "isAssigned": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "isCompliant": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "LastRefresh": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "LicenseAvailable": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "TemplateId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Value": {}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true,
+  "_endpoint": "ListStandardsCompare",
+  "_case": null,
+  "_requiresTenant": true
 }

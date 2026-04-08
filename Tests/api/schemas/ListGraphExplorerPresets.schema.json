@@ -1,39 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "ListCommunityRepos",
-  "description": "Shape schema for /api/ListCommunityRepos",
+  "$id": "ListGraphExplorerPresets",
+  "description": "Shape schema for /api/ListGraphExplorerPresets",
   "type": [
     "object",
     "null"
   ],
   "properties": {
-    "DefaultBranch": {
+    "IsMyPreset": {
       "type": [
-        "string",
+        "boolean",
         "null"
       ]
     },
-    "Description": {
+    "IsShared": {
       "type": [
-        "string",
-        "null"
-      ]
-    },
-    "FullName": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "Id": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "Name": {
-      "type": [
-        "string",
+        "boolean",
         "null"
       ]
     },
@@ -43,72 +25,85 @@
         "null"
       ]
     },
-    "RepoPermissions": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "params": {
       "type": [
         "object",
         "null"
       ],
       "properties": {
-        "admin": {
+        "$count": {
           "type": [
             "boolean",
             "null"
           ]
         },
-        "maintain": {
+        "$expand": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "$filter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "$search": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "$select": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {}
+        },
+        "$top": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IsShared": {
           "type": [
             "boolean",
             "null"
           ]
         },
-        "pull": {
+        "NoPagination": {
           "type": [
             "boolean",
             "null"
           ]
         },
-        "push": {
+        "endpoint": {
           "type": [
-            "boolean",
-            "null"
-          ]
-        },
-        "triage": {
-          "type": [
-            "boolean",
+            "string",
             "null"
           ]
         }
       },
       "additionalProperties": true
-    },
-    "URL": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "UploadBranch": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "Visibility": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "WriteAccess": {
-      "type": [
-        "boolean",
-        "null"
-      ]
     }
   },
   "additionalProperties": true,
-  "_endpoint": "ListCommunityRepos",
+  "_endpoint": "ListGraphExplorerPresets",
   "_case": null,
   "_requiresTenant": false
 }

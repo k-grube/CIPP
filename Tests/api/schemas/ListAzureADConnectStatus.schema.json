@@ -2,188 +2,306 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAzureADConnectStatus",
   "description": "Shape schema for /api/ListAzureADConnectStatus",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "AzureADConnectSettings": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "dirSyncEnabled": {
-          "type": "boolean"
+          "type": [
+            "boolean",
+            "null"
+          ]
         },
-        "numberOfHoursFromLastSync": {
-          "type": "null"
-        },
+        "numberOfHoursFromLastSync": {},
         "raw": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "properties": {
-            "id": {
-              "type": "string"
-            },
-            "deletedDateTime": {
-              "type": "null"
-            },
-            "businessPhones": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "city": {
-              "type": "string"
-            },
-            "country": {
-              "type": "null"
-            },
-            "countryLetterCode": {
-              "type": "string"
-            },
-            "createdDateTime": {
-              "type": "string",
-              "format": "date-time"
-            },
-            "defaultUsageLocation": {
-              "type": "null"
-            },
-            "displayName": {
-              "type": "string"
-            },
-            "isMultipleDataLocationsForServicesEnabled": {
-              "type": "null"
-            },
-            "marketingNotificationEmails": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "onPremisesLastPasswordSyncDateTime": {
-              "type": "null"
-            },
-            "onPremisesLastSyncDateTime": {
-              "type": "null"
-            },
-            "onPremisesSyncEnabled": {
-              "type": "null"
-            },
-            "partnerTenantType": {
-              "type": "null"
-            },
-            "postalCode": {
-              "type": "string"
-            },
-            "preferredLanguage": {
-              "type": "string"
-            },
-            "securityComplianceNotificationMails": {
-              "type": "array",
-              "items": {}
-            },
-            "securityComplianceNotificationPhones": {
-              "type": "array",
-              "items": {}
-            },
-            "state": {
-              "type": "string"
-            },
-            "street": {
-              "type": "string"
-            },
-            "technicalNotificationMails": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "tenantType": {
-              "type": "string"
-            },
             "assignedPlans": {
-              "type": "array",
+              "type": [
+                "array",
+                "null"
+              ],
               "items": {
-                "type": "object",
+                "type": [
+                  "object",
+                  "null"
+                ],
                 "properties": {
                   "assignedDateTime": {
-                    "type": "string",
+                    "type": [
+                      "string",
+                      "null"
+                    ],
                     "format": "date-time"
                   },
                   "capabilityStatus": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "service": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "servicePlanId": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 },
                 "additionalProperties": true
               }
             },
+            "businessPhones": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "city": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "country": {},
+            "countryLetterCode": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "createdDateTime": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "defaultUsageLocation": {},
+            "deletedDateTime": {},
             "directorySizeQuota": {
-              "type": "object",
+              "type": [
+                "object",
+                "null"
+              ],
               "properties": {
-                "used": {
-                  "type": "number"
-                },
                 "total": {
-                  "type": "number"
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "used": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
                 }
               },
               "additionalProperties": true
             },
+            "displayName": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "isMultipleDataLocationsForServicesEnabled": {},
+            "marketingNotificationEmails": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "onPremisesLastPasswordSyncDateTime": {},
+            "onPremisesLastSyncDateTime": {},
+            "onPremisesSyncEnabled": {},
             "onPremisesSyncStatus": {
-              "type": "array",
+              "type": [
+                "array",
+                "null"
+              ],
               "items": {}
             },
+            "partnerTenantType": {},
+            "postalCode": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "preferredLanguage": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
             "privacyProfile": {
-              "type": "object",
+              "type": [
+                "object",
+                "null"
+              ],
               "properties": {
                 "contactEmail": {
-                  "type": "string"
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
-                "statementUrl": {
-                  "type": "null"
-                }
+                "statementUrl": {}
               },
               "additionalProperties": true
             },
             "provisionedPlans": {
-              "type": "array",
+              "type": [
+                "array",
+                "null"
+              ],
               "items": {
-                "type": "object",
+                "type": [
+                  "object",
+                  "null"
+                ],
                 "properties": {
                   "capabilityStatus": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "provisioningStatus": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "service": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 },
                 "additionalProperties": true
               }
             },
-            "verifiedDomains": {
-              "type": "array",
+            "securityComplianceNotificationMails": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {}
+            },
+            "securityComplianceNotificationPhones": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {}
+            },
+            "state": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "street": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "technicalNotificationMails": {
+              "type": [
+                "array",
+                "null"
+              ],
               "items": {
-                "type": "object",
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "tenantType": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "verifiedDomains": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
                 "properties": {
                   "capabilities": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "isDefault": {
-                    "type": "boolean"
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
                   },
                   "isInitial": {
-                    "type": "boolean"
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
                   },
                   "name": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "type": {
-                    "type": "string"
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   }
                 },
                 "additionalProperties": true
@@ -196,26 +314,47 @@
       "additionalProperties": true
     },
     "ObjectsInError": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "id": {
-            "type": "string"
-          },
-          "displayName": {
-            "type": "string"
+          "ObjectType": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "createdDateTime": {
-            "type": "string",
+            "type": [
+              "string",
+              "null"
+            ],
             "format": "date-time"
           },
-          "onPremisesProvisioningErrors": {
-            "type": "array",
-            "items": {}
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "ObjectType": {
-            "type": "string"
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "onPremisesProvisioningErrors": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
           }
         },
         "additionalProperties": true
@@ -223,10 +362,7 @@
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:57.353Z",
   "_endpoint": "ListAzureADConnectStatus",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

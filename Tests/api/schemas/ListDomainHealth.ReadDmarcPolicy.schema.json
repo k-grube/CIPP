@@ -2,75 +2,135 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListDomainHealth.ReadDmarcPolicy",
   "description": "Shape schema for /api/ListDomainHealth (ReadDmarcPolicy)",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Domain": {
-      "type": "string"
-    },
-    "Record": {
-      "type": "string"
-    },
-    "Version": {
-      "type": "string"
-    },
-    "Policy": {
-      "type": "string"
-    },
-    "SubdomainPolicy": {
-      "type": "string"
-    },
-    "Percent": {
-      "type": "number"
-    },
     "DkimAlignment": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "SpfAlignment": {
-      "type": "string"
-    },
-    "ReportFormat": {
-      "type": "string"
-    },
-    "ReportInterval": {
-      "type": "number"
-    },
-    "ReportingEmails": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "ForensicEmails": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    "Domain": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "FailureReport": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ForensicEmails": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "Percent": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Policy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Record": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ReportFormat": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ReportInterval": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "ReportingEmails": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "SpfAlignment": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SubdomainPolicy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ValidationFails": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     },
     "ValidationPasses": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
     "ValidationWarns": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
-    "ValidationFails": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    "Version": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:09.011Z",
   "_endpoint": "ListDomainHealth",
   "_case": "ReadDmarcPolicy",
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 1
+  "_requiresTenant": false
 }

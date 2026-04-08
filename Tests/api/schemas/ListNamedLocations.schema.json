@@ -2,67 +2,110 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListNamedLocations",
   "description": "Shape schema for /api/ListNamedLocations",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "@odata.type": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "id": {
-      "type": "string"
+    "countriesAndRegions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     },
-    "displayName": {
-      "type": "string"
-    },
-    "modifiedDateTime": {
-      "type": "string",
-      "format": "date-time"
+    "countryLookupMethod": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "createdDateTime": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
-    "deletedDateTime": {
-      "type": "null"
+    "deletedDateTime": {},
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "isTrusted": {
-      "type": "boolean"
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "includeUnknownCountriesAndRegions": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "ipRanges": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
           "@odata.type": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "cidrAddress": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "additionalProperties": true
       }
     },
+    "isTrusted": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "modifiedDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
     "rangeOrLocation": {
-      "type": "string"
-    },
-    "countriesAndRegions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "includeUnknownCountriesAndRegions": {
-      "type": "boolean"
-    },
-    "countryLookupMethod": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:11:11.300Z",
   "_endpoint": "ListNamedLocations",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 10
+  "_requiresTenant": true
 }

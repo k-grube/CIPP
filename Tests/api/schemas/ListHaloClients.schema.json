@@ -1,27 +1,27 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "ListMDEOnboarding",
-  "description": "Shape schema for /api/ListMDEOnboarding",
+  "$id": "ListHaloClients",
+  "description": "Shape schema for /api/ListHaloClients",
   "type": [
     "object",
     "null"
   ],
   "properties": {
-    "Tenant": {
+    "label": {
       "type": [
         "string",
         "null"
       ]
     },
-    "partnerState": {
+    "value": {
       "type": [
-        "string",
+        "number",
         "null"
       ]
     }
   },
   "additionalProperties": true,
-  "_endpoint": "ListMDEOnboarding",
+  "_endpoint": "ListHaloClients",
   "_case": null,
-  "_requiresTenant": true
+  "_requiresTenant": false
 }

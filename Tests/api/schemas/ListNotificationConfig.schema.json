@@ -2,26 +2,165 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListNotificationConfig",
   "description": "Shape schema for /api/ListNotificationConfig",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
+    "ETag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PartitionKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RowKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "Severity": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
+    "Timestamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "UseStandardizedSchema": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "email": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "includeTenantId": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
     "logsToInclude": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
+    },
+    "onePerTenant": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "schedule": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sendtoIntegration": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "tenant": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tenantid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "webhook": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "webhookAuthHeaderName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "webhookAuthHeaderValue": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "webhookAuthHeaders": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "webhookAuthPassword": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "webhookAuthToken": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "webhookAuthType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "webhookAuthUsername": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:12.374Z",
   "_endpoint": "ListNotificationConfig",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 1
+  "_requiresTenant": false
 }

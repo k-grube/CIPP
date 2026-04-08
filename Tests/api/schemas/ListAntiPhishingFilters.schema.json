@@ -2,278 +2,507 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAntiPhishingFilters",
   "description": "Shape schema for /api/ListAntiPhishingFilters",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Enabled": {
-      "type": "boolean"
-    },
-    "ImpersonationProtectionState": {
-      "type": "string"
-    },
-    "EnableTargetedUserProtection": {
-      "type": "boolean"
-    },
-    "EnableMailboxIntelligenceProtection": {
-      "type": "boolean"
-    },
-    "EnableTargetedDomainsProtection": {
-      "type": "boolean"
-    },
-    "EnableOrganizationDomainsProtection": {
-      "type": "boolean"
-    },
-    "EnableMailboxIntelligence": {
-      "type": "boolean"
-    },
-    "EnableFirstContactSafetyTips": {
-      "type": "boolean"
-    },
-    "EnableSimilarUsersSafetyTips": {
-      "type": "boolean"
-    },
-    "EnableSimilarDomainsSafetyTips": {
-      "type": "boolean"
-    },
-    "EnableUnusualCharactersSafetyTips": {
-      "type": "boolean"
-    },
-    "TargetedUserProtectionAction": {
-      "type": "string"
-    },
-    "TargetedUserQuarantineTag": {
-      "type": "string"
-    },
-    "MailboxIntelligenceProtectionAction": {
-      "type": "string"
-    },
-    "MailboxIntelligenceQuarantineTag": {
-      "type": "string"
-    },
-    "TargetedDomainProtectionAction": {
-      "type": "string"
-    },
-    "TargetedDomainQuarantineTag": {
-      "type": "string"
+    "AdminDisplayName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "AuthenticationFailAction": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "SpoofQuarantineTag": {
-      "type": "string"
-    },
-    "EnableSpoofIntelligence": {
-      "type": "boolean"
-    },
-    "EnableViaTag": {
-      "type": "boolean"
-    },
-    "EnableUnauthenticatedSender": {
-      "type": "boolean"
-    },
-    "EnableSuspiciousSafetyTip": {
-      "type": "boolean"
-    },
-    "HonorDmarcPolicy": {
-      "type": "boolean"
-    },
-    "DmarcRejectAction": {
-      "type": "string"
+    "DistinguishedName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "DmarcQuarantineAction": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "PhishThresholdLevel@data.type": {
-      "type": "string"
+    "DmarcRejectAction": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "PhishThresholdLevel": {
-      "type": "number"
+    "EnableFirstContactSafetyTips": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "TargetedUsersToProtect@odata.type": {
-      "type": "string"
+    "EnableMailboxIntelligence": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "TargetedUsersToProtect": {
-      "type": "array",
-      "items": {}
+    "EnableMailboxIntelligenceProtection": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "TargetedUserActionRecipients@odata.type": {
-      "type": "string"
+    "EnableOrganizationDomainsProtection": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "TargetedUserActionRecipients": {
-      "type": "array",
-      "items": {}
+    "EnableSimilarDomainsSafetyTips": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "MailboxIntelligenceProtectionActionRecipients@odata.type": {
-      "type": "string"
+    "EnableSimilarUsersSafetyTips": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "MailboxIntelligenceProtectionActionRecipients": {
-      "type": "array",
-      "items": {}
+    "EnableSpoofIntelligence": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "TargetedDomainsToProtect@odata.type": {
-      "type": "string"
+    "EnableSuspiciousSafetyTip": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "TargetedDomainsToProtect": {
-      "type": "array",
-      "items": {}
+    "EnableTargetedDomainsProtection": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "TargetedDomainActionRecipients@odata.type": {
-      "type": "string"
+    "EnableTargetedUserProtection": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "TargetedDomainActionRecipients": {
-      "type": "array",
+    "EnableUnauthenticatedSender": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "EnableUnusualCharactersSafetyTips": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "EnableViaTag": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Enabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExchangeObjectId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ExchangeObjectId@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ExchangeObjectId@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ExchangeVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ExcludedDomains": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
     "ExcludedDomains@odata.type": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ExcludedDomains": {
-      "type": "array",
+    "ExcludedSenders": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
     "ExcludedSenders@odata.type": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ExcludedSenders": {
-      "type": "array",
+    "ExcludedSubDomains": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
     "ExcludedSubDomains@odata.type": {
-      "type": "string"
-    },
-    "ExcludedSubDomains": {
-      "type": "array",
-      "items": {}
-    },
-    "IsDefault": {
-      "type": "boolean"
-    },
-    "AdminDisplayName": {
-      "type": "string"
-    },
-    "PolicyTag": {
-      "type": "string"
-    },
-    "RecommendedPolicyType": {
-      "type": "string"
-    },
-    "Identity": {
-      "type": "string"
-    },
-    "Id": {
-      "type": "string"
-    },
-    "IsValid": {
-      "type": "boolean"
-    },
-    "ExchangeVersion": {
-      "type": "string"
-    },
-    "Name": {
-      "type": "string"
-    },
-    "DistinguishedName": {
-      "type": "string"
-    },
-    "ObjectCategory": {
-      "type": "string"
-    },
-    "ObjectClass@odata.type": {
-      "type": "string"
-    },
-    "ObjectClass": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "WhenChanged@data.type": {
-      "type": "string"
-    },
-    "WhenChanged": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "WhenCreated@data.type": {
-      "type": "string"
-    },
-    "WhenCreated": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "WhenChangedUTC@data.type": {
-      "type": "string"
-    },
-    "WhenChangedUTC": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "WhenCreatedUTC@data.type": {
-      "type": "string"
-    },
-    "WhenCreatedUTC": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "ExchangeObjectId@data.type": {
-      "type": "string"
-    },
-    "ExchangeObjectId@odata.type": {
-      "type": "string"
-    },
-    "ExchangeObjectId": {
-      "type": "string"
-    },
-    "OrganizationalUnitRoot": {
-      "type": "string"
-    },
-    "OrganizationId": {
-      "type": "string"
-    },
-    "Guid@data.type": {
-      "type": "string"
-    },
-    "Guid@odata.type": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Guid": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Guid@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Guid@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "HonorDmarcPolicy": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Identity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ImpersonationProtectionState": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IsDefault": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "IsValid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "MailboxIntelligenceProtectionAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MailboxIntelligenceProtectionActionRecipients": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "MailboxIntelligenceProtectionActionRecipients@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "MailboxIntelligenceQuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ObjectCategory": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ObjectClass": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "ObjectClass@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OrganizationId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OrganizationalUnitRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "OriginatingServer": {
-      "type": "string"
-    },
-    "RuleName": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
+      ]
+    },
+    "PhishThresholdLevel": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "PhishThresholdLevel@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "PolicyTag": {
+      "type": [
+        "string",
+        "null"
       ]
     },
     "Priority": {
       "type": [
-        "null",
-        "number"
+        "number",
+        "null"
       ]
     },
     "RecipientDomainIs": {
       "type": [
+        "string",
         "null",
         "array"
       ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
+    },
+    "RecommendedPolicyType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RuleName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SpoofQuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "State": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
+      ]
+    },
+    "TargetedDomainActionRecipients": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "TargetedDomainActionRecipients@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TargetedDomainProtectionAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TargetedDomainQuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TargetedDomainsToProtect": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "TargetedDomainsToProtect@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TargetedUserActionRecipients": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "TargetedUserActionRecipients@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TargetedUserProtectionAction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TargetedUserQuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "TargetedUsersToProtect": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "TargetedUsersToProtect@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenChanged": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenChanged@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenChangedUTC": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenChangedUTC@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenCreated@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenCreatedUTC": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenCreatedUTC@data.type": {
+      "type": [
+        "string",
+        "null"
       ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:24.072Z",
   "_endpoint": "ListAntiPhishingFilters",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 2
+  "_requiresTenant": true
 }

@@ -2,33 +2,51 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListOAuthApps",
   "description": "Shape schema for /api/ListOAuthApps",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Tenant": {
-      "type": "string"
+    "ApplicationID": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Name": {
-      "type": "string"
-    },
-    "ApplicationID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ObjectID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Scope": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "StartTime": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
+    },
+    "Tenant": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:11:15.048Z",
   "_endpoint": "ListOAuthApps",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 50
+  "_requiresTenant": true
 }

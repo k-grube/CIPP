@@ -2,47 +2,77 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListRoles",
   "description": "Shape schema for /api/ListRoles",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Id": {
-      "type": "string"
-    },
-    "roleTemplateId": {
-      "type": "string"
+    "Description": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "DisplayName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Description": {
-      "type": "string"
+    "Id": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Members": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
           "displayName": {
-            "type": "string"
-          },
-          "userPrincipalName": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "id": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "userPrincipalName": {
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "additionalProperties": true
       }
     },
     "SID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "roleTemplateId": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:11:32.049Z",
   "_endpoint": "ListRoles",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 19
+  "_requiresTenant": true
 }

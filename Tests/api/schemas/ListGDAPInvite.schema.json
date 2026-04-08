@@ -2,48 +2,108 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListGDAPInvite",
   "description": "Shape schema for /api/ListGDAPInvite",
-  "_metadata": {
-    "endpoint": "ListGDAPInvite",
-    "generatedAt": "2026-04-05T12:15:06.090Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListGDAPInvite.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "ETag": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "InviteUrl": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "OnboardingUrl": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "PartitionKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Reference": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RoleMappings": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "GroupId": {},
-          "GroupName": {},
-          "roleDefinitionId": {},
-          "RoleName": {}
+          "GroupId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "GroupName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "RoleName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "roleDefinitionId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tenantFilter": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
         "additionalProperties": true
       }
     },
     "RowKey": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Technician": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Timestamp": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListGDAPInvite",
+  "_case": null,
+  "_requiresTenant": false
 }

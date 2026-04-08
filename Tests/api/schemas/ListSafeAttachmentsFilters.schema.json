@@ -2,169 +2,296 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListSafeAttachmentsFilters",
   "description": "Shape schema for /api/ListSafeAttachmentsFilters",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "Action": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "AdminDisplayName": {
-      "type": "string"
-    },
-    "Enable": {
-      "type": "boolean"
-    },
-    "EnableBlockingEncryptedAttachments": {
-      "type": "boolean"
-    },
-    "EnableOrganizationBranding": {
-      "type": "boolean"
-    },
-    "ExcludedTypesFromBlockingEncryptedAttachments@odata.type": {
-      "type": "string"
-    },
-    "ExcludedTypesFromBlockingEncryptedAttachments": {
-      "type": "array",
-      "items": {}
-    },
-    "IsBuiltInProtection": {
-      "type": "boolean"
-    },
-    "IsDefault": {
-      "type": "boolean"
-    },
-    "QuarantineTag": {
-      "type": "string"
-    },
-    "QuarantineTagForBlockingEncryptedAttachments": {
-      "type": "string"
-    },
-    "RecommendedPolicyType": {
-      "type": "string"
-    },
-    "Redirect": {
-      "type": "boolean"
-    },
-    "RedirectAddress": {
-      "type": "string"
-    },
-    "Identity": {
-      "type": "string"
-    },
-    "Id": {
-      "type": "string"
-    },
-    "IsValid": {
-      "type": "boolean"
-    },
-    "ExchangeVersion": {
-      "type": "string"
-    },
-    "Name": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "DistinguishedName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ObjectCategory": {
-      "type": "string"
+    "Enable": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "ObjectClass@odata.type": {
-      "type": "string"
+    "EnableBlockingEncryptedAttachments": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "ObjectClass": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "WhenChanged@data.type": {
-      "type": "string"
-    },
-    "WhenChanged": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "WhenCreated@data.type": {
-      "type": "string"
-    },
-    "WhenCreated": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "WhenChangedUTC@data.type": {
-      "type": "string"
-    },
-    "WhenChangedUTC": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "WhenCreatedUTC@data.type": {
-      "type": "string"
-    },
-    "WhenCreatedUTC": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "ExchangeObjectId@data.type": {
-      "type": "string"
-    },
-    "ExchangeObjectId@odata.type": {
-      "type": "string"
+    "EnableOrganizationBranding": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "ExchangeObjectId": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "OrganizationalUnitRoot": {
-      "type": "string"
+    "ExchangeObjectId@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "OrganizationId": {
-      "type": "string"
+    "ExchangeObjectId@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Guid@data.type": {
-      "type": "string"
+    "ExchangeVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Guid@odata.type": {
-      "type": "string"
+    "ExcludedTypesFromBlockingEncryptedAttachments": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "ExcludedTypesFromBlockingEncryptedAttachments@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Guid": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Guid@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Guid@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Identity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IsBuiltInProtection": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "IsDefault": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "IsValid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ObjectCategory": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ObjectClass": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "ObjectClass@odata.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OrganizationId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OrganizationalUnitRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "OriginatingServer": {
-      "type": "string"
-    },
-    "RuleName": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
       ]
     },
     "Priority": {
       "type": [
-        "null",
-        "number"
+        "number",
+        "null"
+      ]
+    },
+    "QuarantineTag": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QuarantineTagForBlockingEncryptedAttachments": {
+      "type": [
+        "string",
+        "null"
       ]
     },
     "RecipientDomainIs": {
       "type": [
+        "string",
         "null",
         "array"
       ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
+    },
+    "RecommendedPolicyType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Redirect": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "RedirectAddress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RuleName": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "State": {
       "type": [
-        "null",
-        "string"
+        "string",
+        "null"
+      ]
+    },
+    "WhenChanged": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenChanged@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenChangedUTC": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenChangedUTC@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenCreated@data.type": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenCreatedUTC": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenCreatedUTC@data.type": {
+      "type": [
+        "string",
+        "null"
       ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:11:33.888Z",
   "_endpoint": "ListSafeAttachmentsFilters",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 2
+  "_requiresTenant": true
 }

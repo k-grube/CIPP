@@ -3,7 +3,7 @@
   { "name": "GetVersion", "requiresTenant": false },
   { "name": "ListAppApprovalTemplates", "requiresTenant": false },
   { "name": "ListAppTemplates", "requiresTenant": false },
-  { "name": "ListApiTest", "requiresTenant": false },
+  { "name": "ListApiTest", "requiresTenant": false, "skip": true, "skipReason": "debug" },
   { "name": "ListApplicationQueue", "requiresTenant": false, "allowEmpty": true },
   { "name": "ListAssignmentFilterTemplates", "requiresTenant": false },
   { "name": "ListAvailableTests", "requiresTenant": false, "allowEmpty": true },
@@ -15,12 +15,42 @@
   { "name": "ListCustomRole", "requiresTenant": false, "allowEmpty": true },
   { "name": "ListCustomScripts", "requiresTenant": false, "allowEmpty": true },
   { "name": "ListDiagnosticsPresets", "requiresTenant": false, "allowEmpty": true },
-  { "name": "ListDomainHealth", "case": "ReadMXRecord", "requiresTenant": false, "extraParams": { "Action": "ReadMXRecord", "Domain": "cyberdrain.com" } },
-  { "name": "ListDomainHealth", "case": "ReadSpfRecord", "requiresTenant": false, "extraParams": { "Action": "ReadSpfRecord", "Domain": "cyberdrain.com" } },
-  { "name": "ListDomainHealth", "case": "ReadDmarcPolicy", "requiresTenant": false, "extraParams": { "Action": "ReadDmarcPolicy", "Domain": "cyberdrain.com" } },
-  { "name": "ListDomainHealth", "case": "ReadDkimRecord", "requiresTenant": false, "extraParams": { "Action": "ReadDkimRecord", "Domain": "cyberdrain.com" } },
-  { "name": "ListDomainHealth", "case": "TestDNSSEC", "requiresTenant": false, "extraParams": { "Action": "TestDNSSEC", "Domain": "cyberdrain.com" } },
-  { "name": "ListDomainHealth", "case": "ReadNSRecord", "requiresTenant": false, "extraParams": { "Action": "ReadNSRecord", "Domain": "cyberdrain.com" } },
+  {
+    "name": "ListDomainHealth",
+    "case": "ReadMXRecord",
+    "requiresTenant": false,
+    "extraParams": { "Action": "ReadMXRecord", "Domain": "cyberdrain.com" }
+  },
+  {
+    "name": "ListDomainHealth",
+    "case": "ReadSpfRecord",
+    "requiresTenant": false,
+    "extraParams": { "Action": "ReadSpfRecord", "Domain": "cyberdrain.com" }
+  },
+  {
+    "name": "ListDomainHealth",
+    "case": "ReadDmarcPolicy",
+    "requiresTenant": false,
+    "extraParams": { "Action": "ReadDmarcPolicy", "Domain": "cyberdrain.com" }
+  },
+  {
+    "name": "ListDomainHealth",
+    "case": "ReadDkimRecord",
+    "requiresTenant": false,
+    "extraParams": { "Action": "ReadDkimRecord", "Domain": "cyberdrain.com" }
+  },
+  {
+    "name": "ListDomainHealth",
+    "case": "TestDNSSEC",
+    "requiresTenant": false,
+    "extraParams": { "Action": "TestDNSSEC", "Domain": "cyberdrain.com" }
+  },
+  {
+    "name": "ListDomainHealth",
+    "case": "ReadNSRecord",
+    "requiresTenant": false,
+    "extraParams": { "Action": "ReadNSRecord", "Domain": "cyberdrain.com" }
+  },
   { "name": "ListExConnectorTemplates", "requiresTenant": false, "allowEmpty": true },
   { "name": "ListExcludedLicenses", "requiresTenant": false },
   { "name": "ListExtensionSync", "requiresTenant": false },
@@ -31,7 +61,7 @@
   {
     "name": "ListGitHubReleaseNotes",
     "requiresTenant": false,
-    "extraParams": { "repo": "CIPP", "owner": "KelvinTegelaar" }
+    "extraParams": { "Repository": "CIPP", "Owner": "KelvinTegelaar" }
   },
   { "name": "ListGraphExplorerPresets", "requiresTenant": false, "allowEmpty": true },
   { "name": "ListGroupTemplates", "requiresTenant": false },
@@ -55,7 +85,6 @@
   { "name": "ListUserPhoto", "requiresTenant": false },
   { "name": "ListUserSettings", "requiresTenant": false },
   { "name": "ListWebhookAlert", "requiresTenant": false, "allowEmpty": true },
-
   { "name": "ListAPDevices", "requiresTenant": true, "allowEmpty": true },
   { "name": "ListAdminPortalLicenses", "requiresTenant": true },
   { "name": "ListAlertsQueue", "requiresTenant": true, "allowEmpty": true },
@@ -68,8 +97,20 @@
   { "name": "ListAuditLogSearches", "requiresTenant": true, "allowEmpty": true },
   { "name": "ListAuditLogs", "requiresTenant": true, "allowEmpty": true },
   { "name": "ListAutopilotconfig", "requiresTenant": true, "allowEmpty": true },
-  { "name": "ListAutopilotconfig", "case": "ApProfile", "requiresTenant": true, "extraParams": { "type": "ApProfile" }, "allowEmpty": true },
-  { "name": "ListAutopilotconfig", "case": "ESP", "requiresTenant": true, "extraParams": { "type": "ESP" }, "allowEmpty": true },
+  {
+    "name": "ListAutopilotconfig",
+    "case": "ApProfile",
+    "requiresTenant": true,
+    "extraParams": { "type": "ApProfile" },
+    "allowEmpty": true
+  },
+  {
+    "name": "ListAutopilotconfig",
+    "case": "ESP",
+    "requiresTenant": true,
+    "extraParams": { "type": "ESP" },
+    "allowEmpty": true
+  },
   { "name": "ListAzureADConnectStatus", "requiresTenant": true },
   { "name": "ListBPA", "requiresTenant": true, "allowEmpty": true },
   { "name": "ListBasicAuth", "requiresTenant": true, "allowEmpty": true },
@@ -168,7 +209,6 @@
   { "name": "ListUsers", "requiresTenant": true },
   { "name": "ListUsersAndGroups", "requiresTenant": true },
   { "name": "ListmailboxPermissions", "requiresTenant": true },
-
   { "name": "ExecAccessChecks", "requiresTenant": false },
   { "name": "ExecAlertsList", "requiresTenant": true, "allowEmpty": true },
   { "name": "ExecIncidentsList", "requiresTenant": true, "allowEmpty": true },

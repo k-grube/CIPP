@@ -22,8 +22,18 @@ export const WithButton = {
   args: {
     title: 'Card with Button',
     children: <p>This card has an action button in the footer.</p>,
-    CardButton: <Button variant="contained" size="small">Take Action</Button>,
+    onButtonClick: fn(),
   },
+  render: (args) => (
+    <CippButtonCard
+      {...args}
+      CardButton={
+        <Button variant="contained" size="small" onClick={args.onButtonClick}>
+          View Details
+        </Button>
+      }
+    />
+  ),
 }
 
 export const AccordionMode = {
@@ -32,7 +42,6 @@ export const AccordionMode = {
     component: 'accordion',
     accordionExpanded: true,
     children: <p>This content is inside an accordion panel.</p>,
-    CardButton: <Button variant="outlined" size="small">View Details</Button>,
   },
 }
 

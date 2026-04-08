@@ -2,92 +2,164 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListConnectionFilter",
   "description": "Shape schema for /api/ListConnectionFilter",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "AdminDisplayName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "IsDefault": {
-      "type": "boolean"
+    "DirectoryBasedEdgeBlockMode": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DistinguishedName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "EnableSafeList": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ExchangeObjectId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ExchangeVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Guid": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "IPAllowList": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
     "IPBlockList": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
-    "EnableSafeList": {
-      "type": "boolean"
-    },
-    "DirectoryBasedEdgeBlockMode": {
-      "type": "string"
+    "Id": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "Identity": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "Id": {
-      "type": "string"
+    "IsDefault": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "IsValid": {
-      "type": "boolean"
-    },
-    "ExchangeVersion": {
-      "type": "string"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "Name": {
-      "type": "string"
-    },
-    "DistinguishedName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ObjectCategory": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ObjectClass": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
-    "WhenChanged": {
-      "type": "string",
-      "format": "date-time"
+    "OrganizationId": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "WhenCreated": {
-      "type": "string",
+    "OrganizationalUnitRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OriginatingServer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WhenChanged": {
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
     "WhenChangedUTC": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "WhenCreated": {
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
     "WhenCreatedUTC": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
-    },
-    "ExchangeObjectId": {
-      "type": "string"
-    },
-    "OrganizationalUnitRoot": {
-      "type": "string"
-    },
-    "OrganizationId": {
-      "type": "string"
-    },
-    "Guid": {
-      "type": "string"
-    },
-    "OriginatingServer": {
-      "type": "string"
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:09:23.775Z",
   "_endpoint": "ListConnectionFilter",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

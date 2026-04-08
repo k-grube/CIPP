@@ -32,7 +32,7 @@
     "test:coverage": "vitest run --coverage",
     "test:storybook": "vitest run --project storybook",
     "test:api": "vitest run --config vitest.api.config.mjs",
-    "test:api:update": "node Tools/generate-schemas.js --live"
+    "test:api:update": "node Tests/api/generate-schemas.mjs"
   },
   "dependencies": {
     "@emotion/cache": "11.14.0",

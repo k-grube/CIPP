@@ -2,183 +2,330 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListDomainHealth.ReadSpfRecord",
   "description": "Shape schema for /api/ListDomainHealth (ReadSpfRecord)",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "Domain": {
-      "type": "string"
-    },
-    "Record": {
-      "type": "string"
-    },
-    "RecordCount": {
-      "type": "number"
-    },
-    "LookupCount": {
-      "type": "number"
-    },
     "AllMechanism": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
-    "ValidationPasses": {
-      "type": "array",
+    "Domain": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Explanation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "Example": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Record": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "IPAddresses": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
-    "ValidationWarns": {
-      "type": "array",
+    "LookupCount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "MailProvider": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "MinimumSelectorPass": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "MxMatch": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "Selectors": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "SpfInclude": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "_DkimComment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "_MxComment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "_SpfComment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "Recommendations": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
-    "ValidationFails": {
-      "type": "array",
-      "items": {}
+    "RecommendedRecord": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Record": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RecordCount": {
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "RecordList": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "Domain": {
-            "type": "string"
-          },
-          "Record": {
-            "type": "string"
-          },
-          "RecordCount": {
-            "type": "number"
-          },
-          "LookupCount": {
-            "type": "number"
-          },
           "AllMechanism": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
-          "ValidationPasses": {
-            "type": "array",
-            "items": {}
-          },
-          "ValidationWarns": {
-            "type": "array",
-            "items": {}
-          },
-          "ValidationFails": {
-            "type": "array",
-            "items": {}
-          },
-          "RecordList": {
-            "type": "array",
-            "items": {}
-          },
-          "TypeLookups": {
-            "type": "array",
-            "items": {}
-          },
-          "Recommendations": {
-            "type": "array",
-            "items": {}
-          },
-          "RecommendedRecord": {
-            "type": "string"
-          },
-          "IPAddresses": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "MailProvider": {
-            "type": "string"
+          "Domain": {
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "Explanation": {
-            "type": "object",
+            "type": [
+              "object",
+              "null"
+            ],
             "properties": {
               "Example": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
               "Record": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "additionalProperties": true
           },
+          "IPAddresses": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "LookupCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "MailProvider": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Recommendations": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "RecommendedRecord": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Record": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "RecordCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "RecordList": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
           "Status": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "TypeLookups": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "ValidationFails": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "ValidationPasses": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "ValidationWarns": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
           }
         },
         "additionalProperties": true
       }
     },
+    "Status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "TypeLookups": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
-    "Recommendations": {
-      "type": "array",
+    "ValidationFails": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
     },
-    "RecommendedRecord": {
-      "type": "string"
-    },
-    "IPAddresses": {
-      "type": "array",
+    "ValidationPasses": {
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
-    "MailProvider": {
-      "type": "object",
-      "properties": {
-        "Name": {
-          "type": "string"
-        },
-        "MxMatch": {
-          "type": "string"
-        },
-        "SpfInclude": {
-          "type": "string"
-        },
-        "Selectors": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "MinimumSelectorPass": {
-          "type": "number"
-        },
-        "_MxComment": {
-          "type": "string"
-        },
-        "_SpfComment": {
-          "type": "string"
-        },
-        "_DkimComment": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": true
-    },
-    "Explanation": {
-      "type": "object",
-      "properties": {
-        "Example": {
-          "type": "string"
-        },
-        "Record": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": true
-    },
-    "Status": {
-      "type": "string"
+    "ValidationWarns": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:08.684Z",
   "_endpoint": "ListDomainHealth",
   "_case": "ReadSpfRecord",
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 1
+  "_requiresTenant": false
 }

@@ -2,49 +2,95 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAppTemplates",
   "description": "Shape schema for /api/ListAppTemplates",
-  "_metadata": {
-    "endpoint": "ListAppTemplates",
-    "generatedAt": "2026-04-05T12:15:06.073Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListAppTemplates.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "appCount": {
-      "type": "number"
-    },
-    "appNames": {
-      "type": "string"
-    },
     "Apps": {
-      "type": "object",
-      "properties": {
-        "appName": {
-          "type": "string"
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "appName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "appType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "config": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
-        "appType": {
-          "type": "string"
-        },
-        "config": {
-          "type": "string"
-        }
-      },
-      "additionalProperties": true
-    },
-    "appTypes": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "displayName": {
-      "type": "string"
+        "additionalProperties": true
+      }
     },
     "GUID": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "appCount": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "appNames": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "appTypes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListAppTemplates",
+  "_case": null,
+  "_requiresTenant": false
 }

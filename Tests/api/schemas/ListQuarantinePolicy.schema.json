@@ -2,40 +2,106 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListQuarantinePolicy",
   "description": "Shape schema for /api/ListQuarantinePolicy",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "EndUserQuarantinePermissions": {
-      "type": "string"
+    "AllowSender": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "ESNEnabled": {
-      "type": "boolean"
+    "BlockSender": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "QuarantinePolicyType": {
-      "type": "string"
+    "Builtin": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
-    "QuarantineRetentionDays": {
-      "type": "number"
-    },
-    "IncludeMessagesFromBlockedSenderAddress": {
-      "type": "boolean"
-    },
-    "Identity": {
-      "type": "string"
-    },
-    "Id": {
-      "type": "string"
-    },
-    "IsValid": {
-      "type": "boolean"
-    },
-    "ExchangeVersion": {
-      "type": "string"
-    },
-    "Name": {
-      "type": "string"
+    "Delete": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "DistinguishedName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Download": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ESNEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "EndUserQuarantinePermissions": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ExchangeObjectId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ExchangeVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Guid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Identity": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "IncludeMessagesFromBlockedSenderAddress": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "IsValid": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "Name": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ObjectCategory": {
       "type": [
@@ -44,19 +110,84 @@
       ]
     },
     "ObjectClass": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
-    "WhenChanged": {
+    "OrganizationId": {
       "type": [
         "string",
         "null"
-      ],
-      "format": "date-time"
+      ]
     },
-    "WhenCreated": {
+    "OrganizationalUnitRoot": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OriginatingServer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Preview": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "QuarantineNotification": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "QuarantinePolicyType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "QuarantineRetentionDays": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "Release": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ReleaseActionPreference": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RequestRelease": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "ViewHeader": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "WhenChanged": {
       "type": [
         "string",
         "null"
@@ -70,67 +201,23 @@
       ],
       "format": "date-time"
     },
-    "WhenCreatedUTC": {
+    "WhenCreated": {
       "type": [
         "string",
         "null"
       ],
       "format": "date-time"
     },
-    "ExchangeObjectId": {
-      "type": "string"
-    },
-    "OrganizationalUnitRoot": {
-      "type": "string"
-    },
-    "OrganizationId": {
-      "type": "string"
-    },
-    "Guid": {
-      "type": "string"
-    },
-    "OriginatingServer": {
-      "type": "string"
-    },
-    "ViewHeader": {
-      "type": "boolean"
-    },
-    "BlockSender": {
-      "type": "boolean"
-    },
-    "Preview": {
-      "type": "boolean"
-    },
-    "RequestRelease": {
-      "type": "boolean"
-    },
-    "AllowSender": {
-      "type": "boolean"
-    },
-    "Delete": {
-      "type": "boolean"
-    },
-    "Release": {
-      "type": "boolean"
-    },
-    "Download": {
-      "type": "boolean"
-    },
-    "QuarantineNotification": {
-      "type": "boolean"
-    },
-    "ReleaseActionPreference": {
-      "type": "string"
-    },
-    "Builtin": {
-      "type": "boolean"
+    "WhenCreatedUTC": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:11:27.910Z",
   "_endpoint": "ListQuarantinePolicy",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 5
+  "_requiresTenant": true
 }

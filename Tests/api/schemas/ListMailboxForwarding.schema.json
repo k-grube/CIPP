@@ -2,28 +2,40 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListMailboxForwarding",
   "description": "Shape schema for /api/ListMailboxForwarding",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "UPN": {
-      "type": "string"
+    "DeliverToMailboxAndForward": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "DisplayName": {
-      "type": "string"
-    },
-    "PrimarySmtpAddress": {
-      "type": "string"
-    },
-    "RecipientTypeDetails": {
-      "type": "string"
-    },
-    "ForwardingType": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ForwardTo": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "ForwardingSmtpAddress": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ForwardingType": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "InternalForwardingAddress": {
       "type": [
@@ -31,15 +43,27 @@
         "null"
       ]
     },
-    "DeliverToMailboxAndForward": {
-      "type": "boolean"
+    "PrimarySmtpAddress": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RecipientTypeDetails": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "UPN": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:11:03.986Z",
   "_endpoint": "ListMailboxForwarding",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 7
+  "_requiresTenant": true
 }

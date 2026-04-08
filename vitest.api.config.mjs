@@ -7,5 +7,6 @@ export default defineConfig({
     testTimeout: 120_000,
     hookTimeout: 30_000,
     globals: true,
+    reporters: ['verbose'],
   },
 })

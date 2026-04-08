@@ -2,140 +2,64 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListAutopilotconfig.ApProfile",
   "description": "Shape schema for /api/ListAutopilotconfig (ApProfile)",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "@odata.type": {
-      "type": "string"
-    },
-    "id": {
-      "type": "string"
-    },
-    "displayName": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "language": {
-      "type": "string"
-    },
-    "locale": {
-      "type": "string"
-    },
-    "createdDateTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "lastModifiedDateTime": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "enrollmentStatusScreenSettings": {
-      "type": "null"
-    },
-    "extractHardwareHash": {
-      "type": "boolean"
-    },
-    "hardwareHashExtractionEnabled": {
-      "type": "boolean"
-    },
-    "deviceNameTemplate": {
-      "type": "string"
-    },
-    "deviceType": {
-      "type": "string"
-    },
-    "enableWhiteGlove": {
-      "type": "boolean"
-    },
-    "preprovisioningAllowed": {
-      "type": "boolean"
-    },
-    "roleScopeTagIds": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "managementServiceAppId": {
-      "type": "null"
-    },
-    "outOfBoxExperienceSettings": {
-      "type": "object",
-      "properties": {
-        "hidePrivacySettings": {
-          "type": "boolean"
-        },
-        "hideEULA": {
-          "type": "boolean"
-        },
-        "userType": {
-          "type": "string"
-        },
-        "deviceUsageType": {
-          "type": "string"
-        },
-        "skipKeyboardSelectionPage": {
-          "type": "boolean"
-        },
-        "hideEscapeLink": {
-          "type": "boolean"
-        }
-      },
-      "additionalProperties": true
-    },
-    "outOfBoxExperienceSetting": {
-      "type": "object",
-      "properties": {
-        "privacySettingsHidden": {
-          "type": "boolean"
-        },
-        "eulaHidden": {
-          "type": "boolean"
-        },
-        "userType": {
-          "type": "string"
-        },
-        "deviceUsageType": {
-          "type": "string"
-        },
-        "keyboardSelectionPageSkipped": {
-          "type": "boolean"
-        },
-        "escapeLinkHidden": {
-          "type": "boolean"
-        }
-      },
-      "additionalProperties": true
-    },
-    "assignments@odata.context": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "assignments": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
           "id": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "source": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "sourceId": {
-            "type": "string"
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "target": {
-            "type": "object",
+            "type": [
+              "object",
+              "null"
+            ],
             "properties": {
               "@odata.type": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               },
-              "deviceAndAppManagementAssignmentFilterId": {
-                "type": "null"
-              },
+              "deviceAndAppManagementAssignmentFilterId": {},
               "deviceAndAppManagementAssignmentFilterType": {
-                "type": "string"
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
             "additionalProperties": true
@@ -143,13 +67,200 @@
         },
         "additionalProperties": true
       }
+    },
+    "assignments@odata.context": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "createdDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deviceNameTemplate": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "deviceType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "enableWhiteGlove": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "enrollmentStatusScreenSettings": {},
+    "extractHardwareHash": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "hardwareHashExtractionEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "lastModifiedDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "locale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "managementServiceAppId": {},
+    "outOfBoxExperienceSetting": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "deviceUsageType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "escapeLinkHidden": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "eulaHidden": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "keyboardSelectionPageSkipped": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "privacySettingsHidden": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "userType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "outOfBoxExperienceSettings": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "deviceUsageType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hideEULA": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "hideEscapeLink": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "hidePrivacySettings": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "skipKeyboardSelectionPage": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "userType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "preprovisioningAllowed": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "roleScopeTagIds": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:42.773Z",
   "_endpoint": "ListAutopilotconfig",
   "_case": "ApProfile",
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 4
+  "_requiresTenant": true
 }

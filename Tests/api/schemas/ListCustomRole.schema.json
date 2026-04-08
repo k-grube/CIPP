@@ -2,43 +2,531 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListCustomRole",
   "description": "Shape schema for /api/ListCustomRole",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "RoleName": {
-      "type": "string"
-    },
-    "Type": {
-      "type": "string"
-    },
-    "Permissions": {
-      "type": "string"
-    },
     "AllowedTenants": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null",
+          "object"
+        ],
+        "properties": {
+          "addedFields": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "customerId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "defaultDomainName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "displayName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
       }
     },
+    "BlockedEndpoints": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "BlockedTenants": {
-      "type": "array",
-      "items": {}
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "addedFields": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "customerId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "defaultDomainName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "displayName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "ETag": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "EntraGroup": {
-      "type": "null"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "EntraGroupId": {
-      "type": "null"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "IPRange": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {}
+    },
+    "PartitionKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Permissions": {
+      "type": [
+        "string",
+        "null",
+        "object"
+      ],
+      "properties": {
+        "CIPPAlert": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CIPPAppSettings": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CIPPBackup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CIPPCore": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CIPPDashboard": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CIPPExtension": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CIPPScheduler": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "CIPPSuperAdmin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndpointApplication": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndpointAutopilot": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndpointDevice": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "EndpointMEM": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeConnectionFilter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeConnector": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeContact": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeEquipment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeGroup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeGroups": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeMailbox": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeRetentionPolicies": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeRoom": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeSafeLinks": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeSpamFilter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ExchangeTransportRule": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdentityAuditLog": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdentityDevice": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdentityDirSync": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdentityGroup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdentityRole": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "IdentityUser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SchedulerBilling": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SecurityAlert": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SecurityIncident": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SecuritySafeLinksPolicy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SharepointAdmin": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "SharepointSite": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TeamsActivity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TeamsGroup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TeamsVoice": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantAdministration": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantAlert": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantApplication": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantApplicationTemplates": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantBestPracticeAnalyser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantConditionalAccess": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantConfig": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantDeviceCompliance": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantDirectory": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantDomainAnalyser": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantGroups": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantRelationship": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantReports": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantStandards": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "TenantTests": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "RoleName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "RowKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Timestamp": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "Type": {
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:08:08.072Z",
   "_endpoint": "ListCustomRole",
   "_case": null,
-  "_tenantFilter": null,
-  "_requiresTenant": false,
-  "_sampledRows": 4
+  "_requiresTenant": false
 }

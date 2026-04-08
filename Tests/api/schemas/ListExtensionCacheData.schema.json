@@ -2,13 +2,3328 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListExtensionCacheData",
   "description": "Shape schema for /api/ListExtensionCacheData",
-  "type": "object",
-  "properties": {},
+  "type": [
+    "object",
+    "null"
+  ],
+  "properties": {
+    "AllRoles": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "deletedDateTime": {},
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "roleTemplateId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "CASMailbox": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "@odata.editLink": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "@odata.id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ActiveSyncEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "DisplayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ECPEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "EmailAddresses": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "EwsEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "ExchangeVersion": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ExternalDirectoryObjectId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Guid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Identity": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ImapEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "MAPIEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Name": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "OWAEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "ObjectKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "OrganizationId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "PopEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "PrimarySmtpAddress": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ServerLegacyDN": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "ConditionalAccess": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "conditions": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "applications": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "applicationFilter": {},
+                  "excludeApplications": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "includeApplications": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "includeAuthenticationContextClassReferences": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "includeUserActions": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  }
+                },
+                "additionalProperties": true
+              },
+              "clientAppTypes": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "clientApplications": {},
+              "deviceStates": {},
+              "devices": {},
+              "locations": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "excludeLocations": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "includeLocations": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              },
+              "platforms": {},
+              "signInRiskLevels": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {}
+              },
+              "times": {},
+              "userRiskLevels": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {}
+              },
+              "users": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "excludeGroups": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "excludeGuestsOrExternalUsers": {
+                    "type": [
+                      "object",
+                      "null"
+                    ],
+                    "properties": {
+                      "externalTenants": {
+                        "type": [
+                          "object",
+                          "null"
+                        ],
+                        "properties": {
+                          "@odata.type": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "members": {
+                            "type": [
+                              "array",
+                              "null"
+                            ],
+                            "items": {
+                              "type": [
+                                "string",
+                                "null"
+                              ]
+                            }
+                          },
+                          "membershipKind": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "guestOrExternalUserTypes": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "excludeRoles": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "excludeUsers": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "includeGroups": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "includeGuestsOrExternalUsers": {},
+                  "includeRoles": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "includeUsers": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          "createdDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "deletedDateTime": {},
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "grantControls": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "authenticationStrength": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "allowedCombinations": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "combinationConfigurations": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {}
+                  },
+                  "combinationConfigurations@odata.context": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "createdDateTime": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "date-time"
+                  },
+                  "description": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "displayName": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "id": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "modifiedDateTime": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "format": "date-time"
+                  },
+                  "policyType": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "requirementsSatisfied": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "authenticationStrength@odata.context": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "builtInControls": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "customAuthenticationFactors": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {}
+              },
+              "operator": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "termsOfUse": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {}
+              }
+            },
+            "additionalProperties": true
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "modifiedDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "partialEnablementStrategy": {},
+          "sessionControls": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "applicationEnforcedRestrictions": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "isEnabled": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              },
+              "cloudAppSecurity": {},
+              "continuousAccessEvaluation": {},
+              "disableResilienceDefaults": {},
+              "persistentBrowser": {},
+              "secureSignInSession": {},
+              "signInFrequency": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "authenticationType": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "frequencyInterval": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "isEnabled": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "type": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "value": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            },
+            "additionalProperties": true
+          },
+          "state": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "templateId": {}
+        },
+        "additionalProperties": true
+      }
+    },
+    "DeviceApps": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "@odata.type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "createdDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isAssigned": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "lastModifiedDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "publisher": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "DeviceCompliancePolicies": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "@odata.type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "activeFirewallRequired": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "advancedThreatProtectionRequiredSecurityLevel": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "antiSpywareRequired": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "antivirusRequired": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "bitLockerEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "codeIntegrityEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "conditionStatementId": {},
+          "configurationManagerComplianceRequired": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "createdDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "defenderEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "defenderVersion": {},
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "deviceCompliancePolicyScript": {},
+          "deviceThreatProtectionEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "deviceThreatProtectionRequiredSecurityLevel": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "earlyLaunchAntiMalwareDriverEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "firmwareProtectionEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "kernelDmaProtectionEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "lastModifiedDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "memoryIntegrityEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "minAndroidSecurityPatchLevel": {},
+          "mobileOsMaximumVersion": {},
+          "mobileOsMinimumVersion": {},
+          "osMaximumVersion": {},
+          "osMinimumVersion": {},
+          "passwordBlockSimple": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "passwordExpirationDays": {},
+          "passwordMinimumCharacterSetCount": {},
+          "passwordMinimumLength": {},
+          "passwordMinutesOfInactivityBeforeLock": {},
+          "passwordPreviousPasswordBlockCount": {},
+          "passwordRequired": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "passwordRequiredToUnlockFromIdle": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "passwordRequiredType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "passwordSignInFailureCountBeforeFactoryReset": {},
+          "requireHealthyDeviceReport": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "requiredPasswordComplexity": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "restrictedApps": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "roleScopeTagIds": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "rtpEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "secureBootEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityBlockDeviceAdministratorManagedDevices": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityBlockJailbrokenDevices": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityDisableUsbDebugging": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityPreventInstallAppsFromUnknownSources": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityRequireCompanyPortalAppIntegrity": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityRequireGooglePlayServices": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityRequireSafetyNetAttestationBasicIntegrity": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityRequireSafetyNetAttestationCertifiedDevice": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityRequireUpToDateSecurityProviders": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "securityRequireVerifyApps": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "signatureOutOfDate": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "storageRequireEncryption": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "tpmRequired": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "validOperatingSystemBuildRanges": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "version": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "virtualizationBasedSecurityEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "wslDistributions": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "Devices": {},
+    "Domains": {
+      "type": [
+        "object",
+        "null",
+        "array"
+      ],
+      "properties": {
+        "authenticationType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "availabilityStatus": {},
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isAdminManaged": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "isDefault": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "isInitial": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "isRoot": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "isVerified": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "passwordNotificationWindowInDays": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "passwordValidityPeriodInDays": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "state": {},
+        "supportedServices": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": true,
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "authenticationType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "availabilityStatus": {},
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isAdminManaged": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isDefault": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isInitial": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isRoot": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isVerified": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "passwordNotificationWindowInDays": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "passwordValidityPeriodInDays": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "state": {},
+          "supportedServices": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "Groups": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "createdDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "groupTypes": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mailEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "mailNickname": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "membershipRule": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "onPremisesSamAccountName": {},
+          "onPremisesSyncEnabled": {},
+          "organizationId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "resourceProvisioningOptions": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "securityEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "visibility": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "Licenses": {
+      "type": [
+        "object",
+        "null",
+        "array"
+      ],
+      "properties": {
+        "accountId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "accountName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "appliesTo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "capabilityStatus": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "consumedUnits": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prepaidUnits": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "enabled": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "lockedOut": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "suspended": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "warning": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "servicePlans": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "appliesTo": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "provisioningStatus": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "servicePlanId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "servicePlanName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "skuId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "skuPartNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "subscriptionIds": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "additionalProperties": true,
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "accountId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "accountName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "appliesTo": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "capabilityStatus": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "consumedUnits": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prepaidUnits": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "enabled": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "lockedOut": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "suspended": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "warning": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          },
+          "servicePlans": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "appliesTo": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "provisioningStatus": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "servicePlanId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "servicePlanName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "skuId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "skuPartNumber": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "subscriptionIds": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "MailboxPermissions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "AccessRights": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "AccessRights@odata.type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Deny": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "Identity": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "InheritanceType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "IsInherited": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "IsOwner": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "IsValid": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "User": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "UserSid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "UserWithDisplayName": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "UserWithDisplayName@odata.type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "MailboxUsage": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "createdDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "deletedDate": {},
+          "deletedItemCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "deletedItemQuota": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "deletedItemSizeInBytes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "hasArchive": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "issueWarningQuotaInBytes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "itemCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "lastActivityDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prohibitSendQuotaInBytes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "prohibitSendReceiveQuotaInBytes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "recipientType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reportPeriod": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reportRefreshDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "storageUsedInBytes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "userPrincipalName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "Mailboxes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "AdditionalEmailAddresses": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ArchiveGuid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "DeliverToMailboxAndForward": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "ExchangeGuid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ExternalDirectoryObjectId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ForwardingSmtpAddress": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "HiddenFromAddressListsEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "Id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "InternalForwardingAddress": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "MessageCopyForSendOnBehalfEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "MessageCopyForSentAsEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "UPN": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "WhenSoftDeleted": {},
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "primarySmtpAddress": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "recipientType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "recipientTypeDetails": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "OneDriveUsage": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "activeFileCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "fileCount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "isDeleted": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "lastActivityDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ownerDisplayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ownerPrincipalName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reportPeriod": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reportRefreshDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "siteId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "siteUrl": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "storageAllocatedInBytes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "storageUsedInBytes": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "SecureScore": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "activeUserCount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "averageComparativeScores": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "SeatSizeRangeLowerValue": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "SeatSizeRangeUpperValue": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "appsScore": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "appsScoreMax": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "averageScore": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "basis": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "dataScore": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "dataScoreMax": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "deviceScore": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "deviceScoreMax": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "identityScore": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "identityScoreMax": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "infrastructureScore": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "infrastructureScoreMax": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "azureTenantId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "controlScores": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "controlCategory": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "controlName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "count": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "description": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "implementationStatus": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "lastSynced": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "on": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "score": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "scoreInPercentage": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "total": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "createdDateTime": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "currentScore": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "enabledServices": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "licensedUserCount": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "maxScore": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "vendorInformation": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "provider": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "providerVersion": {},
+            "subProvider": {},
+            "vendor": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "SecureScoreControlProfiles": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "actionType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "actionUrl": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "azureTenantId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "complianceInformation": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {}
+          },
+          "controlCategory": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "controlStateUpdates": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "assignedTo": {},
+                "comment": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "state": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "updatedBy": {},
+                "updatedDateTime": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "format": "date-time"
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "deprecated": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "implementationCost": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "lastModifiedDateTime": {},
+          "maxScore": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "rank": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "remediation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "remediationImpact": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "service": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "threats": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "tier": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "userImpact": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "vendorInformation": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "provider": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "providerVersion": {},
+              "subProvider": {},
+              "vendor": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "Subscriptions": {
+      "type": [
+        "object",
+        "null",
+        "array"
+      ],
+      "properties": {
+        "commerceSubscriptionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "createdDateTime": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isTrial": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "nextLifecycleDateTime": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "ocpSubscriptionId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ownerId": {},
+        "ownerTenantId": {},
+        "ownerType": {},
+        "serviceStatus": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "appliesTo": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "provisioningStatus": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "servicePlanId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "servicePlanName": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "skuId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "skuPartNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "totalLicenses": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true,
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "commerceSubscriptionId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "createdDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isTrial": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "nextLifecycleDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "ocpSubscriptionId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "ownerId": {},
+          "ownerTenantId": {},
+          "ownerType": {},
+          "serviceStatus": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "appliesTo": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "provisioningStatus": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "servicePlanId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "servicePlanName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "skuId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "skuPartNumber": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "totalLicenses": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "TenantDetails": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "assignedPlans": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "assignedDateTime": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              "capabilityStatus": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "service": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "servicePlanId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "businessPhones": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "city": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "country": {},
+        "countryLetterCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "createdDateTime": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "defaultUsageLocation": {},
+        "deletedDateTime": {},
+        "directorySizeQuota": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "total": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "used": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "displayName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isMultipleDataLocationsForServicesEnabled": {},
+        "marketingNotificationEmails": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "onPremisesLastPasswordSyncDateTime": {},
+        "onPremisesLastSyncDateTime": {},
+        "onPremisesSyncEnabled": {},
+        "onPremisesSyncStatus": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {}
+        },
+        "partnerTenantType": {},
+        "postalCode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "preferredLanguage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "privacyProfile": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "contactEmail": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "statementUrl": {}
+          },
+          "additionalProperties": true
+        },
+        "provisionedPlans": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "capabilityStatus": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "provisioningStatus": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "service": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "securityComplianceNotificationMails": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {}
+        },
+        "securityComplianceNotificationPhones": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {}
+        },
+        "state": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "street": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "technicalNotificationMails": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "tenantType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "verifiedDomains": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "capabilities": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "isDefault": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "isInitial": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "type": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "Users": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "accountEnabled": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "assignedLicenses": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "properties": {
+                "disabledPlans": {
+                  "type": [
+                    "array",
+                    "null"
+                  ],
+                  "items": {}
+                },
+                "skuId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "businessPhones": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "city": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "companyName": {},
+          "country": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "createdDateTime": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "department": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "faxNumber": {},
+          "givenName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "isResourceAccount": {},
+          "jobTitle": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mailNickname": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mobilePhone": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "officeLocation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "onPremisesDistinguishedName": {},
+          "onPremisesLastSyncDateTime": {},
+          "onPremisesSyncEnabled": {},
+          "otherMails": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "postalCode": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "preferredDataLocation": {},
+          "preferredLanguage": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "proxyAddresses": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "showInAddressList": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "state": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "streetAddress": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "surname": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "usageLocation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "userPrincipalName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "userType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "patternProperties": {
+    "^AllRoles_[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$": {
+      "type": [
+        "array",
+        "null",
+        "object"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "@odata.type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "userPrincipalName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      },
+      "properties": {
+        "@odata.type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "displayName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "userPrincipalName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "^DeviceCompliancePolicies_[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$": {},
+    "^Groups_[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$": {
+      "type": [
+        "array",
+        "null",
+        "object"
+      ],
+      "items": {
+        "type": [
+          "object",
+          "null"
+        ],
+        "properties": {
+          "@odata.type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "userPrincipalName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      },
+      "properties": {
+        "@odata.type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "displayName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "userPrincipalName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:09:32.727Z",
   "_endpoint": "ListExtensionCacheData",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 1
+  "_requiresTenant": true
 }

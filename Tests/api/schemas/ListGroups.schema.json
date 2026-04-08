@@ -2,17 +2,36 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListGroups",
   "description": "Shape schema for /api/ListGroups",
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "id": {
-      "type": "string"
+    "SID": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "assignedLicenses": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "calculatedGroupType": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "createdDateTime": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
-    },
-    "displayName": {
-      "type": "string"
     },
     "description": {
       "type": [
@@ -20,6 +39,43 @@
         "null"
       ]
     },
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dynamicGroupBool": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "groupType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "groupTypes": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licenseProcessingState": {},
     "mail": {
       "type": [
         "string",
@@ -27,81 +83,76 @@
       ]
     },
     "mailEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "mailNickname": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "membersCsv": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "membershipRule": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "onPremisesSamAccountName": {},
+    "onPremisesSyncEnabled": {},
+    "organizationId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "primDomain": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "resourceProvisioningOptions": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
     "securityEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "teamsEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "visibility": {
       "type": [
         "string",
         "null"
       ]
-    },
-    "organizationId": {
-      "type": "string"
-    },
-    "onPremisesSamAccountName": {
-      "type": "null"
-    },
-    "membershipRule": {
-      "type": [
-        "null",
-        "string"
-      ]
-    },
-    "groupTypes": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "onPremisesSyncEnabled": {
-      "type": "null"
-    },
-    "licenseProcessingState": {
-      "type": "null"
-    },
-    "assignedLicenses": {
-      "type": "array",
-      "items": {}
-    },
-    "primDomain": {
-      "type": "string"
-    },
-    "membersCsv": {
-      "type": "string"
-    },
-    "teamsEnabled": {
-      "type": "boolean"
-    },
-    "groupType": {
-      "type": "string"
-    },
-    "calculatedGroupType": {
-      "type": "string"
-    },
-    "dynamicGroupBool": {
-      "type": "boolean"
-    },
-    "SID": {
-      "type": "string"
     }
   },
   "additionalProperties": true,
-  "_generatedAt": "2026-04-06T04:09:59.081Z",
   "_endpoint": "ListGroups",
   "_case": null,
-  "_tenantFilter": "7ngn50.onmicrosoft.com",
-  "_requiresTenant": true,
-  "_sampledRows": 34
+  "_requiresTenant": true
 }

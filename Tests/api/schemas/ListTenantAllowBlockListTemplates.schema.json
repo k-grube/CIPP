@@ -2,40 +2,62 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListTenantAllowBlockListTemplates",
   "description": "Shape schema for /api/ListTenantAllowBlockListTemplates",
-  "_metadata": {
-    "endpoint": "ListTenantAllowBlockListTemplates",
-    "generatedAt": "2026-04-05T12:15:06.113Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListTenantAllowBlockListTemplates.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "entries": {
-      "type": "string"
-    },
     "GUID": {
-      "type": "string"
-    },
-    "listMethod": {
-      "type": "string"
-    },
-    "listType": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "NoExpiration": {
-      "type": "boolean"
-    },
-    "notes": {
-      "type": "string"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "RemoveAfter": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "entries": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "listMethod": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "listType": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "templateName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListTenantAllowBlockListTemplates",
+  "_case": null,
+  "_requiresTenant": false
 }

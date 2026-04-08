@@ -2,138 +2,219 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListSharepointSettings",
   "description": "Shape schema for /api/ListSharepointSettings",
-  "_metadata": {
-    "endpoint": "ListSharepointSettings",
-    "generatedAt": "2026-04-05T12:15:06.108Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListSharepointSettings.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "@odata.context": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "allowedDomainGuidsForSyncApp": {
       "type": [
-        "string",
-        "number",
-        "boolean",
+        "array",
         "null"
-      ]
+      ],
+      "items": {}
     },
     "availableManagedPathsForSiteCreation": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "string"
+        "type": [
+          "string",
+          "null"
+        ]
       }
     },
     "deletedUserPersonalSiteRetentionPeriodInDays": {
-      "type": "number"
-    },
-    "excludedFileExtensionsForSyncApp": {
       "type": [
-        "string",
         "number",
-        "boolean",
         "null"
       ]
     },
+    "excludedFileExtensionsForSyncApp": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
     "idleSessionSignOut": {
-      "type": "object",
+      "type": [
+        "object",
+        "null"
+      ],
       "properties": {
         "isEnabled": {
-          "type": "boolean"
+          "type": [
+            "boolean",
+            "null"
+          ]
         },
         "signOutAfterInSeconds": {
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "warnAfterInSeconds": {
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
     },
     "imageTaggingOption": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "isCommentingOnSitePagesEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isFileActivityNotificationEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isLegacyAuthProtocolsEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isLoopEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isMacSyncAppEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isResharingByExternalUsersEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isSharePointMobileNotificationEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isSharePointNewsfeedEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isSiteCreationEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isSiteCreationUIEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isSitePagesCreationEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isSitesStorageLimitAutomatic": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isSyncButtonHiddenOnPersonalSite": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "isUnmanagedSyncAppForTenantRestricted": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "personalSiteDefaultStorageLimitInMB": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "sharingAllowedDomainList": {
       "type": [
-        "string",
-        "number",
-        "boolean",
+        "array",
         "null"
-      ]
+      ],
+      "items": {}
     },
     "sharingBlockedDomainList": {
       "type": [
+        "array",
+        "null"
+      ],
+      "items": {}
+    },
+    "sharingCapability": {
+      "type": [
         "string",
-        "number",
-        "boolean",
         "null"
       ]
     },
-    "sharingCapability": {
-      "type": "string"
-    },
     "sharingDomainRestrictionMode": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "siteCreationDefaultManagedPath": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "siteCreationDefaultStorageLimitInMB": {
-      "type": "number"
+      "type": [
+        "number",
+        "null"
+      ]
     },
     "tenantDefaultTimezone": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListSharepointSettings",
+  "_case": null,
+  "_requiresTenant": false
 }

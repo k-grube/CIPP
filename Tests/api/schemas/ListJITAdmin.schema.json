@@ -2,70 +2,97 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListJITAdmin",
   "description": "Shape schema for /api/ListJITAdmin",
-  "_metadata": {
-    "endpoint": "ListJITAdmin",
-    "generatedAt": "2026-04-05T12:15:06.096Z",
-    "tenantFilter": "7ngn50.onmicrosoft.com",
-    "requiresTenant": true,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListJITAdmin.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
     "accountEnabled": {
-      "type": "boolean"
-    },
-    "displayName": {
-      "type": "string"
-    },
-    "id": {
-      "type": "string"
-    },
-    "jitAdminCreatedBy": {
       "type": [
-        "string",
-        "number",
         "boolean",
         "null"
       ]
     },
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "jitAdminCreatedBy": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "jitAdminEnabled": {
-      "type": "boolean"
+      "type": [
+        "boolean",
+        "null"
+      ]
     },
     "jitAdminExpiration": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date-time"
     },
     "jitAdminReason": {
       "type": [
         "string",
-        "number",
-        "boolean",
         "null"
       ]
     },
     "jitAdminStartDate": {
       "type": [
         "string",
-        "number",
-        "boolean",
         "null"
-      ]
+      ],
+      "format": "date-time"
     },
     "memberOf": {
-      "type": "array",
+      "type": [
+        "array",
+        "null"
+      ],
       "items": {
-        "type": "object",
+        "type": [
+          "object",
+          "null"
+        ],
         "properties": {
-          "displayName": {},
-          "id": {}
+          "displayName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
         },
         "additionalProperties": true
       }
     },
     "userPrincipalName": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListJITAdmin",
+  "_case": null,
+  "_requiresTenant": true
 }

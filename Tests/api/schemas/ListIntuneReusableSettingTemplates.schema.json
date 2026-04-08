@@ -2,31 +2,44 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "ListIntuneReusableSettingTemplates",
   "description": "Shape schema for /api/ListIntuneReusableSettingTemplates",
-  "_metadata": {
-    "endpoint": "ListIntuneReusableSettingTemplates",
-    "generatedAt": "2026-04-05T12:15:06.095Z",
-    "tenantFilter": null,
-    "requiresTenant": false,
-    "sampledRows": 1,
-    "convertedFrom": "Tests/Shapes/ListIntuneReusableSettingTemplates.json"
-  },
-  "type": "object",
+  "type": [
+    "object",
+    "null"
+  ],
   "properties": {
-    "description": {
-      "type": "string"
-    },
-    "displayName": {
-      "type": "string"
-    },
     "GUID": {
-      "type": "string"
-    },
-    "isSynced": {
-      "type": "boolean"
+      "type": [
+        "string",
+        "null"
+      ]
     },
     "RawJSON": {
-      "type": "string"
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "description": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "displayName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "isSynced": {
+      "type": [
+        "boolean",
+        "null"
+      ]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": true,
+  "_endpoint": "ListIntuneReusableSettingTemplates",
+  "_case": null,
+  "_requiresTenant": false
 }
